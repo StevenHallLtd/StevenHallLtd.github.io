@@ -4,12 +4,77 @@
     <head>
         <meta charset="UTF-8">
         <title>Steven Hall - Frontend Development</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+            }
+
+            h1, h2, h3 {
+                margin-top: 0;
+            }
+
+            .intro, .project {
+                padding: 60px;
+                min-height: 100%;
+                border: 60px solid #FFFFFF;
+                background: #4A4A4A;
+                color: white;
+            }
+
+            .intro {
+                background: #F8E71C;
+                font-size: 100px;
+            }
+
+            .promo {
+                margin: 60px;
+                text-align: center;
+            }
+
+            .intro__heading,
+            .project__heading,
+            .project__keywords li {
+                display: inline;
+                background: #000000;
+            }
+
+            .project__keywords {
+                padding: 0;
+            }
+
+            .project__keywords li {
+                font-size: 25px;
+            }
+
+            .project__heading {
+                font-size: 50px;
+            }
+
+            .project--kindeo {
+                background: #7ED321;
+            }
+
+            .project--barometer {
+                background: #4A90E2;
+            }
+
+            .project--chromebooks {
+                background: #D0021B;
+            }
+        </style>
     </head>
 
     <body>
 
         <header class="intro">
-            <h1 class="intro__heading">Steven Hall</h1>
+            <h1 class="intro__heading">Steven<br>Hall</h1>
         </header>
 
         <section class="promo">
