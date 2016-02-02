@@ -13,7 +13,7 @@
                 height: 100%;
                 margin: 0;
                 padding: 0;
-                font-family: sans-serif;
+                font-family: "Futura PT", sans-serif;
             }
 
             h1, h2, h3 {
@@ -33,17 +33,16 @@
                 font-size: 100px;
             }
 
+            .intro__content {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
             .promo {
                 padding: 60px;
                 border: 60px solid #FFFFFF;
                 text-align: center;
-            }
-
-            .intro__heading,
-            .project__heading,
-            .project__keywords li {
-                display: inline;
-                background: #000000;
             }
 
             .promo__heading,
@@ -51,11 +50,29 @@
                 font-size: 50px;
             }
 
+            .project__heading,
+            .project__keywords {
+                margin-left: -5px;
+            }
+
+            .intro__heading,
+            .project__heading,
+            .project__keywords li {
+                display: inline;
+                padding: 0 5px;
+                background: #000000;
+
+                /* Fix for multi-line padded text */
+                box-decoration-break: clone;
+                -webkit-box-decoration-break: clone;
+            }
+
             .project__keywords {
                 padding: 0;
             }
 
             .project__keywords li {
+                margin-right: 5px;
                 font-size: 25px;
             }
 
@@ -76,7 +93,9 @@
     <body>
 
         <header class="intro">
-            <h1 class="intro__heading">Steven<br>Hall</h1>
+            <div class="intro__content">
+                <h1 class="intro__heading">Steven<br>Hall</h1>
+            </div>
         </header>
 
         <section class="promo">
