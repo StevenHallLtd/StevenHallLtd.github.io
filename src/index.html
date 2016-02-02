@@ -13,11 +13,13 @@
             html.wf-loading {
                 /* Class added by TypeKit while fonts are loading */
                 opacity: 0;
+                background: #FFF;
             }
 
             html {
                 height: 100%;
                 background: #F2F2F2;
+                transition: opacity 0.25s ease-out, background 0.5s ease-out;
             }
 
             body {
@@ -30,8 +32,6 @@
                 font-size: 15px;
                 font-family: "futura-pt", sans-serif;
                 letter-spacing: -0.02em;
-
-                transition: opacity 0.25s ease-out;
             }
 
             h1, h2, h3 {
