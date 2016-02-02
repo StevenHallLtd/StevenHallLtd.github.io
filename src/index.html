@@ -3,6 +3,7 @@
 
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Steven Hall - Frontend Development</title>
         <style>
             * {
@@ -10,6 +11,7 @@
             }
 
             html.wf-loading {
+                /* Class added by TypeKit while fonts are loading */
                 opacity: 0;
             }
 
@@ -17,12 +19,17 @@
                 height: 100%;
                 margin: 0;
                 padding: 0;
+
+                font-size: 25px;
                 font-family: "futura-pt", sans-serif;
+                letter-spacing: -0.02em;
+
                 transition: opacity 0.25s ease-out;
             }
 
             h1, h2, h3 {
                 margin-top: 0;
+                letter-spacing: -0.025em;
             }
 
             .intro, .project {
@@ -35,13 +42,16 @@
 
             .intro {
                 background: #F8E71C;
-                font-size: 100px;
             }
 
             .intro__content {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
+            }
+
+            .intro__heading {
+                font-size: 8em;
             }
 
             .promo {
@@ -52,7 +62,7 @@
 
             .promo__heading,
             .project__heading {
-                font-size: 50px;
+                font-size: 2em;
             }
 
             .project__heading,
@@ -78,7 +88,6 @@
 
             .project__keywords li {
                 margin-right: 5px;
-                font-size: 25px;
             }
 
             .project--kindeo {
