@@ -32,6 +32,15 @@
                 letter-spacing: -0.025em;
             }
 
+            .intro, .project, .promo {
+                padding: 2em;
+                border: 2em solid #FFF;
+            }
+
+            .intro, .project {
+                color: #FFF;
+            }
+
             .intro {
                 min-height: 100%;
                 background: #F8E71C;
@@ -43,34 +52,18 @@
                 transform: translateY(-50%);
             }
 
-            .intro, .project, .promo {
-                padding: 2em;
-                border: 2em solid #FFF;
-            }
-
-            .intro, .project {
-                color: #FFF;
-            }
-
             .promo {
                 text-align: center;
             }
 
-            .promo__heading,
-            .project__heading {
+            .promo__heading {
                 font-size: 2em;
-            }
-
-            .project__heading,
-            .project__keywords {
-                margin-left: -5px;
             }
 
             .intro__heading,
             .project__heading,
             .project__keywords li {
                 display: inline;
-                padding: 0 8px 0 5px;
                 background: #000;
 
                 /* Fix for multi-line padded text */
@@ -83,11 +76,24 @@
                 padding: 0 0.1em 0 0.06em;
             }
 
+            .project__heading {
+                font-size: 2em;
+                margin: 0 0 1em 0;
+                padding: 0 8px 0 5px;
+            }
+
+            .project__image {
+                display: block;
+                max-width: 100%;
+                margin: 2em auto;
+            }
+
             .project__keywords {
                 padding: 0;
             }
 
-            .project__keywords li {
+            .project__keywords li{
+                padding: 0 8px 0 5px;
                 margin-right: 5px;
             }
 
@@ -137,6 +143,7 @@
 
         <article class="project project--kindeo">
             <h2 class="project__heading">Kindeo</h2>
+            <img class="project__image" src="images/tablet.svg">
             <ul class="project__keywords">
                 <li>React</li>
                 <li>Fluxible</li>
@@ -152,6 +159,7 @@
 
         <article class="project project--barometer">
             <h2 class="project__heading">Google Consumer Barometer</h2>
+            <img class="project__image" src="images/tablet.svg">
             <ul class="project__keywords">
                 <li>Angular</li>
                 <li>Foundation</li>
@@ -167,6 +175,7 @@
 
         <article class="project project--chromebooks">
             <h2 class="project__heading">Google Chromebooks</h2>
+            <img class="project__image" src="images/tablet.svg">
             <ul class="project__keywords">
                 <li>Assemble</li>
                 <li>Foundation</li>
@@ -182,6 +191,7 @@
 
         <article class="project project--nexus">
             <h2 class="project__heading">Google Nexus</h2>
+            <img class="project__image" src="images/tablet.svg">
             <ul class="project__keywords">
                 <li>Angular</li>
                 <li>Foundation</li>
