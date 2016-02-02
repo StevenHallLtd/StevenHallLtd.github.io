@@ -9,11 +9,16 @@
                 box-sizing: border-box;
             }
 
+            html.wf-loading {
+                opacity: 0;
+            }
+
             html, body {
                 height: 100%;
                 margin: 0;
                 padding: 0;
-                font-family: "Futura PT", sans-serif;
+                font-family: "futura-pt", sans-serif;
+                transition: opacity 0.25s ease-out;
             }
 
             h1, h2, h3 {
@@ -88,6 +93,8 @@
                 background: #D0021B;
             }
         </style>
+        <script src="https://use.typekit.net/hyf5yvq.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
     </head>
 
     <body>
