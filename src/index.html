@@ -146,16 +146,28 @@
                 background: #4A4A4A;
             }
 
-            .client__logos {
+            .project--miscellaneous {
                 padding: 0;
+                background: none;
+            }
+
+            .project--miscellaneous .project__heading {
+                display: inline-block;
+                margin: 1em;
+            }
+
+            .client__logos {
+                margin: 0;
+                padding: 0;
+                border-top: 4px solid #FFF;
             }
 
             .client__logos li {
                 float: left;
                 width: 33.333%;
                 position: relative;
-                padding-bottom: 25%;
-                background: #F2F2F2;
+                padding-bottom: 30%;
+                box-shadow: 0 0 0 2px #FFF;
                 list-style: none;
             }
 
@@ -166,6 +178,18 @@
                 display: block;
                 position: absolute;
                 transform: translate(-50%, -50%);
+            }
+
+            .client__logos li svg path {
+                transition: fill 0.3s ease-in-out;
+            }
+
+            .client__logos li:not(:hover) svg path {
+                fill: #9B9B9B;
+            }
+
+            .client__logos li:not(:hover) svg path.client__logo--negative {
+                fill: #F2F2F2;
             }
 
             @media screen and (min-width: 480px) {
@@ -290,7 +314,7 @@
             <h2 class="promo__heading">A real team-player and<br> all-round nice guy ;-)</h2>
         </section>
 
-        <article class="project">
+        <article class="project project--miscellaneous">
             <h2 class="project__heading">Ask me about...</h2>
             <ul class="client__logos">
                 <li>
@@ -359,8 +383,8 @@
                 <li>
                     <svg class="client__logo--marvel" viewBox="0 0 100 45.2" alt="Marvel">
                         <path fill="#F11E22" d="M100,45.2H0V0h100V45.2z"></path>
-                        <path class="negative" fill="#FFFFFF" d="M86.3,6.4h5.6V33h4.8v6.7H86.3V6.4z"></path>
-                        <path class="negative" fill="#FFFFFF" d="M47.8,22.2c4-0.2,3.6-5.2,3.6-5.2c-0.6-4.9-3.6-4.7-3.6-4.7V22.2z M34.9,29.8l-1.7-10.1l-1.5,10.1H34.9z M4,39.5V6.4h7.6l2.7,13.9l3-13.9h7.3v29.8l4.8-29.8h7.5l4.7,29.8V6.5h9.8c0,0,3.4,0.6,5.1,5.4l-0.7-5.5h6l2.8,17.2l2.9-17h16.8v6.2h-5v6.8h4.8v6.9h-4.7V33h4.9v6.7H73.3V7.8l-5.6,31.9h-6.7l-3.5-21.1c0,0-0.6,5.8-3.9,8.5l4.2,12.6h-5.8l-4.1-11.1v11.1H36l-0.6-3.2h-4.5l-0.9,3.2H18.8V27.6l-2.9,12.1h-3l-2.7-12v11.7L4,39.5z"></path>
+                        <path class="client__logo--negative" fill="#FFFFFF" d="M86.3,6.4h5.6V33h4.8v6.7H86.3V6.4z"></path>
+                        <path class="client__logo--negative" fill="#FFFFFF" d="M47.8,22.2c4-0.2,3.6-5.2,3.6-5.2c-0.6-4.9-3.6-4.7-3.6-4.7V22.2z M34.9,29.8l-1.7-10.1l-1.5,10.1H34.9z M4,39.5V6.4h7.6l2.7,13.9l3-13.9h7.3v29.8l4.8-29.8h7.5l4.7,29.8V6.5h9.8c0,0,3.4,0.6,5.1,5.4l-0.7-5.5h6l2.8,17.2l2.9-17h16.8v6.2h-5v6.8h4.8v6.9h-4.7V33h4.9v6.7H73.3V7.8l-5.6,31.9h-6.7l-3.5-21.1c0,0-0.6,5.8-3.9,8.5l4.2,12.6h-5.8l-4.1-11.1v11.1H36l-0.6-3.2h-4.5l-0.9,3.2H18.8V27.6l-2.9,12.1h-3l-2.7-12v11.7L4,39.5z"></path>
                     </svg>
                 </li>
             </ul>
