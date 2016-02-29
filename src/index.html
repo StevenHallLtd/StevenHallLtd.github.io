@@ -107,13 +107,6 @@
                 padding: 0 0.3em 0 0.25em;
             }
 
-            .project__image {
-                width: 100%;
-                display: block;
-                max-width: 100%;
-                margin: 2em auto;
-            }
-
             .project__keywords {
                 margin: 1em 0;
                 padding: 0;
@@ -159,7 +152,7 @@
                 width: 100%;
                 height: 100%;
                 background: none no-repeat center;
-                background-size: contain;
+                background-size: cover;
                 pointer-events: none;
             }
 
@@ -170,6 +163,13 @@
             .screenshots--tablet {
                 width: 96%;
                 padding-top: 65.28%;
+            }
+
+            .screenshots--tablet .screenshots__content {
+                top: 5.15%;
+                left: 10%;
+                width: 80%;
+                height: 88.24%;
             }
 
             .screenshots--tablet .screenshots__frame {
@@ -193,6 +193,7 @@
 
             .screenshot {
                 width: 100%;
+                box-shadow: inset 0 0 5px 0 rgba(0,0,0,0.75);
             }
 
             .client__logos {
@@ -281,7 +282,9 @@
         <article class="project project--kindeo">
             <h2 class="project__heading">Kindeo</h2>
             <div class="screenshots screenshots--tablet">
-                <div class="screenshots__content"></div>
+                <div class="screenshots__content">
+                    <img class="screenshot" src="images/kindeo.png" alt="Kindeo screenshot" />
+                </div>
                 <div class="screenshots__frame"></div>
             </div>
             <ul class="project__keywords">
