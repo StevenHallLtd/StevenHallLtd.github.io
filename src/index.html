@@ -57,19 +57,13 @@
             .intro {
                 height: 100%;
                 min-height: 20em;
-                background: #F8E71C;
-                position: relative;
+                background: #F8E71C
             }
 
             .intro__content {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-
-            .intro__heading {
-                font-size: 4em;
-                padding: 0 0.1em 0 0.06em;
+                height: 100%;
+                background: url(images/logo.svg) no-repeat left;
+                background-size: contain;
             }
 
             .promo {
@@ -86,7 +80,6 @@
                 display: none;
             }
 
-            .intro__heading,
             .project__heading,
             .project__keywords li {
                 display: inline;
@@ -270,9 +263,7 @@
     <body>
 
         <header class="intro">
-            <div class="intro__content">
-                <h1 class="intro__heading">Steven<br>Hall</h1>
-            </div>
+            <div class="intro__content"></div>
         </header>
 
         <section class="promo">
