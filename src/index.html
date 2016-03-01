@@ -45,19 +45,22 @@
                 cursor: default;
             }
 
-            .intro, .project, .promo, .contact {
-                padding: 2em;
-                border: 2em solid #FFF;
+            .intro,
+            .project,
+            .promo,
+            .contact {
+                padding: 1em;
+                border: 1em solid #FFF;
                 cursor: default;
             }
 
-            .intro, .project {
+            .intro,
+            .project {
                 color: #FFF;
             }
 
             .intro {
                 height: 100%;
-                min-height: 20em;
                 background: #F8E71C
             }
 
@@ -67,20 +70,19 @@
                 background-size: contain;
             }
 
+            .promo {
+                padding: 4em 0;
+            }
+
             .promo,
             .contact {
                 background: #FFF;
                 text-align: center;
             }
 
-            .promo__heading,
-            .contact__heading {
-                font-size: 2em;
-            }
-
-            .promo__heading br {
-                /* We only want line-breaks to appear at larger breakpoints */
-                display: none;
+            .promo__heading {
+                margin: 0;
+                font-size: 1.5em;
             }
 
             .project__link,
@@ -99,9 +101,9 @@
             }
 
             .project__heading {
-                font-size: 2em;
                 margin: 1em 0;
                 padding: 0 0.3em 0 0.25em;
+                font-size: 1.5em;
             }
 
             .project__keywords {
@@ -265,6 +267,10 @@
                 position: relative;
             }
 
+            .contact__heading {
+                font-size: 1.5em;
+            }
+
             .contact__button {
                 width: 4em;
                 margin: 0 5px;
@@ -289,8 +295,8 @@
                     font-size: 20px;
                 }
 
-                .intro {
-                    min-height: 22em;
+                .promo {
+                    padding: 3em 1em;
                 }
 
                 .project__description {
@@ -298,23 +304,29 @@
                 }
             }
 
-            @media screen and (min-width: 680px) {
-                .intro {
-                    min-height: 30em;
-                }
-
-                .project__keywords li {
-                    font-size: 1.2em;
-                }
-            }
-
-            @media screen and (min-width: 960px) {
+            @media screen and (min-width: 720px) {
                 html, body {
                     font-size: 25px;
                 }
 
-                .promo__heading br {
-                    display: block;
+                .intro,
+                .project,
+                .promo,
+                .contact {
+                    padding: 2em;
+                    border: 2em solid #FFF;
+                }
+            }
+
+            @media screen and (min-width: 960px) {
+                .project__keywords li {
+                    font-size: 1.2em;
+                }
+
+                .promo__heading,
+                .project__heading,
+                .contact__heading {
+                    font-size: 2em;
                 }
 
                 .project__description {
