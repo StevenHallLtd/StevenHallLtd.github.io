@@ -69,6 +69,10 @@
                 cursor: default;
             }
 
+            .main__container {
+                height: 100%;
+            }
+
             .intro,
             .project,
             .promo,
@@ -87,11 +91,15 @@
                 height: 100%;
                 background: #F8E71C
             }
-
-            .intro__content {
+            
+            .intro__container {
                 height: 100%;
                 background: url(images/logo.svg) no-repeat left;
                 background-size: contain;
+            }
+
+            .intro__heading {
+                display: none;
             }
 
             .promo {
@@ -453,11 +461,13 @@
 
     <body>
 
-        <header class="intro">
-            <div class="intro__content"></div>
-        </header>
+        <main class="main__container" role="main">
 
-        <main role="main">
+            <header class="intro">
+                <div class="intro__container">
+                    <h1 class="intro__heading">Steven Hall</h1>
+                </div>
+            </header>
 
             <section class="promo">
                 <h2 class="promo__heading">Over ten years experience<br> in front-end development.</h2>
