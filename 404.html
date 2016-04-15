@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>404 - Page not found</title>
+        <title>Page not found</title>
 
         <script>
             (function(d) {
@@ -17,14 +17,26 @@
         </script>
 
         <style>
+            * {
+                box-sizing: border-box;
+            }
+
             html {
+                height: 100%;
                 transition: opacity 0.25s ease-out, background 0.5s ease-out;
                 -webkit-transition: opacity 0.25s ease-out, background 0.5s ease-out;
                 -moz-transition: opacity 0.25s ease-out, background 0.5s ease-out;
                 -o-transition: opacity 0.25s ease-out, background 0.5s ease-out;
             }
 
+            /* Class added by TypeKit while fonts are loading */
+            html.wf-loading {
+                opacity: 0;
+                background: #FFF;
+            }
+
             body {
+                height: 100%;
                 margin: 0 auto;
 
                 min-width: 320px;
@@ -38,25 +50,47 @@
             }
 
             h1, h2, h3 {
+                margin-top: 0;
                 letter-spacing: -0.025em;
 
                 /* Stop displaying the text cursor everywhere */
                 cursor: default;
             }
 
+            .error {
+                top: 50%;
+                width: 100%;
+                transform: translate(0, -60%);
+                position: absolute;
+            }
+
             .error__heading {
-                font-size: 4em;
+                font-size: 5.6em;
+                margin-bottom: 0;
+            }
+
+            .error__subheading {
+                font-size: 3em;
             }
 
             .error__link {
+                color: #FFF;
+                background: #111;
+                padding: 0.1em 0.3em 0.1em 0.25em;
+                line-height: 1.8em;
+                font-weight: bold;
                 font-size: 2em;
+                text-decoration: none;
             }
         </style>
     </head>
 
     <body>
-        <h1 class="error__heading">404 – Page not found</h1>
-        <a class="error__link" href="/">Go home</a>
+        <div class="error">
+            <h1 class="error__heading">404</h1>
+            <h1 class="error__subheading">Page not found</h1>
+            <a class="error__link" href="/">Go home</a>
+        </div>
     </body>
 
 </html>
