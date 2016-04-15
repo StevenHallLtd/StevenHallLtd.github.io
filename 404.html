@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>404 - Page not found</title>
+
+        <script>
+            (function(d) {
+                var config = {
+                            kitId: 'hyf5yvq',
+                            scriptTimeout: 3000,
+                            async: true
+                        },
+                        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+            })(document);
+        </script>
+
+        <style>
+            html {
+                transition: opacity 0.25s ease-out, background 0.5s ease-out;
+                -webkit-transition: opacity 0.25s ease-out, background 0.5s ease-out;
+                -moz-transition: opacity 0.25s ease-out, background 0.5s ease-out;
+                -o-transition: opacity 0.25s ease-out, background 0.5s ease-out;
+            }
+
+            body {
+                margin: 0 auto;
+
+                min-width: 320px;
+                max-width: 1440px;
+
+                font-size: 15px;
+                font-family: "futura-pt", sans-serif;
+                letter-spacing: -0.02em;
+
+                text-align: center;
+            }
+
+            h1, h2, h3 {
+                letter-spacing: -0.025em;
+
+                /* Stop displaying the text cursor everywhere */
+                cursor: default;
+            }
+
+            .error__heading {
+                font-size: 4em;
+            }
+
+            .error__link {
+                font-size: 2em;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 class="error__heading">404 – Page not found</h1>
+        <a class="error__link" href="/">Go home</a>
+    </body>
+
+</html>
