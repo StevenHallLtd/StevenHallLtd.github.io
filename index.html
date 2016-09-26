@@ -1,671 +1,794 @@
 <!DOCTYPE html>
-<html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <title>Steven Hall - Freelance Frontend Developer</title>
-        <meta name="description" content="Over ten years experience in front-end development. A keen eye for design with a clear understanding of UX. An expert problem-solver and avid brainstormer. A master craftsman of clean, maintainable code. A real team-player and all-round nice guy ;-)">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <meta property="og:url" content="http://stevenhall.uk" />
-        <meta property="og:title" content="Steven Hall - Freelance Frontend Developer" />
-        <meta property="og:description" content="Over ten years experience in front-end development. A keen eye for design with a clear understanding of UX. An expert problem-solver and avid brainstormer. A master craftsman of clean, maintainable code. A real team-player and all-round nice guy ;-)" />
-        <meta property="og:image" content="http://stevenhall.uk/facebook-hero.png" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-        <script>
-            (function(d) {
-                var config = {
-                            kitId: 'hyf5yvq',
-                            scriptTimeout: 3000,
-                            async: true
-                        },
-                        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-            })(document);
-        </script>
-
-        <style>
-            * {
-                box-sizing: border-box;
-                -webkit-box-sizing: border-box;
-            }
-
-            /* Class added by TypeKit while fonts are loading */
-            html.wf-loading {
-                opacity: 0;
-                background: #FFF;
-            }
-
-            html {
-                height: 100%;
-                background: #F2F2F2;
-                transition: opacity 0.25s ease-out, background 0.5s ease-out;
-                -webkit-transition: opacity 0.25s ease-out, background 0.5s ease-out;
-                -moz-transition: opacity 0.25s ease-out, background 0.5s ease-out;
-                -o-transition: opacity 0.25s ease-out, background 0.5s ease-out;
-            }
-
-            body {
-                height: 100%;
-                margin: 0 auto;
-
-                min-width: 320px;
-                max-width: 1440px;
-
-                font-size: 15px;
-                font-family: "futura-pt", sans-serif;
-                letter-spacing: -0.02em;
-            }
-
-            h1, h2, h3 {
-                margin-top: 0;
-                letter-spacing: -0.025em;
-
-                /* Stop displaying the text cursor everywhere */
-                cursor: default;
-            }
-
-            .main__container {
-                height: 100%;
-            }
-
-            .intro,
-            .project,
-            .promo,
-            .contact {
-                padding: 1em;
-                border: 1em solid #FFF;
-                cursor: default;
-            }
-
-            .intro,
-            .project {
-                color: #FFF;
-            }
-
-            .intro {
-                height: 100%;
-                background: #F8E71C
-            }
-            
-            .intro__container {
-                height: 100%;
-                background: url(images/logo.svg) no-repeat left;
-                background-size: contain;
-            }
-
-            .intro__heading {
-                display: none;
-            }
-
-            .promo {
-                padding: 4em 0;
-            }
-
-            .promo,
-            .contact {
-                background: #FFF;
-                text-align: center;
-            }
-
-            .promo__heading {
-                margin: 0;
-                font-size: 1.5em;
-            }
-
-            .project__link,
-            .project__heading,
-            .project__keywords li {
-                display: inline;
-                background: #111;
-
-                /* Fix for multi-line padded text */
-                box-decoration-break: clone;
-                -webkit-box-decoration-break: clone;
-            }
-
-            .project {
-                overflow: auto;
-            }
-
-            .project__heading {
-                margin: 1em 0;
-                padding: 0 0.3em 0 0.25em;
-                font-size: 1.5em;
-            }
-
-            .project__keywords {
-                margin: 1em 0;
-                padding: 0;
-                cursor: default;
-            }
-
-            .project__link,
-            .project__keywords li {
-                padding: 0.1em 0.3em 0.1em 0.25em;
-                margin-right: 0.15em;
-                line-height: 1.8em;
-                font-weight: bold;
-            }
-
-            .project__keywords li {
-                cursor: default;
-            }
-
-            .project__link {
-                background: rgba(0, 0, 0, 0.1);
-                color: #FFF;
-                margin: 0.5em 0;
-                padding-left: 1.8em;
-                padding-right: 0.6em;
-                display: inline-block;
-                text-decoration: none;
-                font-weight: bold;
-                transition: background 0.2s ease-in-out;
-                -webkit-transition: background 0.2s ease-in-out;
-                -moz-transition: background 0.2s ease-in-out;
-                -o-transition: background 0.2s ease-in-out;
-            }
-
-            .project__link:hover {
-                background: rgba(0, 0, 0, 1);
-            }
-
-            .project__link::before {
-                content: "";
-                display: block;
-                position: absolute;
-                background: url(images/link.svg) no-repeat center;
-                background-size: 0.8em;
-                margin-left: -1.7em;
-                height: 1.8em;
-                width: 1.8em;
-            }
-
-            .project__link--inactive::before {
-                background-image: url(images/link--broken.svg);
-            }
-
-            .project__description {
-                line-height: 1.5em;
-                cursor: default;
-            }
-
-            .project__description--inverted {
-                color: #4A4A4A;
-            }
-
-            .project--kindeo {
-                background: #7ED321;
-            }
-
-            .project--barometer {
-                background: #4A90E2;
-            }
-
-            .project--chromebooks {
-                background: #D0021B;
-            }
-
-            .project--nexus {
-                background: #4A4A4A;
-            }
-
-            .screenshots {
-                margin: 2em auto;
-                position: relative;
-            }
-
-            .screenshots__frame {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: none no-repeat center;
-                background-size: contain;
-                pointer-events: none;
-            }
-
-            .screenshots__content {
-                position: absolute;
-            }
-
-            .screenshots--tablet {
-                width: 96%;
-                padding-top: 64.86%;
-            }
-
-            .screenshots--tablet .screenshots__content {
-                top: 5.15%;
-                left: 10%;
-                width: 80%;
-                height: 88.24%;
-            }
-
-            .screenshots--tablet .screenshots__frame {
-                background-image: url(images/tablet.svg);
-            }
-
-            .screenshots--desktop {
-                padding-top: 58%;
-            }
-
-            .screenshots--desktop .screenshots__content {
-                top: 5.41%;
-                left: 11.56%;
-                width: 76.3%;
-                height: 82.22%;
-            }
-
-            .screenshots--desktop .screenshots__frame {
-                background-image: url(images/desktop.svg);
-            }
-
-            .screenshot {
-                width: 100%;
-                height: 100%;
-                box-shadow: inset 0 0 5px 0 rgba(0,0,0,0.75);
-                background: #4A4A4A no-repeat center;
-                background-size: cover;
-            }
-
-            .screenshot--kindeo {
-                background-image: url(images/screenshots/kindeo--mobile.jpg);
-            }
-
-            .screenshot--barometer {
-                background-image: url(images/screenshots/barometer--mobile.jpg);
-            }
-
-            .screenshot--chromebooks {
-                background-image: url(images/screenshots/chromebooks--mobile.jpg);
-            }
-
-            .screenshot--nexus {
-                background-image: url(images/screenshots/nexus--mobile.jpg);
-            }
-
-            .client__logos {
-                margin: 0;
-                padding: 0;
-                height: 100%;
-                position: relative;
-            }
-
-            .client__logos li {
-                float: left;
-                height: 50%;
-                width: 33.333%;
-                list-style: none;
-                position: relative;
-                box-shadow: 0 0 0 2px #FFF;
-                transition: background 0.2s ease-in-out;
-                -webkit-transition: background 0.2s ease-in-out;
-                -moz-transition: background 0.2s ease-in-out;
-                -o-transition: background 0.2s ease-in-out;
-            }
-
-            .client__logos li:hover {
-                background: #FFF;
-            }
-
-            .client__logos li svg {
-                top: 50%;
-                left: 50%;
-                width: 65%;
-                display: block;
-                position: absolute;
-                transform: translate(-50%, -50%);
-                -webkit-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-            }
-
-            .contact {
-                height: 100%;
-                position: relative;
-            }
-
-            .contact__heading {
-                font-size: 1.5em;
-            }
-
-            .contact__button {
-                width: 3.6em;
-                margin: 0 5px;
-                display: inline-block;
-                transition: opacity 0.2s ease-in-out;
-                -webkit-transition: opacity 0.2s ease-in-out;
-                -moz-transition: opacity 0.2s ease-in-out;
-                -o-transition: opacity 0.2s ease-in-out;
-            }
-
-            .contact__button:hover {
-                opacity: 0.85;
-            }
-
-            .contact__content {
-                top: 50%;
-                left: 50%;
-                width: 100%;
-                position: absolute;
-                transform: translate(-50%, -50%);
-                -webkit-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-            }
-
-            @media screen and (min-width: 480px) {
-                html, body {
-                    font-size: 20px;
-                }
-
-                .promo {
-                    padding: 3em 1em;
-                }
-
-                .project__description {
-                    line-height: 1.75em;
-                }
-
-                .screenshot--kindeo {
-                    background-image: url(images/screenshots/kindeo--phablet.jpg);
-                }
-
-                .screenshot--barometer {
-                    background-image: url(images/screenshots/barometer--phablet.jpg);
-                }
-
-                .screenshot--chromebooks {
-                    background-image: url(images/screenshots/chromebooks--phablet.jpg);
-                }
-
-                .screenshot--nexus {
-                    background-image: url(images/screenshots/nexus--phablet.jpg);
-                }
-            }
-
-            @media screen and (min-width: 720px) {
-                html, body {
-                    font-size: 25px;
-                }
-
-                .intro,
-                .project,
-                .promo,
-                .contact {
-                    padding: 2em;
-                    border: 2em solid #FFF;
-                }
-
-                .screenshot--kindeo {
-                    background-image: url(images/screenshots/kindeo--tablet.jpg);
-                }
-
-                .screenshot--barometer {
-                    background-image: url(images/screenshots/barometer--tablet.jpg);
-                }
-
-                .screenshot--chromebooks {
-                    background-image: url(images/screenshots/chromebooks--tablet.jpg);
-                }
-
-                .screenshot--nexus {
-                    background-image: url(images/screenshots/nexus--tablet.jpg);
-                }
-            }
-
-            @media screen and (min-width: 960px) {
-                .project__keywords li {
-                    font-size: 1.2em;
-                }
-
-                .promo__heading,
-                .project__heading,
-                .contact__heading {
-                    font-size: 2em;
-                }
-
-                .project__description {
-                    line-height: 2em;
-                }
-
-                .screenshot--kindeo {
-                    background-image: url(images/screenshots/kindeo--desktop.jpg);
-                }
-
-                .screenshot--barometer {
-                    background-image: url(images/screenshots/barometer--desktop.jpg);
-                }
-
-                .screenshot--chromebooks {
-                    background-image: url(images/screenshots/chromebooks--desktop.jpg);
-                }
-
-                .screenshot--nexus {
-                    background-image: url(images/screenshots/nexus--desktop.jpg);
-                }
-            }
-        </style>
-
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-74521129-1', 'auto');
-            ga('send', 'pageview');
-
-        </script>
-    </head>
-
-    <body>
-
-        <main class="main__container" role="main">
-
-            <header class="intro">
-                <div class="intro__container">
-                    <h1 class="intro__heading">Steven Hall</h1>
-                </div>
-            </header>
-
-            <section class="promo">
-                <h2 class="promo__heading">Over ten years experience<br> in front-end development.</h2>
-            </section>
-
-            <article class="project project--kindeo">
-                <h2 class="project__heading">Kindeo</h2>
-                <div class="screenshots screenshots--tablet">
-                    <div class="screenshots__content">
-                        <div class="screenshot screenshot--kindeo"></div>
-                    </div>
-                    <div class="screenshots__frame"></div>
-                </div>
-                <ul class="project__keywords">
-                    <li>React</li>
-                    <li>Fluxible</li>
-                    <li>Sass</li>
-                    <li>Webpack</li>
-                </ul>
-                <p class="project__description"><b>Kindeo</b> is an easy-to-use iPad app that helps you record stories and memories onto video.&nbsp; Opting for a hybrid approach for maximum portability, I was quickly able to establish a solid foundation using React, Fluxible and Webpack – allowing us to build features in record time without accruing technical debt.&nbsp; Working within a lean, agile team, I was very much hands-on in pinning down project requirements and helping to shape the product – working directly with the product owners to explain key considerations and pain points.&nbsp; The result is an app which, due to its responsiveness and silky-smooth transitions, feels every bit like a native app.</p>
-                <a class="project__link" href="https://geo.itunes.apple.com/app/kindeo-capture-a-life-story/id1020197282?mt=8" target="_blank">Kindeo on the App Store</a>
-            </article>
-
-            <section class="promo">
-                <h2 class="promo__heading">A keen eye for design with<br> a clear understanding of UX.</h2>
-            </section>
-
-            <article class="project project--barometer">
-                <h2 class="project__heading">Google Consumer Barometer</h2>
-                <div class="screenshots screenshots--desktop">
-                    <div class="screenshots__content">
-                        <div class="screenshot screenshot--barometer"></div>
-                    </div>
-                    <div class="screenshots__frame"></div>
-                </div>
-                <ul class="project__keywords">
-                    <li>Angular</li>
-                    <li>Foundation</li>
-                    <li>Less</li>
-                    <li>Gulp</li>
-                </ul>
-                <p class="project__description"><b>Google Consumer Barometer</b> is a tool to help you understand how people use the Internet across the world.&nbsp; Working with data from surveys around the world, the challenge was clear: How to present some really big data in a clear, informative, interesting way.&nbsp; Working within a small, agile team through an extensive design and discovery phase, the result is a tool which successfully masks its immense complexity behind a beautifully simple, yet powerful user interface.&nbsp; My main responsibility was to develop that interface, which is fully responsive – taking some occasionally very rough middleware and honing it into a great user experience.</p>
-                <a class="project__link" href="http://consumerbarometer.com" target="_blank">Consumer Barometer</a>
-            </article>
-
-            <section class="promo">
-                <h2 class="promo__heading">An expert problem-solver<br> and avid brainstormer.</h2>
-            </section>
-
-            <article class="project project--chromebooks">
-                <h2 class="project__heading">Google Chromebooks</h2>
-                <div class="screenshots screenshots--desktop">
-                    <div class="screenshots__content">
-                        <div class="screenshot screenshot--chromebooks"></div>
-                    </div>
-                    <div class="screenshots__frame"></div>
-                </div>
-                <ul class="project__keywords">
-                    <li>Assemble</li>
-                    <li>Foundation</li>
-                    <li>Sass</li>
-                    <li>Grunt</li>
-                </ul>
-                <p class="project__description"><b>Google Chromebooks</b> is a static site promoting Google’s range of Chromebook computers.&nbsp; Working side-by-side with a designer, we set about creating a number of prototypes for user testing – which I also helped conduct and analyse.&nbsp; Given the target audience, many of the earlier, more radical designs caused some major usability concerns – and so the design was pared back to a simple, yet striking layout.&nbsp; The site is fully responsive and localised into numerous languages at compile-time using JSON data.&nbsp; The project was hosted on Google App Engine, which allowed for simple A/B testing and a blue-green deployment process.</p>
-                <div class="project__link project__link--inactive">Project no longer live</div>
-            </article>
-
-            <section class="promo">
-                <h2 class="promo__heading">A master craftsman of<br> clean, maintainable code.</h2>
-            </section>
-
-            <article class="project project--nexus">
-                <h2 class="project__heading">Google Nexus</h2>
-                <div class="screenshots screenshots--desktop">
-                    <div class="screenshots__content">
-                        <div class="screenshot screenshot--nexus"></div>
-                    </div>
-                    <div class="screenshots__frame"></div>
-                </div>
-                <ul class="project__keywords">
-                    <li>Angular</li>
-                    <li>Foundation</li>
-                    <li>Sass</li>
-                    <li>Grunt</li>
-                </ul>
-                <p class="project__description"><b>Google Nexus</b> is the main retail site for Google’s range of phones and tablets.&nbsp; Joining a small team of developers, the requirement was to turn the site around in record time to tie in with the release of the latest handset.&nbsp; As this was a major international google retail site, we had to meet a lot of strict conditions and work with some interesting, proprietary tools to get the site published and localised.&nbsp; Nevertheless, we were able to collectively deal with issues, working around problems as they arose to deliver the project on time.</p>
-                <div class="project__link project__link--inactive">Project no longer live</div>
-            </article>
-
-            <section class="promo">
-                <h2 class="promo__heading">A real team-player and<br> all-round nice guy ;-)</h2>
-            </section>
-
-            <article class="project project--miscellaneous">
-                <h2 class="project__heading">Ask me about...</h2>
-                <div class="screenshots screenshots--desktop">
-                    <div class="screenshots__content">
-                        <ul class="client__logos">
-                            <li>
-                                <svg viewBox="0 0 100 34" alt="Google">
-                                    <path fill="#EA4335" d="M42.8703704,17.4740741 C42.8703704,22.2037037 39.1703704,25.6888889 34.6296296,25.6888889 C30.0888889,25.6888889 26.3888889,22.2037037 26.3888889,17.4740741 C26.3888889,12.7111111 30.0888889,9.25925926 34.6296296,9.25925926 C39.1703704,9.25925926 42.8703704,12.7111111 42.8703704,17.4740741 L42.8703704,17.4740741 Z M39.262963,17.4740741 C39.262963,14.5185185 37.1185185,12.4962963 34.6296296,12.4962963 C32.1407407,12.4962963 29.9962963,14.5185185 29.9962963,17.4740741 C29.9962963,20.4 32.1407407,22.4518519 34.6296296,22.4518519 C37.1185185,22.4518519 39.262963,20.3962963 39.262963,17.4740741 L39.262963,17.4740741 Z"></path>
-                                    <path fill="#FBBC05" d="M60.6481481,17.4740741 C60.6481481,22.2037037 56.9481481,25.6888889 52.4074074,25.6888889 C47.8666667,25.6888889 44.1666667,22.2037037 44.1666667,17.4740741 C44.1666667,12.7148148 47.8666667,9.25925926 52.4074074,9.25925926 C56.9481481,9.25925926 60.6481481,12.7111111 60.6481481,17.4740741 L60.6481481,17.4740741 Z M57.0407407,17.4740741 C57.0407407,14.5185185 54.8962963,12.4962963 52.4074074,12.4962963 C49.9185185,12.4962963 47.7740741,14.5185185 47.7740741,17.4740741 C47.7740741,20.4 49.9185185,22.4518519 52.4074074,22.4518519 C54.8962963,22.4518519 57.0407407,20.3962963 57.0407407,17.4740741 L57.0407407,17.4740741 Z"></path>
-                                    <path fill="#4285F4" d="M77.6851852,9.75555556 L77.6851852,24.5037037 C77.6851852,30.5703704 74.1074074,33.0481481 69.8777778,33.0481481 C65.8962963,33.0481481 63.5,30.3851852 62.5962963,28.2074074 L65.737037,26.9 C66.2962963,28.237037 67.6666667,29.8148148 69.8740741,29.8148148 C72.5814815,29.8148148 74.2592593,28.1444444 74.2592593,25 L74.2592593,23.8185185 L74.1333333,23.8185185 C73.3259259,24.8148148 71.7703704,25.6851852 69.8074074,25.6851852 C65.7,25.6851852 61.937037,22.1074074 61.937037,17.5037037 C61.937037,12.8666667 65.7,9.25925926 69.8074074,9.25925926 C71.7666667,9.25925926 73.3222222,10.1296296 74.1333333,11.0962963 L74.2592593,11.0962963 L74.2592593,9.75925926 L77.6851852,9.75925926 L77.6851852,9.75555556 Z M74.5148148,17.5037037 C74.5148148,14.6111111 72.5851852,12.4962963 70.1296296,12.4962963 C67.6407407,12.4962963 65.5555556,14.6111111 65.5555556,17.5037037 C65.5555556,20.3666667 67.6407407,22.4518519 70.1296296,22.4518519 C72.5851852,22.4518519 74.5148148,20.3666667 74.5148148,17.5037037 L74.5148148,17.5037037 Z"></path>
-                                    <path fill="#34A853" d="M83.3333333,1.11111111 L83.3333333,25.1851852 L79.8148148,25.1851852 L79.8148148,1.11111111 L83.3333333,1.11111111 L83.3333333,1.11111111 Z"></path>
-                                    <path fill="#EA4335" d="M97.0444444,20.1777778 L99.8444444,22.0444444 C98.9407407,23.3814815 96.762963,25.6851852 93,25.6851852 C88.3333333,25.6851852 84.8481481,22.0777778 84.8481481,17.4703704 C84.8481481,12.5851852 88.362963,9.25555556 92.5962963,9.25555556 C96.8592593,9.25555556 98.9444444,12.6481481 99.6259259,14.4814815 L100,15.4148148 L89.0185185,19.962963 C89.8592593,21.6111111 91.1666667,22.4518519 93,22.4518519 C94.837037,22.4518519 96.1111111,21.5481481 97.0444444,20.1777778 L97.0444444,20.1777778 Z M88.4259259,17.2222222 L95.7666667,14.1740741 C95.362963,13.1481481 94.1481481,12.4333333 92.7185185,12.4333333 C90.8851852,12.4333333 88.3333333,14.0518519 88.4259259,17.2222222 L88.4259259,17.2222222 Z"></path>
-                                    <path fill="#4285F4" d="M13.0703704,15.337037 L13.0703704,11.8518519 L24.8148148,11.8518519 C24.9296296,12.4592593 24.9888889,13.1777778 24.9888889,13.9555556 C24.9888889,16.5703704 24.2740741,19.8037037 21.9703704,22.1074074 C19.7296296,24.4407407 16.8666667,25.6851852 13.0740741,25.6851852 C6.04444444,25.6851852 0.133333333,19.9592593 0.133333333,12.9296296 C0.133333333,5.9 6.04444444,0.174074074 13.0740741,0.174074074 C16.962963,0.174074074 19.7333333,1.7 21.8148148,3.68888889 L19.3555556,6.14814815 C17.862963,4.74814815 15.8407407,3.65925926 13.0703704,3.65925926 C7.93703704,3.65925926 3.92222222,7.7962963 3.92222222,12.9296296 C3.92222222,18.062963 7.93703704,22.2 13.0703704,22.2 C16.4,22.2 18.2962963,20.862963 19.5111111,19.6481481 C20.4962963,18.662963 21.1444444,17.2555556 21.4,15.3333333 L13.0703704,15.337037 L13.0703704,15.337037 Z"></path>
-                                </svg>
-                            </li>
-
-                            <li>
-                                <svg viewBox="0 0 100 21.3" alt="Microsoft">
-                                    <path fill="#706D6E" d="M100,9.7V7.9h-2.2V5.2l-0.1,0l-2.1,0.6l0,0v2.1h-3.2V6.7c0-0.5,0.1-0.9,0.4-1.2c0.2-0.3,0.6-0.4,1-0.4c0.3,0,0.6,0.1,0.9,0.2l0.1,0V3.5l0,0c-0.3-0.1-0.7-0.2-1.2-0.2c-0.6,0-1.2,0.1-1.7,0.4c-0.5,0.3-0.9,0.7-1.2,1.2c-0.3,0.5-0.4,1.1-0.4,1.7v1.3h-1.5v1.8h1.5v7.4h2.2V9.7h3.2v4.7c0,1.9,0.9,2.9,2.7,2.9c0.3,0,0.6,0,0.9-0.1c0.3-0.1,0.5-0.1,0.7-0.2l0,0v-1.8l-0.1,0.1c-0.1,0.1-0.3,0.1-0.4,0.2c-0.2,0-0.3,0.1-0.4,0.1c-0.4,0-0.7-0.1-0.9-0.3c-0.2-0.2-0.3-0.6-0.3-1.2V9.7L100,9.7L100,9.7z M83.8,15.5c-0.8,0-1.4-0.3-1.9-0.8c-0.4-0.5-0.7-1.3-0.7-2.2c0-1,0.2-1.7,0.7-2.3c0.4-0.5,1.1-0.8,1.8-0.8c0.8,0,1.4,0.3,1.8,0.8c0.4,0.5,0.7,1.3,0.7,2.2c0,1-0.2,1.8-0.6,2.3C85.2,15.2,84.6,15.5,83.8,15.5 M83.9,7.7c-1.5,0-2.7,0.4-3.6,1.3c-0.9,0.9-1.3,2.1-1.3,3.6c0,1.4,0.4,2.6,1.3,3.4s2,1.3,3.4,1.3c1.5,0,2.6-0.4,3.5-1.3c0.9-0.9,1.3-2.1,1.3-3.6c0-1.5-0.4-2.6-1.2-3.5C86.5,8.1,85.4,7.7,83.9,7.7 M75.5,7.7c-1,0-1.9,0.3-2.5,0.8c-0.7,0.5-1,1.2-1,2c0,0.4,0.1,0.8,0.2,1.1c0.1,0.3,0.4,0.6,0.6,0.9c0.3,0.2,0.7,0.5,1.3,0.7c0.5,0.2,0.9,0.4,1.1,0.5c0.2,0.1,0.4,0.3,0.5,0.4c0.1,0.1,0.1,0.3,0.1,0.5c0,0.6-0.5,0.9-1.4,0.9c-0.3,0-0.8-0.1-1.2-0.2s-0.9-0.3-1.2-0.6L72,14.7v2.1l0,0c0.3,0.1,0.7,0.3,1.2,0.4c0.5,0.1,0.9,0.1,1.2,0.1c1.1,0,2-0.3,2.7-0.8c0.7-0.5,1-1.2,1-2.1c0-0.6-0.2-1.2-0.5-1.6c-0.3-0.4-1-0.8-1.8-1.2c-0.7-0.3-1.1-0.5-1.3-0.7c-0.2-0.2-0.3-0.4-0.3-0.7c0-0.3,0.1-0.5,0.3-0.7c0.2-0.2,0.5-0.3,0.9-0.3c0.4,0,0.7,0.1,1.1,0.2c0.4,0.1,0.7,0.3,1,0.4l0.1,0.1v-2l0,0c-0.3-0.1-0.6-0.2-1-0.3C76.2,7.7,75.9,7.7,75.5,7.7 M66.3,15.5c-0.8,0-1.4-0.3-1.9-0.8c-0.4-0.5-0.7-1.3-0.7-2.2c0-1,0.2-1.7,0.7-2.3c0.4-0.5,1.1-0.8,1.8-0.8c0.8,0,1.4,0.3,1.8,0.8c0.4,0.5,0.7,1.3,0.7,2.2c0,1-0.2,1.8-0.6,2.3C67.8,15.2,67.1,15.5,66.3,15.5 M66.4,7.7c-1.5,0-2.7,0.4-3.6,1.3c-0.9,0.9-1.3,2.1-1.3,3.6c0,1.4,0.4,2.6,1.3,3.4s2,1.3,3.4,1.3c1.5,0,2.6-0.4,3.5-1.3c0.9-0.9,1.3-2.1,1.3-3.6c0-1.5-0.4-2.6-1.2-3.5C69,8.1,67.9,7.7,66.4,7.7 M58.3,9.5V7.9h-2.2v9.2h2.2v-4.7c0-0.8,0.2-1.5,0.5-1.9c0.3-0.5,0.8-0.7,1.4-0.7c0.2,0,0.4,0,0.6,0.1c0.2,0.1,0.4,0.1,0.5,0.2l0.1,0.1V7.9l0,0c-0.2-0.1-0.5-0.1-0.8-0.1c-0.5,0-1,0.2-1.4,0.5C58.8,8.6,58.5,9,58.3,9.5C58.3,9.5,58.3,9.5,58.3,9.5z M52.3,7.7c-1,0-1.9,0.2-2.6,0.6c-0.8,0.4-1.3,1-1.7,1.8c-0.4,0.8-0.6,1.6-0.6,2.6c0,0.9,0.2,1.7,0.6,2.4c0.4,0.7,0.9,1.2,1.6,1.6c0.7,0.4,1.5,0.6,2.4,0.6c1,0,1.9-0.2,2.6-0.6l0,0v-2l-0.1,0.1c-0.3,0.2-0.7,0.4-1.1,0.6c-0.4,0.1-0.7,0.2-1,0.2c-0.8,0-1.5-0.3-2-0.8c-0.5-0.5-0.7-1.3-0.7-2.2c0-0.9,0.3-1.7,0.8-2.2c0.5-0.6,1.2-0.8,2-0.8c0.7,0,1.4,0.2,2.1,0.7l0.1,0.1V8.2l0,0c-0.2-0.1-0.6-0.3-1-0.3C53,7.7,52.6,7.7,52.3,7.7 M45.8,7.9h-2.2v9.2h2.2V7.9z M44.8,4c-0.4,0-0.7,0.1-0.9,0.4c-0.3,0.2-0.4,0.5-0.4,0.9c0,0.3,0.1,0.6,0.4,0.9c0.3,0.2,0.6,0.3,0.9,0.3c0.4,0,0.7-0.1,0.9-0.3c0.3-0.2,0.4-0.5,0.4-0.9s-0.1-0.6-0.4-0.9C45.5,4.1,45.1,4,44.8,4 M39.4,7.2v9.8h2.2V4.3h-3l-3.9,9.5l-3.8-9.5h-3.2v12.8h2.1V7.2h0.1l4,9.8h1.6L39.4,7.2L39.4,7.2L39.4,7.2z"></path>
-                                    <path fill="#F1511B" d="M10.1,10.1H0V0h10.1V10.1z"></path>
-                                    <path fill="#80CC28" d="M21.3,10.1H11.2V0h10.1L21.3,10.1L21.3,10.1z"></path>
-                                    <path fill="#00ADEF" d="M10.1,21.3H0V11.2h10.1V21.3z"></path>
-                                    <path fill="#FBBC09" d="M21.3,21.3H11.2V11.2h10.1L21.3,21.3L21.3,21.3z"></path>
-                                </svg>
-                            </li>
-
-                            <li>
-                                <svg viewBox="0 0 100 28" alt="Tesco">
-                                    <path fill="#0054A4" d="M8.09269154,22.4569353 C6.10214428,22.4569353 4.49020398,23.5962388 3.71209453,24.4037015 C3.71209453,24.4037015 1.81856219,26.2803184 0.536472637,26.9300697 C0.480253731,26.9609154 0.481248756,27.0231045 0.559358209,27.0231045 L12.1484129,27.0231045 C14.4394577,27.0231045 15.5165721,26.2469851 16.8762736,25.0295721 C16.8762736,25.0295721 18.8558756,23.1897711 20.2135871,22.5957413 C20.350403,22.544 20.3180647,22.4569353 20.2135871,22.4569353 L8.09269154,22.4569353 L8.09269154,22.4569353 Z M28.0021443,22.4569353 C26.011597,22.4569353 24.4011493,23.5962388 23.6215473,24.4037015 C23.6215473,24.4037015 21.7285124,26.2803184 20.4464229,26.9300697 C20.3897065,26.9609154 20.3907015,27.0231045 20.4693085,27.0231045 L32.0812488,27.0231045 C34.371796,27.0231045 35.4499055,26.2469851 36.8091095,25.0295721 C36.8091095,25.0295721 38.7668209,23.1897711 40.1235373,22.5957413 C40.2603532,22.544 40.250403,22.4569353 40.1464229,22.4569353 L28.0021443,22.4569353 L28.0021443,22.4569353 Z M47.9344826,22.4569353 C45.9444328,22.4569353 44.33299,23.5962388 43.5538856,24.4037015 C43.5538856,24.4037015 41.6603532,26.2803184 40.3782637,26.9300697 C40.3225423,26.9609154 40.3240348,27.0231045 40.4021443,27.0231045 L52.0140846,27.0231045 C54.3046318,27.0231045 55.3588607,26.2469851 56.7190597,25.0295721 C56.7190597,25.0295721 58.6986617,23.1897711 60.0558756,22.5957413 C60.1931891,22.544 60.1832388,22.4569353 60.0792587,22.4569353 L47.9344826,22.4569353 L47.9344826,22.4569353 Z M67.8439353,22.4569353 C65.8543831,22.4569353 64.2658259,23.5962388 63.4862239,24.4037015 C63.4862239,24.4037015 61.569806,26.2803184 60.2872189,26.9300697 C60.2314975,26.9609154 60.23299,27.0231045 60.3110995,27.0231045 L71.9225423,27.0231045 C74.2135871,27.0231045 75.291199,26.2469851 76.6509005,25.0295721 C76.6509005,25.0295721 78.631995,23.1897711 79.9887114,22.5957413 C80.1265224,22.544 80.092194,22.4569353 79.9887114,22.4569353 L67.8439353,22.4569353 L67.8439353,22.4569353 Z M87.7757761,22.4569353 C85.7857264,22.4569353 84.1732886,23.5962388 83.3951791,24.4037015 C83.3951791,24.4037015 81.5006517,26.2803184 80.2190597,26.9300697 C80.1623433,26.9609154 80.1643333,27.0231045 80.2419453,27.0231045 L91.8548806,27.0231045 C94.1454279,27.0231045 95.2220448,26.2469851 96.5832388,25.0295721 C96.5832388,25.0295721 98.5414478,23.1897711 99.8966716,22.5957413 C100.033488,22.544 100.02503,22.4569353 99.9200547,22.4569353 L87.7757761,22.4569353 L87.7757761,22.4569353 Z"></path>
-                                    <path fill="#F02E25" d="M48.6533881,0.415641791 C44.4170697,0.415641791 40.2862239,1.67335323 40.2862239,5.88529353 C40.2862239,13.1793234 53.0101045,9.32608955 53.0101045,13.7887761 C53.0101045,15.2435025 50.7538856,15.8285771 48.9314975,15.8285771 C45.6578657,15.8285771 43.4016468,15.3415124 40.5414478,13.6265871 L40.5414478,17.2882786 C42.6737861,17.9912637 45.5747811,18.3315622 48.7230398,18.3315622 C53.1175672,18.3315622 57.22901,17.1967363 57.22901,12.884796 C57.22901,5.26887562 44.5046318,8.69076617 44.5046318,4.95842786 C44.5046318,3.45544279 46.5464229,2.94200995 48.3295075,2.94200995 C51.330005,2.94200995 54.5693085,3.8201194 56.3489104,5.4678806 L56.3489104,1.57434826 C54.0459254,0.847482587 50.9882139,0.415641791 48.6533881,0.415641791 L48.6533881,0.415641791 Z M71.1349801,0.461910448 C63.4936866,0.461910448 58.4339851,4.13504478 58.4339851,9.73255721 C58.4339851,14.8698706 63.0777662,18.3081791 70.0225423,18.3081791 C72.2722935,18.3081791 74.2802537,18.0131542 76.6275174,17.4499701 L76.6275174,13.1156418 C74.9683134,14.8688756 72.9961741,15.5723582 70.8797562,15.5723582 C66.7782637,15.5723582 63.972791,13.0171343 63.972791,9.33753234 C63.972791,5.7081791 66.8812488,3.05643781 70.9484129,3.05643781 C73.1648308,3.05643781 74.9414478,3.86240796 76.371796,5.25892537 L76.371796,0.924597015 C74.8847313,0.618129353 73.0195572,0.461910448 71.1349801,0.461910448 L71.1349801,0.461910448 Z M88.9573682,0.461910448 C82.372791,0.461910448 77.7165721,4.25245771 77.7165721,9.59325373 C77.7165721,14.8325572 81.8976667,18.3086766 88.1235373,18.3086766 C94.7379652,18.3086766 99.2941841,14.6131542 99.2941841,9.24648756 C99.2956766,3.98081592 95.152393,0.461910448 88.9573682,0.461910448 L88.9573682,0.461910448 Z M1.18622388,0.994746269 L1.18622388,5.09723383 C2.61756716,3.98778109 5.6110995,3.56937313 8.88075124,3.54449751 L8.88075124,14.7385274 C8.88075124,16.3663881 8.73697015,16.8300697 8.04642289,17.6823085 L14.5130896,17.6823085 C13.7872189,16.8300697 13.6782637,16.3663881 13.6782637,14.7385274 L13.6782637,3.45096517 C16.5120945,3.4758408 19.8951791,3.98678607 21.3265224,5.09773134 L21.3265224,0.995243781 L1.18622388,0.995243781 L1.18622388,0.994746269 L1.18622388,0.994746269 Z M23.0653284,0.994746269 C23.7419453,1.84648756 23.8762736,2.3320597 23.8762736,3.96141294 L23.8762736,14.7385274 C23.8762736,16.3663881 23.7538856,16.8554428 23.111597,17.6823085 L38.73299,17.6823085 L38.73299,13.6265871 C36.5897065,15.1524577 32.510602,15.1579303 30.8528905,15.1325572 L28.5817463,15.1325572 L28.5817463,10.4743483 L30.250403,10.4743483 C31.3812488,10.4743483 33.4215473,10.6081791 34.6076169,10.9614129 L34.6076169,7.48529353 C33.4384627,7.86091542 31.3777662,7.97235821 30.250403,7.97235821 L28.5817463,7.97235821 L28.5817463,3.54648756 L30.8528905,3.54648756 C32.8822438,3.54648756 36.411597,3.96638806 37.7364726,5.07633831 L37.7364726,0.997233831 L23.0653284,0.997233831 L23.0653284,0.994746269 L23.0653284,0.994746269 Z M88.5185622,2.98827861 C91.9673184,2.98827861 94.2429403,5.84151244 94.2429403,9.36191045 C94.2429403,12.8823085 91.9673184,15.7360398 88.5185622,15.7360398 C85.0135871,15.7360398 82.7693085,12.8823085 82.7693085,9.36191045 C82.769806,5.84200995 85.0135871,2.98827861 88.5185622,2.98827861 L88.5185622,2.98827861 Z"></path>
-                                </svg>
-                            </li>
-
-                            <li>
-                                <svg viewBox="0 0 100 37" alt="Disney">
-                                    <path fill="#108FF7" d="M5.4,18.5C5.6,17,7.7,14,15.9,13.7s11.9,1.9,11.9,2.8c0.1,1-1.6,2.3-2.7,2.4c-1.1,0.2-1-0.3-0.9-0.5c0-0.2,1.2-1,1.3-1.1c0.1-0.1,0.2-0.2-0.1-0.2c-0.3-0.1-2-0.6-8.3-0.6c-6.3,0.1-10.1,0.9-10.2,2.7c-0.2,2,6.9,6.4,14.9,6.5c8.3,0.2,12.3-3.7,12.4-7.7C34.1,11.1,22.1,2.5,6.1,1.5C1.3,1.2,1.4,1.7,1.4,1.8s1.3,0.5,1.3,1c0,0.4-1.1,0.2-1.5,0C0.9,2.9,0,2.2,0,1.6C0,1.1,0.6-0.2,7.1,0c6,0.2,15.4,1.9,23.8,7.8c4.2,3,6.9,6.2,6.9,11c-0.2,6.7-7.6,9.5-15.4,9.4C16.5,28,5.2,24.6,5.4,18.5"></path>
-                                    <path fill="#108FF7" d="M15.7,8.1c0.6,0,1.4,3.7,1.3,10.6c-0.1,6.3,0.2,11.9-1.7,11.7c-1.6-0.1-1.4-6.1-1.3-10.2C14.1,16.1,14.6,8.1,15.7,8.1"></path>
-                                    <path fill="#108FF7" d="M38.3,10.7c-0.2-0.1-0.4-1.3,1.5-3.6c0.9-1,2.3-2.5,4.5-3.5c2.8-1.3,5.7-1.7,6.7-0.2c1.3,1.9-0.9,4.4-3.4,5.7c-2.6,1.4-7.8,1.9-9.5-1c-1.1-1.9,0.2-4.6,2.4-5.9c2.6-1.6,5.2-1.4,7-0.7c1.3,0.5,1,2-0.4,2c-1,0-3.4-0.7-5.5,0.6c-1.3,0.8-2,2.1-1.3,3.4c1,1.8,4.5,1.7,6.5,0.6c2.4-1.2,3.4-2.9,2.8-3.6c-0.6-0.9-3.5,0.5-5.3,1.7c-1.7,1.2-3.7,2.9-4.6,3.9C39.4,10.2,38.7,11.1,38.3,10.7"></path>
-                                    <path fill="#108FF7" d="M41.7,12.9c0.6,0,1.5,1.3,1.3,6.6c-0.2,5.3-0.6,7.6-1.7,7.6s-1.5-2.9-1.3-5.9S40.7,12.9,41.7,12.9"></path>
-                                    <path fill="#108FF7" d="M59.3,22.5c0-2.7-3.9-3.5-7.6-4.3c-2.8-0.6-4-1-4-1.6c0-0.6,2-1.1,6.5-1c4.5,0.1,5-0.9,5-1.2c-0.1-0.4-0.9-1.3-5.9-1.2c-5,0.1-8.3,2-8.3,3.7c0.1,1.7,3,2.3,5.9,3c2.9,0.6,5.7,1.3,5.7,2.5c0,1.3-2.8,2.3-5.4,2.3s-4.7-0.4-4.7-1.1c0-0.3,0.9-0.2,1.3-0.2c0.3,0,2.4,0.1,3.2,0.1c0.8,0,2.3-0.1,2.3-0.9c-0.1-0.8-1.9-1.2-3.9-1.3c-2,0-5,0.5-5,2c0,1.7,3.8,3.3,7.4,3.3C55.7,26.9,59.3,25.1,59.3,22.5"></path>
-                                    <path fill="#108FF7" d="M63.5,14.5c-0.6,0-1.6,1.3-2,5.5c-0.5,4.1-0.2,5-0.2,5.4c0.2,0.6,0.6,0.9,0.9,1.1c0.3,0.2,1,0.9,1.2-0.2c0.2-1,0.5-7.1,0.6-7.2c0-0.2,0.1-0.5,0.5,0c0.6,0.7,3.4,5.1,4.7,6.8c0.9,1.1,1.5,1.7,2,1.6c0.6,0,2-0.2,2.4-7.8c0.2-5.5-1.9-7.6-2.3-7.9c-0.5-0.3-0.6-0.3-0.7-0.2c-0.1,0.1-0.1,0.2,0.2,0.6c0.2,0.4,0.8,2.3,0.8,5.9c0,2.6-0.3,4.1-0.6,4.9c-0.1,0.4-0.2,0.7-0.6,0.2c-0.6-0.6-1.6-2-2.7-3.8C66.1,17.5,64.3,14.5,63.5,14.5"></path>
-                                    <path fill="#108FF7" d="M76,14.4c0-0.6,3-1.3,5.4-1.5c2.4-0.2,3.9,0.2,4.2,0.5c0.2,0.2,0.9,1.2,0.6,1.6c-0.4,0.4-3.6,0.5-5.9,0.4c-0.4,1.3-1.4,4.6-1.5,7.1c-0.2,2.4,1.1,2.1,2.2,2c1.1-0.1,3.1-0.3,3.9-0.4c0.2,0,0.7,0,0.7,0.3S85.3,25,85,25.3c-0.6,0.4-3.3,2-6.1,1.9c-2-0.1-2.5-1.2-2.5-2.6c-0.1-2.3,1.3-8,1.8-9.3C77.4,15.2,75.9,15.2,76,14.4"></path>
-                                    <path fill="#108FF7" d="M75.2,20.1c-0.1,0.2,0.4,1,2.2,1.3c1.7,0.2,4.2,0,4.7-0.2c0.6-0.2,1.2-0.7,1.4-1.1c0.2-0.5,0.3-0.7,0.1-0.9c-0.2-0.2-1.1-0.2-2.3-0.2c-1.8,0.2-4.6,0.5-5.4,0.6C75.5,19.8,75.3,19.9,75.2,20.1"></path>
-                                    <path fill="#108FF7" d="M91.2,12.2c0.4,0,0.2,0.5-0.1,1c-0.2,0.6-2,4.3-2.4,7.4c-0.3,2.4,0.5,4,3,4.3c2.4,0.2,4.8-3,5.6-4.9c0.8-1.9,1.4-4.2,0.5-4.6c-1-0.4-3.1,2.8-4.6,5.7c-1.1,2.2-3.1,6.1-5,14.3C87.8,37,87.6,37,87.2,37c-0.3-0.1-1.6-0.8-1.2-3.7c0.4-2.9,2.2-7,3.5-9.8c1.3-2.8,6.1-11.1,8.8-10.5c2.8,0.6,1.2,6.2,0.6,7.6c-0.9,2.1-3.9,8-9.5,6c-2.5-0.9-3.1-4.3-2.3-7.2c0.6-2.1,2.2-5.2,3.1-6.4C90.6,12.5,90.8,12,91.2,12.2"></path>
-                                </svg>
-                            </li>
-
-                            <li>
-                                <svg viewBox="0 0 100 13.3" alt="Pixar">
-                                    <path fill="#111111" d="M0,12.8c0-0.3,0-0.3,1.1-0.4l1-0.1l0-0.2c0-0.3,0-5.8,0-9l0-2.3L1.8,0.6c-0.2,0-0.6-0.1-1-0.1C0.1,0.4,0,0.3,0,0.1C0,0,0.2,0,2.7,0c4,0,5.2,0.1,6.3,0.7c0.8,0.4,1.4,1.1,1.4,1.9c0.1,0.7-0.2,1.7-0.7,2.3c-0.7,1-2.1,1.9-3.5,2.2c-0.8,0.2-1,0.2-1,0.1c0-0.3,0.1-0.3,0.6-0.6c0.7-0.3,1.2-0.6,1.5-1C8,5.1,8.3,4.3,8.2,3.3c0-0.6,0-0.7-0.2-1.1c-0.5-1-1.4-1.5-3-1.6l-0.6,0l0,0.3c-0.1,0.3,0,9.4,0,10.6c0,0.7,0,0.8,0.2,0.8c0.1,0,0.6,0.1,1.1,0.1c0.6,0,1,0.1,1.1,0.1c0,0,0.1,0.1,0.1,0.2v0.2H4.1c-1.5,0-3,0-3.4,0C0.1,12.8,0,12.8,0,12.8z"></path>
-                                    <path fill="#111111" d="M21.9,12.7c0-0.1,0-0.2,0-0.2c0,0,0.3-0.1,0.7-0.1c0.4,0,0.8-0.1,1-0.2c0.3-0.1,0.3-0.1,0.3-0.4c0.1-0.6,0-11-0.1-11.1c0,0-0.5-0.1-1-0.2C22.5,0.5,22,0.4,22,0.4s0-0.1,0-0.2l0-0.2h2.7c1.5,0,2.9,0,3.2,0l0.5,0l0,0.2c0,0.1-0.1,0.2-0.1,0.2c0,0-0.5,0.1-1,0.2c-0.5,0.1-0.9,0.1-1,0.2c-0.1,0.1-0.1,8.2,0,10l0,1.5l0.3,0.1c0.2,0,0.6,0.1,1,0.1c0.4,0,0.7,0.1,0.7,0.1s0,0.1,0,0.2l0,0.2l-3,0c-1.7,0-3.1,0-3.2,0C22,12.8,21.9,12.8,21.9,12.7z"></path>
-                                    <path fill="#111111" d="M51.4,13c-1-0.8-2.8-2.8-5.1-5.5c-0.3-0.3-0.5-0.5-0.5-0.5c-0.2,0-2.6,3.6-3.2,4.9l-0.2,0.4l0.6,0.1c0.3,0,0.6,0.1,0.8,0.1c0.2,0,0.3,0.1,0.3,0.3c0,0-0.6,0.1-2.4,0.1h-2.4l0-0.1c0.1-0.2,0.2-0.3,0.6-0.3c0.6-0.1,0.8-0.2,1.3-0.7c0.6-0.6,3.5-4.4,4.2-5.2c0-0.1-0.1-0.2-0.4-0.6c-0.2-0.3-1-1.3-1.8-2.3c-0.8-1-1.6-2.1-1.8-2.3c-0.4-0.5-0.4-0.5-0.8-0.6c-0.2-0.1-0.5-0.1-0.6-0.1c-0.2,0-0.2,0-0.2-0.2c0-0.1,0-0.2,0-0.2c0,0,1.3,0,2.8-0.1c2.7,0,2.9,0,2.9,0.1c0,0.2-0.1,0.2-0.7,0.3c-0.3,0-0.7,0.1-0.8,0.1l-0.2,0l0.4,0.6c0.8,1.2,2.4,3.5,2.5,3.5c0.1,0,2.2-2.9,2.7-3.8c0.2-0.3,0.2-0.3-0.6-0.5c-0.5-0.1-0.6-0.1-0.6-0.3c0-0.1,0-0.2,0-0.2s1,0,2.2,0l2.2,0l0,0.2c0,0.1,0,0.2,0,0.2c0,0-0.3,0.1-0.6,0.1c-0.6,0.1-0.6,0.1-0.9,0.4c-0.4,0.4-1.9,2.1-3.1,3.4L47,5.3l0.5,0.6c0.5,0.6,0.6,0.9,2.8,3.9c0.9,1.3,2.3,3.1,2.5,3.4c0,0.1-0.1,0.1-0.5,0.1h-0.6L51.4,13z"></path>
-                                    <path fill="#111111" d="M98.7,12.8c-1-0.7-3.1-2.8-5.2-5.1l-0.8-0.9l-0.8,0c-0.5,0-0.9,0.1-0.9,0.1c-0.1,0,0,5.1,0.1,5.1c0.1,0.1,0.4,0.2,1.2,0.2c0.7,0.1,0.7,0.1,0.8,0.2c0,0.1,0,0.2,0,0.2c0,0-1.4,0-3.1,0l-3.1,0c0-0.1,0-0.2,0.1-0.3c0,0,0.5-0.1,1-0.2c0.5-0.1,0.9-0.1,0.9-0.2c0,0,0.1-0.3,0.1-0.6c0-0.6,0-10.5-0.1-10.7c0-0.2-0.2-0.3-1-0.3c-1-0.1-1-0.1-1-0.3V0.1h2.1c5.9,0,7.2,0.2,8.1,1.2c0.6,0.6,0.6,1.5,0.2,2.4c-0.3,0.7-1.2,1.7-2,2.1L94.9,6l0.2,0.4c0.3,0.5,2,3,2.7,4c0.7,1,1.1,1.4,1.7,2.2l0.5,0.6l-0.4,0.1c-0.2,0-0.4,0.1-0.4,0.1C99.2,13.2,99,13,98.7,12.8z M92.5,6.1c0.8-0.2,1.4-0.4,1.9-0.9c0.5-0.5,0.7-0.9,0.8-1.5c0.3-1.4-0.6-2.5-2.3-2.9c-0.6-0.2-1.8-0.3-1.9-0.2c0,0-0.1,0.8-0.1,2.9l0,2.8l0.5,0C91.7,6.2,92.2,6.2,92.5,6.1z"></path>
-                                    <path fill="#111111" d="M61.7,12.6c0-0.2,0-0.2,0.9-0.3l0.7-0.1l0.2-0.4c0.4-0.8,1.3-3,3.1-7.6c0.7-1.9,1.3-3.5,1.3-3.5c0,0-0.3-0.1-0.6-0.1c-0.9-0.1-0.8-0.1-0.8-0.3V0.1l2.8,0C71.8,0,72,0,72,0.1c0,0,0,0.1,0,0.2s-0.2,0.1-0.7,0.2c-0.4,0.1-0.7,0.1-0.7,0.2c0,0,0.3,0.9,0.7,2c1.4,4,2.6,7,3.4,8.7l0.3,0.7l0.3,0.1c0.3,0.1,1.1,0.2,1.3,0.2c0.1,0,0.1,0.1,0.1,0.2l0,0.2l-3.1,0c-1.7,0-3.1,0-3.1,0s0-0.1,0-0.2l0-0.2l0.8-0.1c1-0.1,1.1-0.2,1-0.3c-0.1-0.2-0.6-1.6-0.9-2.7c-0.2-0.5-0.5-1.3-0.6-1.7l-0.3-0.8h-0.3c-0.9,0-3.9,0.2-4,0.3c-0.1,0.1-0.9,3.1-1.2,4.2c-0.1,0.4-0.2,0.8-0.2,0.8c0,0,0.3,0.1,0.9,0.2c0.7,0.1,0.7,0.1,0.7,0.3l0,0.2h-2.2c-1.2,0-2.3,0-2.5,0l-0.3,0L61.7,12.6z M70.3,6.2c0-0.1-0.1-0.2-0.2-0.3c-0.1-0.2-0.8-2.3-1.4-4.1c-0.2-0.4-0.3-0.8-0.3-0.8c-0.1-0.1-2,5-2,5.3c0,0,0.7,0.1,1.5,0.1s1.7,0,1.9,0l0.5,0L70.3,6.2z"></path>
-                                </svg>
-                            </li>
-
-                            <li>
-                                <svg viewBox="0 0 100 45.2" alt="Marvel">
-                                    <path fill="#F11E22" d="M100,45.2H0V0h100V45.2z"></path>
-                                    <path fill="#FFFFFF" d="M86.3,6.4h5.6V33h4.8v6.7H86.3V6.4z"></path>
-                                    <path fill="#FFFFFF" d="M47.8,22.2c4-0.2,3.6-5.2,3.6-5.2c-0.6-4.9-3.6-4.7-3.6-4.7V22.2z M34.9,29.8l-1.7-10.1l-1.5,10.1H34.9z M4,39.5V6.4h7.6l2.7,13.9l3-13.9h7.3v29.8l4.8-29.8h7.5l4.7,29.8V6.5h9.8c0,0,3.4,0.6,5.1,5.4l-0.7-5.5h6l2.8,17.2l2.9-17h16.8v6.2h-5v6.8h4.8v6.9h-4.7V33h4.9v6.7H73.3V7.8l-5.6,31.9h-6.7l-3.5-21.1c0,0-0.6,5.8-3.9,8.5l4.2,12.6h-5.8l-4.1-11.1v11.1H36l-0.6-3.2h-4.5l-0.9,3.2H18.8V27.6l-2.9,12.1h-3l-2.7-12v11.7L4,39.5z"></path>
-                                </svg>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="screenshots__frame"></div>
-                </div>
-                <p class="project__description project__description--inverted"><b>Since 2000</b>, I’ve worked on a huge variety of projects for a diverse range of clients, from the smallest startups to the biggest multinationals.&nbsp; As an accomplished developer, I enjoy the thrill of the chase – facing problems head-on and quickly learning new skills and techniques to overcome the trickiest of situations.&nbsp; I work quickly, but also take huge pride in the code I create – leaving it in the best possible state for future development.&nbsp; I also bring with me a keen eye for design and a clear understanding of UX.&nbsp; A willing and valued contributor to any design workshop or brainstorm, I’m also a great guy to have around the office.&nbsp; Try me.</p>
-            </article>
-
-            <section class="contact">
-                <div class="contact__content">
-                    <h2 class="contact__heading">If you'd like my help,<br> please get in touch...</h2>
-
-                    <a class="contact__button" title="Email me" href="mailto:steve@stevenhall.uk">
-                        <svg viewBox="0 0 34 34">
-                            <circle id="background" fill="#EC6B53" cx="17" cy="17" r="17"></circle>
-                            <path fill="#FFFFFF" d="M8.2,10.5c-1.2,0-0.6,0.4,0,0.9l8.2,6.8l9.4-6.8c0.6-0.5,1.2-0.9,0-0.9h-9.4H8.2z"></path>
-                            <path fill="#FFFFFF" d="M7,12.3v10c0,0.6,0.6,1.2,1.1,1.2h17.9c0.5,0,1.1-0.6,1.1-1.2v-10l-10.6,7.6L7,12.3z"></path>
-                        </svg>
-                    </a>
-
-                    <a class="contact__button" title="Follow me" target="_blank" href="https://twitter.com/S_Hl">
-                        <svg viewBox="0 0 34 34">
-                            <circle id="background" fill="#78CBEF" cx="17" cy="17" r="17"></circle>
-                            <path fill="#FFFFFF" d="M25.5,12.6c-0.6,0.3-1.3,0.5-2,0.6c0.7-0.4,1.3-1.1,1.5-1.9c-0.7,0.4-1.4,0.7-2.2,0.8c-0.6-0.7-1.5-1.1-2.6-1.1c-1.9,0-3.5,1.6-3.5,3.5c0,0.3,0,0.5,0.1,0.8c-2.9-0.1-5.5-1.5-7.2-3.7c-0.3,0.5-0.5,1.1-0.5,1.8c0,1.2,0.6,2.3,1.6,2.9c-0.6,0-1.1-0.2-1.6-0.4v0c0,1.7,1.2,3.1,2.8,3.4c-0.3,0.1-0.6,0.1-0.9,0.1c-0.2,0-0.4,0-0.7-0.1c0.4,1.4,1.7,2.4,3.3,2.4c-1.2,0.9-2.7,1.5-4.3,1.5c-0.3,0-0.6,0-0.8,0c1.5,1,3.4,1.6,5.4,1.6c6.4,0,9.9-5.3,9.9-9.9c0-0.2,0-0.3,0-0.5C24.5,13.9,25.1,13.3,25.5,12.6"></path>
-                        </svg>
-                    </a>
-
-                    <a class="contact__button" title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/stevenjohnhall">
-                        <svg viewBox="0 0 34 34">
-                            <circle id="background" fill="#1384C7" cx="17" cy="17" r="17"></circle>
-                            <path fill="#FFFFFF" d="M12.2,24.1H8.9V13.5h3.3V24.1z M10.5,12.2L10.5,12.2c-1.2,0-2-0.8-2-1.8c0-1,0.8-1.8,2-1.8c1.2,0,2,0.8,2,1.8C12.5,11.4,11.8,12.2,10.5,12.2z M25.5,24.1h-3.8v-5.5c0-1.4-0.6-2.4-1.9-2.4c-1,0-1.5,0.7-1.8,1.3C18,17.7,18,18.1,18,18.4v5.7h-3.7c0,0,0-9.7,0-10.6H18v1.7c0.2-0.7,1.4-1.8,3.3-1.8c2.4,0,4.2,1.5,4.2,4.8V24.1z"></path>
-                        </svg>
-                    </a>
-                </div>
-            </section>
-
-        </main>
-
-    </body>
-
+<html lang="en" class="wf-loading">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Steven Hall - Frontend Developer</title>
+
+    <meta name="description" content="Over ten years experience in front-end development. A keen eye for design with a clear understanding of UX. An expert problem-solver and avid brainstormer. A master craftsman of clean, maintainable code. A commitment to quality with a proven track record. A real team-player and all-round nice guy ;-)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:url" content="http://stevenhall.uk"/>
+    <meta property="og:title" content="Steven Hall – Frontend Developer"/>
+    <meta property="og:description" content="Over ten years experience in front-end development. A keen eye for design with a clear understanding of UX. An expert problem-solver and avid brainstormer. A master craftsman of clean, maintainable code. A commitment to quality with a proven track record. A real team-player and all-round nice guy ;-)"/>
+    <meta property="og:image" content="http://stevenhall.uk/facebook-hero.png"/>
+    <meta property="og:image:type" content="image/png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="canonical" href="http://stevenhall.uk" />
+
+    <script>
+      (function (d) {
+        var config = {
+            kitId: 'hyf5yvq',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h = d.documentElement, t = setTimeout(function () {
+            h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a;
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || a && a != "complete" && a != "loaded")return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config)
+          } catch (e) {
+          }
+        };
+        s.parentNode.insertBefore(tk, s)
+      })(document);
+    </script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+      }
+
+      /* Class added by TypeKit while fonts are loading */
+      html.wf-loading {
+        opacity: 0;
+        background: #FFF;
+      }
+
+      html {
+        height: 100%;
+        background: #F2F2F2;
+        transition: opacity 0.25s ease-out, background 0.5s ease-out;
+        -webkit-transition: opacity 0.25s ease-out, background 0.5s ease-out;
+        -moz-transition: opacity 0.25s ease-out, background 0.5s ease-out;
+        -o-transition: opacity 0.25s ease-out, background 0.5s ease-out;
+      }
+
+      body {
+        height: 100%;
+        margin: 0 auto;
+
+        min-width: 320px;
+        max-width: 1440px;
+
+        font-size: 15px;
+        font-family: "futura-pt", sans-serif;
+        letter-spacing: -0.02em;
+      }
+
+      h1, h2, h3 {
+        margin-top: 0;
+        letter-spacing: -0.025em;
+
+        /* Stop displaying the text cursor everywhere */
+        cursor: default;
+      }
+
+      .main__container {
+        height: 100%;
+      }
+
+      .intro,
+      .project,
+      .promo,
+      .contact {
+        padding: 1em;
+        border: 1em solid #FFF;
+        cursor: default;
+      }
+
+      .intro,
+      .project {
+        color: #FFF;
+      }
+
+      .intro {
+        height: 100%;
+        background: #3023AE linear-gradient(0deg, #6A23AD 0%, #3023AE 100%);
+      }
+
+      .intro__container {
+        height: 100%;
+        background: url(images/logo.svg) no-repeat left;
+        background-size: contain;
+      }
+
+      .intro__heading {
+        display: none;
+      }
+
+      .promo {
+        padding: 4em 0;
+      }
+
+      .promo,
+      .contact {
+        background: #FFF;
+        text-align: center;
+      }
+
+      .promo__heading {
+        margin: 0;
+        font-size: 1.5em;
+      }
+
+      .project__link,
+      .project__heading,
+      .project__keywords li {
+        display: inline;
+        background: #111;
+        color: #FFF;
+
+        /* Fix for multi-line padded text */
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+      }
+
+      .project {
+        overflow: auto;
+      }
+
+      .project__heading {
+        margin: 1em 0;
+        padding: 0 0.3em 0 0.25em;
+        font-size: 1.5em;
+      }
+
+      .project__keywords {
+        margin: 1em 0;
+        padding: 0;
+        cursor: default;
+      }
+
+      .project__link,
+      .project__keywords li {
+        padding: 0.1em 0.3em 0.1em 0.25em;
+        margin-right: 0.15em;
+        line-height: 1.8em;
+        font-weight: bold;
+      }
+
+      .project__keywords li {
+        cursor: default;
+      }
+
+      .project__link {
+        background: rgba(0, 0, 0, 0.5);
+        color: #FFF;
+        margin: 0.5em 0;
+        padding-left: 1.8em;
+        padding-right: 0.6em;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.2s ease-in-out;
+        -webkit-transition: background 0.2s ease-in-out;
+        -moz-transition: background 0.2s ease-in-out;
+        -o-transition: background 0.2s ease-in-out;
+      }
+
+      .project__link:hover {
+        background: rgba(0, 0, 0, 1);
+      }
+
+      .project__link::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background: url(images/link.svg) no-repeat center;
+        background-size: 0.8em;
+        margin-left: -1.7em;
+        height: 1.8em;
+        width: 1.8em;
+      }
+
+      .project__link--inactive::before {
+        background-image: url(images/link--broken.svg);
+      }
+
+      .project__description {
+        line-height: 1.5em;
+        cursor: default;
+      }
+
+      .project__description--inverted {
+        color: #111;
+      }
+
+      .project--beano {
+        background: #FFE300;
+      }
+
+      .project--kindeo {
+        background: #7ED321;
+      }
+
+      .project--barometer {
+        background: #4A90E2;
+      }
+
+      .project--chromebooks {
+        background: #D0021B;
+      }
+
+      .project--nexus {
+        background: #4A4A4A;
+      }
+
+      .screenshots {
+        margin: 2em auto;
+        position: relative;
+      }
+
+      .screenshots__frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: none no-repeat center;
+        background-size: contain;
+        pointer-events: none;
+      }
+
+      .screenshots__content {
+        position: absolute;
+      }
+
+      .screenshots--tablet {
+        width: 96%;
+        padding-top: 64.86%;
+      }
+
+      .screenshots--tablet .screenshots__content {
+        top: 5.15%;
+        left: 10%;
+        width: 80%;
+        height: 88.24%;
+      }
+
+      .screenshots--tablet .screenshots__frame {
+        background-image: url(images/tablet.svg);
+      }
+
+      .screenshots--desktop {
+        padding-top: 58%;
+      }
+
+      .screenshots--desktop .screenshots__content {
+        top: 5.41%;
+        left: 11.56%;
+        width: 76.3%;
+        height: 82.22%;
+      }
+
+      .screenshots--desktop .screenshots__frame {
+        background-image: url(images/desktop.svg);
+      }
+
+      .screenshot {
+        width: 100%;
+        height: 100%;
+        box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.75);
+        background: #4A4A4A no-repeat top;
+        background-size: cover;
+      }
+
+      .screenshot--beano {
+        background-image: url(images/screenshots/beano--mobile.jpg);
+      }
+
+      .screenshot--kindeo {
+        background-image: url(images/screenshots/kindeo--mobile.jpg);
+      }
+
+      .screenshot--barometer {
+        background-image: url(images/screenshots/barometer--mobile.jpg);
+      }
+
+      .screenshot--chromebooks {
+        background-image: url(images/screenshots/chromebooks--mobile.jpg);
+      }
+
+      .screenshot--nexus {
+        background-image: url(images/screenshots/nexus--mobile.jpg);
+      }
+
+      .client__logos {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        position: relative;
+      }
+
+      .client__logos li {
+        float: left;
+        height: 50%;
+        width: 33.333%;
+        list-style: none;
+        position: relative;
+        box-shadow: 0 0 0 2px #FFF;
+        transition: background 0.2s ease-in-out;
+        -webkit-transition: background 0.2s ease-in-out;
+        -moz-transition: background 0.2s ease-in-out;
+        -o-transition: background 0.2s ease-in-out;
+      }
+
+      .client__logos li:hover {
+        background: #FFF;
+      }
+
+      .client__logos li svg {
+        top: 50%;
+        left: 50%;
+        width: 65%;
+        display: block;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+      }
+
+      .contact {
+        height: 100%;
+        position: relative;
+      }
+
+      .contact__heading {
+        font-size: 1.5em;
+      }
+
+      .contact__button {
+        width: 3.6em;
+        margin: 0 5px;
+        display: inline-block;
+        transition: opacity 0.2s ease-in-out;
+        -webkit-transition: opacity 0.2s ease-in-out;
+        -moz-transition: opacity 0.2s ease-in-out;
+        -o-transition: opacity 0.2s ease-in-out;
+      }
+
+      .contact__button:hover {
+        opacity: 0.75;
+      }
+
+      .contact__content {
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+      }
+
+      @media screen and (min-width: 480px) {
+        html, body {
+          font-size: 20px;
+        }
+
+        .promo {
+          padding: 3em 1em;
+        }
+
+        .project__description {
+          line-height: 1.75em;
+        }
+
+        .screenshot--beano {
+          background-image: url(images/screenshots/beano--phablet.jpg);
+        }
+
+        .screenshot--kindeo {
+          background-image: url(images/screenshots/kindeo--phablet.jpg);
+        }
+
+        .screenshot--barometer {
+          background-image: url(images/screenshots/barometer--phablet.jpg);
+        }
+
+        .screenshot--chromebooks {
+          background-image: url(images/screenshots/chromebooks--phablet.jpg);
+        }
+
+        .screenshot--nexus {
+          background-image: url(images/screenshots/nexus--phablet.jpg);
+        }
+      }
+
+      @media screen and (min-width: 720px) {
+        html, body {
+          font-size: 25px;
+        }
+
+        .screenshot--beano {
+          background-image: url(images/screenshots/beano--tablet.jpg);
+        }
+
+        .screenshot--kindeo {
+          background-image: url(images/screenshots/kindeo--tablet.jpg);
+        }
+
+        .screenshot--barometer {
+          background-image: url(images/screenshots/barometer--tablet.jpg);
+        }
+
+        .screenshot--chromebooks {
+          background-image: url(images/screenshots/chromebooks--tablet.jpg);
+        }
+
+        .screenshot--nexus {
+          background-image: url(images/screenshots/nexus--tablet.jpg);
+        }
+      }
+
+      @media screen and (min-width: 960px) {
+        .intro,
+        .project,
+        .promo,
+        .contact {
+          padding: 2em;
+          border: 2em solid #FFF;
+        }
+
+        .project__keywords li {
+          font-size: 1.2em;
+        }
+
+        .promo__heading,
+        .project__heading,
+        .contact__heading {
+          font-size: 2em;
+        }
+
+        .project__description {
+          line-height: 2em;
+        }
+
+        .screenshot--beano {
+          background-image: url(images/screenshots/beano--desktop.jpg);
+        }
+
+        .screenshot--kindeo {
+          background-image: url(images/screenshots/kindeo--desktop.jpg);
+        }
+
+        .screenshot--barometer {
+          background-image: url(images/screenshots/barometer--desktop.jpg);
+        }
+
+        .screenshot--chromebooks {
+          background-image: url(images/screenshots/chromebooks--desktop.jpg);
+        }
+
+        .screenshot--nexus {
+          background-image: url(images/screenshots/nexus--desktop.jpg);
+        }
+      }
+    </style>
+
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-74521129-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+
+  <body>
+    <article class="main__container" role="main">
+
+      <header class="intro">
+        <div class="intro__container">
+          <h1 class="intro__heading">Steven Hall</h1>
+        </div>
+      </header>
+
+      <section class="promo">
+        <h2 class="promo__heading">Over ten years experience<br> in front-end development.</h2>
+      </section>
+
+      <section class="project project--beano">
+        <h2 class="project__heading">Beano.com</h2>
+        <div class="screenshots screenshots--tablet">
+          <div class="screenshots__content">
+            <div class="screenshot screenshot--beano"></div>
+          </div>
+          <div class="screenshots__frame"></div>
+        </div>
+        <ul class="project__keywords">
+          <li>React</li>
+          <li>Redux</li>
+          <li>Webpack</li>
+        </ul>
+        <p class="project__description project__description--inverted">
+          <strong>Beano.com</strong> is the new digital face of The Beano – the nation's favourite comic since its first appearance in 1938.&nbsp;
+          Featuring a mix of original and curated third-party content, the site is aimed at the 7-11 year old YouTube generation.&nbsp;
+          Working amongst a dream-team of highly experienced designers and developers, my task was to help develop the site from a rough prototype to a highly polished website prior to a grand unveiling in front of the nation's media.&nbsp;
+          The result is a bonkers, funny, highly colourful and visually charged website which should hopefully propel this great british brand into the digital age and have kids talking about Beano again.
+        </p>
+        <a class="project__link" href="https://www.beano.com" target="_blank">Beano.com</a>
+      </section>
+
+      <section class="promo">
+        <h2 class="promo__heading">A keen eye for design with<br> a clear understanding of UX.</h2>
+      </section>
+
+      <section class="project project--kindeo">
+        <h2 class="project__heading">Kindeo</h2>
+        <div class="screenshots screenshots--tablet">
+          <div class="screenshots__content">
+            <div class="screenshot screenshot--kindeo"></div>
+          </div>
+          <div class="screenshots__frame"></div>
+        </div>
+        <ul class="project__keywords">
+          <li>React</li>
+          <li>Fluxible</li>
+          <li>Sass</li>
+          <li>Webpack</li>
+        </ul>
+        <p class="project__description">
+          <strong>Kindeo</strong> is an easy-to-use iPad app that helps you record stories and memories onto video.&nbsp;
+          Opting for a hybrid approach for maximum portability, I was quickly able to establish a solid foundation using React, Fluxible and Webpack – allowing us to build features in record time without accruing technical debt.&nbsp;
+          Working within a lean, agile team, I was very much hands-on in pinning down project requirements and helping to shape the product – working directly with the product owners to explain key considerations and pain points.&nbsp;
+          The result is an app which, due to its responsiveness and silky-smooth transitions, feels every bit like a native app.
+        </p>
+        <a class="project__link" href="https://geo.itunes.apple.com/app/kindeo-capture-a-life-story/id1020197282?mt=8" target="_blank">Kindeo on the App Store</a>
+      </section>
+
+      <section class="promo">
+        <h2 class="promo__heading">An expert problem-solver<br> and avid brainstormer.</h2>
+      </section>
+
+      <section class="project project--barometer">
+        <h2 class="project__heading">Google Consumer Barometer</h2>
+        <div class="screenshots screenshots--desktop">
+          <div class="screenshots__content">
+            <div class="screenshot screenshot--barometer"></div>
+          </div>
+          <div class="screenshots__frame"></div>
+        </div>
+        <ul class="project__keywords">
+          <li>Angular</li>
+          <li>Foundation</li>
+          <li>Less</li>
+          <li>Gulp</li>
+        </ul>
+        <p class="project__description">
+          <strong>Google Consumer Barometer</strong> is a tool to help you understand how people use the Internet across the world.&nbsp;
+          Working with data from surveys around the world, the challenge was clear: How to present some really big data in a clear, informative, interesting way.&nbsp;
+          Working within a small, agile team through an extensive design and discovery phase, the result is a tool which successfully masks its immense complexity behind a beautifully simple, yet powerful user interface.&nbsp;
+          My main responsibility was to develop that interface, which is fully responsive – taking some occasionally very rough middleware and honing it into a great user experience.
+        </p>
+        <a class="project__link" href="http://consumerbarometer.com" target="_blank">Consumer Barometer</a>
+      </section>
+
+      <section class="promo">
+        <h2 class="promo__heading">A master craftsman of<br> clean, maintainable code.</h2>
+      </section>
+
+      <section class="project project--chromebooks">
+        <h2 class="project__heading">Google Chromebooks</h2>
+        <div class="screenshots screenshots--desktop">
+          <div class="screenshots__content">
+            <div class="screenshot screenshot--chromebooks"></div>
+          </div>
+          <div class="screenshots__frame"></div>
+        </div>
+        <ul class="project__keywords">
+          <li>Assemble</li>
+          <li>Foundation</li>
+          <li>Sass</li>
+          <li>Grunt</li>
+        </ul>
+        <p class="project__description">
+          <strong>Google Chromebooks</strong> is a static site promoting Google’s range of Chromebook computers.&nbsp;
+          Working side-by-side with a designer, we set about creating a number of prototypes for user testing – which I also helped conduct and analyse.&nbsp;
+          Given the target audience, many of the earlier, more radical designs caused some major usability concerns – and so the design was pared back to a simple, yet striking layout.&nbsp;
+          The site is fully responsive and localised into numerous languages at compile-time using JSON data.&nbsp;
+          The project was hosted on Google App Engine, which allowed for simple A/B testing and a blue-green deployment process.</p>
+        <div class="project__link project__link--inactive">Project no longer live</div>
+      </section>
+
+      <section class="promo">
+        <h2 class="promo__heading">A commitment to quality<br> with a proven track record.</h2>
+      </section>
+
+      <section class="project project--nexus">
+        <h2 class="project__heading">Google Nexus</h2>
+        <div class="screenshots screenshots--desktop">
+          <div class="screenshots__content">
+            <div class="screenshot screenshot--nexus"></div>
+          </div>
+          <div class="screenshots__frame"></div>
+        </div>
+        <ul class="project__keywords">
+          <li>Angular</li>
+          <li>Foundation</li>
+          <li>Sass</li>
+          <li>Grunt</li>
+        </ul>
+        <p class="project__description">
+          <strong>Google Nexus</strong> is the main retail site for Google’s range of phones and tablets.&nbsp;
+          Joining a small team of developers, the requirement was to turn the site around in record time to tie in with the release of the latest handset.&nbsp;
+          As this was a major international google retail site, we had to meet a lot of strict conditions and work with some interesting, proprietary tools to get the site published and localised.&nbsp;
+          Nevertheless, we were able to collectively deal with issues, working around problems as they arose to deliver the project on time.</p>
+        <div class="project__link project__link--inactive">Project no longer live</div>
+      </section>
+
+      <section class="promo">
+        <h2 class="promo__heading">A real team-player and<br> all-round nice guy ;-)</h2>
+      </section>
+
+      <section class="project project--miscellaneous">
+        <h2 class="project__heading">Ask me about...</h2>
+        <div class="screenshots screenshots--desktop">
+          <div class="screenshots__content">
+            <ul class="client__logos">
+              <li>
+                <svg viewBox="0 0 100 34" alt="Google">
+                  <path fill="#EA4335"
+                        d="M42.8703704,17.4740741 C42.8703704,22.2037037 39.1703704,25.6888889 34.6296296,25.6888889 C30.0888889,25.6888889 26.3888889,22.2037037 26.3888889,17.4740741 C26.3888889,12.7111111 30.0888889,9.25925926 34.6296296,9.25925926 C39.1703704,9.25925926 42.8703704,12.7111111 42.8703704,17.4740741 L42.8703704,17.4740741 Z M39.262963,17.4740741 C39.262963,14.5185185 37.1185185,12.4962963 34.6296296,12.4962963 C32.1407407,12.4962963 29.9962963,14.5185185 29.9962963,17.4740741 C29.9962963,20.4 32.1407407,22.4518519 34.6296296,22.4518519 C37.1185185,22.4518519 39.262963,20.3962963 39.262963,17.4740741 L39.262963,17.4740741 Z"></path>
+                  <path fill="#FBBC05"
+                        d="M60.6481481,17.4740741 C60.6481481,22.2037037 56.9481481,25.6888889 52.4074074,25.6888889 C47.8666667,25.6888889 44.1666667,22.2037037 44.1666667,17.4740741 C44.1666667,12.7148148 47.8666667,9.25925926 52.4074074,9.25925926 C56.9481481,9.25925926 60.6481481,12.7111111 60.6481481,17.4740741 L60.6481481,17.4740741 Z M57.0407407,17.4740741 C57.0407407,14.5185185 54.8962963,12.4962963 52.4074074,12.4962963 C49.9185185,12.4962963 47.7740741,14.5185185 47.7740741,17.4740741 C47.7740741,20.4 49.9185185,22.4518519 52.4074074,22.4518519 C54.8962963,22.4518519 57.0407407,20.3962963 57.0407407,17.4740741 L57.0407407,17.4740741 Z"></path>
+                  <path fill="#4285F4"
+                        d="M77.6851852,9.75555556 L77.6851852,24.5037037 C77.6851852,30.5703704 74.1074074,33.0481481 69.8777778,33.0481481 C65.8962963,33.0481481 63.5,30.3851852 62.5962963,28.2074074 L65.737037,26.9 C66.2962963,28.237037 67.6666667,29.8148148 69.8740741,29.8148148 C72.5814815,29.8148148 74.2592593,28.1444444 74.2592593,25 L74.2592593,23.8185185 L74.1333333,23.8185185 C73.3259259,24.8148148 71.7703704,25.6851852 69.8074074,25.6851852 C65.7,25.6851852 61.937037,22.1074074 61.937037,17.5037037 C61.937037,12.8666667 65.7,9.25925926 69.8074074,9.25925926 C71.7666667,9.25925926 73.3222222,10.1296296 74.1333333,11.0962963 L74.2592593,11.0962963 L74.2592593,9.75925926 L77.6851852,9.75925926 L77.6851852,9.75555556 Z M74.5148148,17.5037037 C74.5148148,14.6111111 72.5851852,12.4962963 70.1296296,12.4962963 C67.6407407,12.4962963 65.5555556,14.6111111 65.5555556,17.5037037 C65.5555556,20.3666667 67.6407407,22.4518519 70.1296296,22.4518519 C72.5851852,22.4518519 74.5148148,20.3666667 74.5148148,17.5037037 L74.5148148,17.5037037 Z"></path>
+                  <path fill="#34A853"
+                        d="M83.3333333,1.11111111 L83.3333333,25.1851852 L79.8148148,25.1851852 L79.8148148,1.11111111 L83.3333333,1.11111111 L83.3333333,1.11111111 Z"></path>
+                  <path fill="#EA4335"
+                        d="M97.0444444,20.1777778 L99.8444444,22.0444444 C98.9407407,23.3814815 96.762963,25.6851852 93,25.6851852 C88.3333333,25.6851852 84.8481481,22.0777778 84.8481481,17.4703704 C84.8481481,12.5851852 88.362963,9.25555556 92.5962963,9.25555556 C96.8592593,9.25555556 98.9444444,12.6481481 99.6259259,14.4814815 L100,15.4148148 L89.0185185,19.962963 C89.8592593,21.6111111 91.1666667,22.4518519 93,22.4518519 C94.837037,22.4518519 96.1111111,21.5481481 97.0444444,20.1777778 L97.0444444,20.1777778 Z M88.4259259,17.2222222 L95.7666667,14.1740741 C95.362963,13.1481481 94.1481481,12.4333333 92.7185185,12.4333333 C90.8851852,12.4333333 88.3333333,14.0518519 88.4259259,17.2222222 L88.4259259,17.2222222 Z"></path>
+                  <path fill="#4285F4"
+                        d="M13.0703704,15.337037 L13.0703704,11.8518519 L24.8148148,11.8518519 C24.9296296,12.4592593 24.9888889,13.1777778 24.9888889,13.9555556 C24.9888889,16.5703704 24.2740741,19.8037037 21.9703704,22.1074074 C19.7296296,24.4407407 16.8666667,25.6851852 13.0740741,25.6851852 C6.04444444,25.6851852 0.133333333,19.9592593 0.133333333,12.9296296 C0.133333333,5.9 6.04444444,0.174074074 13.0740741,0.174074074 C16.962963,0.174074074 19.7333333,1.7 21.8148148,3.68888889 L19.3555556,6.14814815 C17.862963,4.74814815 15.8407407,3.65925926 13.0703704,3.65925926 C7.93703704,3.65925926 3.92222222,7.7962963 3.92222222,12.9296296 C3.92222222,18.062963 7.93703704,22.2 13.0703704,22.2 C16.4,22.2 18.2962963,20.862963 19.5111111,19.6481481 C20.4962963,18.662963 21.1444444,17.2555556 21.4,15.3333333 L13.0703704,15.337037 L13.0703704,15.337037 Z"></path>
+                </svg>
+              </li>
+
+              <li>
+                <svg viewBox="0 0 100 21.3" alt="Microsoft">
+                  <path fill="#706D6E"
+                        d="M100,9.7V7.9h-2.2V5.2l-0.1,0l-2.1,0.6l0,0v2.1h-3.2V6.7c0-0.5,0.1-0.9,0.4-1.2c0.2-0.3,0.6-0.4,1-0.4c0.3,0,0.6,0.1,0.9,0.2l0.1,0V3.5l0,0c-0.3-0.1-0.7-0.2-1.2-0.2c-0.6,0-1.2,0.1-1.7,0.4c-0.5,0.3-0.9,0.7-1.2,1.2c-0.3,0.5-0.4,1.1-0.4,1.7v1.3h-1.5v1.8h1.5v7.4h2.2V9.7h3.2v4.7c0,1.9,0.9,2.9,2.7,2.9c0.3,0,0.6,0,0.9-0.1c0.3-0.1,0.5-0.1,0.7-0.2l0,0v-1.8l-0.1,0.1c-0.1,0.1-0.3,0.1-0.4,0.2c-0.2,0-0.3,0.1-0.4,0.1c-0.4,0-0.7-0.1-0.9-0.3c-0.2-0.2-0.3-0.6-0.3-1.2V9.7L100,9.7L100,9.7z M83.8,15.5c-0.8,0-1.4-0.3-1.9-0.8c-0.4-0.5-0.7-1.3-0.7-2.2c0-1,0.2-1.7,0.7-2.3c0.4-0.5,1.1-0.8,1.8-0.8c0.8,0,1.4,0.3,1.8,0.8c0.4,0.5,0.7,1.3,0.7,2.2c0,1-0.2,1.8-0.6,2.3C85.2,15.2,84.6,15.5,83.8,15.5 M83.9,7.7c-1.5,0-2.7,0.4-3.6,1.3c-0.9,0.9-1.3,2.1-1.3,3.6c0,1.4,0.4,2.6,1.3,3.4s2,1.3,3.4,1.3c1.5,0,2.6-0.4,3.5-1.3c0.9-0.9,1.3-2.1,1.3-3.6c0-1.5-0.4-2.6-1.2-3.5C86.5,8.1,85.4,7.7,83.9,7.7 M75.5,7.7c-1,0-1.9,0.3-2.5,0.8c-0.7,0.5-1,1.2-1,2c0,0.4,0.1,0.8,0.2,1.1c0.1,0.3,0.4,0.6,0.6,0.9c0.3,0.2,0.7,0.5,1.3,0.7c0.5,0.2,0.9,0.4,1.1,0.5c0.2,0.1,0.4,0.3,0.5,0.4c0.1,0.1,0.1,0.3,0.1,0.5c0,0.6-0.5,0.9-1.4,0.9c-0.3,0-0.8-0.1-1.2-0.2s-0.9-0.3-1.2-0.6L72,14.7v2.1l0,0c0.3,0.1,0.7,0.3,1.2,0.4c0.5,0.1,0.9,0.1,1.2,0.1c1.1,0,2-0.3,2.7-0.8c0.7-0.5,1-1.2,1-2.1c0-0.6-0.2-1.2-0.5-1.6c-0.3-0.4-1-0.8-1.8-1.2c-0.7-0.3-1.1-0.5-1.3-0.7c-0.2-0.2-0.3-0.4-0.3-0.7c0-0.3,0.1-0.5,0.3-0.7c0.2-0.2,0.5-0.3,0.9-0.3c0.4,0,0.7,0.1,1.1,0.2c0.4,0.1,0.7,0.3,1,0.4l0.1,0.1v-2l0,0c-0.3-0.1-0.6-0.2-1-0.3C76.2,7.7,75.9,7.7,75.5,7.7 M66.3,15.5c-0.8,0-1.4-0.3-1.9-0.8c-0.4-0.5-0.7-1.3-0.7-2.2c0-1,0.2-1.7,0.7-2.3c0.4-0.5,1.1-0.8,1.8-0.8c0.8,0,1.4,0.3,1.8,0.8c0.4,0.5,0.7,1.3,0.7,2.2c0,1-0.2,1.8-0.6,2.3C67.8,15.2,67.1,15.5,66.3,15.5 M66.4,7.7c-1.5,0-2.7,0.4-3.6,1.3c-0.9,0.9-1.3,2.1-1.3,3.6c0,1.4,0.4,2.6,1.3,3.4s2,1.3,3.4,1.3c1.5,0,2.6-0.4,3.5-1.3c0.9-0.9,1.3-2.1,1.3-3.6c0-1.5-0.4-2.6-1.2-3.5C69,8.1,67.9,7.7,66.4,7.7 M58.3,9.5V7.9h-2.2v9.2h2.2v-4.7c0-0.8,0.2-1.5,0.5-1.9c0.3-0.5,0.8-0.7,1.4-0.7c0.2,0,0.4,0,0.6,0.1c0.2,0.1,0.4,0.1,0.5,0.2l0.1,0.1V7.9l0,0c-0.2-0.1-0.5-0.1-0.8-0.1c-0.5,0-1,0.2-1.4,0.5C58.8,8.6,58.5,9,58.3,9.5C58.3,9.5,58.3,9.5,58.3,9.5z M52.3,7.7c-1,0-1.9,0.2-2.6,0.6c-0.8,0.4-1.3,1-1.7,1.8c-0.4,0.8-0.6,1.6-0.6,2.6c0,0.9,0.2,1.7,0.6,2.4c0.4,0.7,0.9,1.2,1.6,1.6c0.7,0.4,1.5,0.6,2.4,0.6c1,0,1.9-0.2,2.6-0.6l0,0v-2l-0.1,0.1c-0.3,0.2-0.7,0.4-1.1,0.6c-0.4,0.1-0.7,0.2-1,0.2c-0.8,0-1.5-0.3-2-0.8c-0.5-0.5-0.7-1.3-0.7-2.2c0-0.9,0.3-1.7,0.8-2.2c0.5-0.6,1.2-0.8,2-0.8c0.7,0,1.4,0.2,2.1,0.7l0.1,0.1V8.2l0,0c-0.2-0.1-0.6-0.3-1-0.3C53,7.7,52.6,7.7,52.3,7.7 M45.8,7.9h-2.2v9.2h2.2V7.9z M44.8,4c-0.4,0-0.7,0.1-0.9,0.4c-0.3,0.2-0.4,0.5-0.4,0.9c0,0.3,0.1,0.6,0.4,0.9c0.3,0.2,0.6,0.3,0.9,0.3c0.4,0,0.7-0.1,0.9-0.3c0.3-0.2,0.4-0.5,0.4-0.9s-0.1-0.6-0.4-0.9C45.5,4.1,45.1,4,44.8,4 M39.4,7.2v9.8h2.2V4.3h-3l-3.9,9.5l-3.8-9.5h-3.2v12.8h2.1V7.2h0.1l4,9.8h1.6L39.4,7.2L39.4,7.2L39.4,7.2z"></path>
+                  <path fill="#F1511B" d="M10.1,10.1H0V0h10.1V10.1z"></path>
+                  <path fill="#80CC28" d="M21.3,10.1H11.2V0h10.1L21.3,10.1L21.3,10.1z"></path>
+                  <path fill="#00ADEF" d="M10.1,21.3H0V11.2h10.1V21.3z"></path>
+                  <path fill="#FBBC09" d="M21.3,21.3H11.2V11.2h10.1L21.3,21.3L21.3,21.3z"></path>
+                </svg>
+              </li>
+
+              <li>
+                <svg viewBox="0 0 100 28" alt="Tesco">
+                  <path fill="#0054A4"
+                        d="M8.09269154,22.4569353 C6.10214428,22.4569353 4.49020398,23.5962388 3.71209453,24.4037015 C3.71209453,24.4037015 1.81856219,26.2803184 0.536472637,26.9300697 C0.480253731,26.9609154 0.481248756,27.0231045 0.559358209,27.0231045 L12.1484129,27.0231045 C14.4394577,27.0231045 15.5165721,26.2469851 16.8762736,25.0295721 C16.8762736,25.0295721 18.8558756,23.1897711 20.2135871,22.5957413 C20.350403,22.544 20.3180647,22.4569353 20.2135871,22.4569353 L8.09269154,22.4569353 L8.09269154,22.4569353 Z M28.0021443,22.4569353 C26.011597,22.4569353 24.4011493,23.5962388 23.6215473,24.4037015 C23.6215473,24.4037015 21.7285124,26.2803184 20.4464229,26.9300697 C20.3897065,26.9609154 20.3907015,27.0231045 20.4693085,27.0231045 L32.0812488,27.0231045 C34.371796,27.0231045 35.4499055,26.2469851 36.8091095,25.0295721 C36.8091095,25.0295721 38.7668209,23.1897711 40.1235373,22.5957413 C40.2603532,22.544 40.250403,22.4569353 40.1464229,22.4569353 L28.0021443,22.4569353 L28.0021443,22.4569353 Z M47.9344826,22.4569353 C45.9444328,22.4569353 44.33299,23.5962388 43.5538856,24.4037015 C43.5538856,24.4037015 41.6603532,26.2803184 40.3782637,26.9300697 C40.3225423,26.9609154 40.3240348,27.0231045 40.4021443,27.0231045 L52.0140846,27.0231045 C54.3046318,27.0231045 55.3588607,26.2469851 56.7190597,25.0295721 C56.7190597,25.0295721 58.6986617,23.1897711 60.0558756,22.5957413 C60.1931891,22.544 60.1832388,22.4569353 60.0792587,22.4569353 L47.9344826,22.4569353 L47.9344826,22.4569353 Z M67.8439353,22.4569353 C65.8543831,22.4569353 64.2658259,23.5962388 63.4862239,24.4037015 C63.4862239,24.4037015 61.569806,26.2803184 60.2872189,26.9300697 C60.2314975,26.9609154 60.23299,27.0231045 60.3110995,27.0231045 L71.9225423,27.0231045 C74.2135871,27.0231045 75.291199,26.2469851 76.6509005,25.0295721 C76.6509005,25.0295721 78.631995,23.1897711 79.9887114,22.5957413 C80.1265224,22.544 80.092194,22.4569353 79.9887114,22.4569353 L67.8439353,22.4569353 L67.8439353,22.4569353 Z M87.7757761,22.4569353 C85.7857264,22.4569353 84.1732886,23.5962388 83.3951791,24.4037015 C83.3951791,24.4037015 81.5006517,26.2803184 80.2190597,26.9300697 C80.1623433,26.9609154 80.1643333,27.0231045 80.2419453,27.0231045 L91.8548806,27.0231045 C94.1454279,27.0231045 95.2220448,26.2469851 96.5832388,25.0295721 C96.5832388,25.0295721 98.5414478,23.1897711 99.8966716,22.5957413 C100.033488,22.544 100.02503,22.4569353 99.9200547,22.4569353 L87.7757761,22.4569353 L87.7757761,22.4569353 Z"></path>
+                  <path fill="#F02E25"
+                        d="M48.6533881,0.415641791 C44.4170697,0.415641791 40.2862239,1.67335323 40.2862239,5.88529353 C40.2862239,13.1793234 53.0101045,9.32608955 53.0101045,13.7887761 C53.0101045,15.2435025 50.7538856,15.8285771 48.9314975,15.8285771 C45.6578657,15.8285771 43.4016468,15.3415124 40.5414478,13.6265871 L40.5414478,17.2882786 C42.6737861,17.9912637 45.5747811,18.3315622 48.7230398,18.3315622 C53.1175672,18.3315622 57.22901,17.1967363 57.22901,12.884796 C57.22901,5.26887562 44.5046318,8.69076617 44.5046318,4.95842786 C44.5046318,3.45544279 46.5464229,2.94200995 48.3295075,2.94200995 C51.330005,2.94200995 54.5693085,3.8201194 56.3489104,5.4678806 L56.3489104,1.57434826 C54.0459254,0.847482587 50.9882139,0.415641791 48.6533881,0.415641791 L48.6533881,0.415641791 Z M71.1349801,0.461910448 C63.4936866,0.461910448 58.4339851,4.13504478 58.4339851,9.73255721 C58.4339851,14.8698706 63.0777662,18.3081791 70.0225423,18.3081791 C72.2722935,18.3081791 74.2802537,18.0131542 76.6275174,17.4499701 L76.6275174,13.1156418 C74.9683134,14.8688756 72.9961741,15.5723582 70.8797562,15.5723582 C66.7782637,15.5723582 63.972791,13.0171343 63.972791,9.33753234 C63.972791,5.7081791 66.8812488,3.05643781 70.9484129,3.05643781 C73.1648308,3.05643781 74.9414478,3.86240796 76.371796,5.25892537 L76.371796,0.924597015 C74.8847313,0.618129353 73.0195572,0.461910448 71.1349801,0.461910448 L71.1349801,0.461910448 Z M88.9573682,0.461910448 C82.372791,0.461910448 77.7165721,4.25245771 77.7165721,9.59325373 C77.7165721,14.8325572 81.8976667,18.3086766 88.1235373,18.3086766 C94.7379652,18.3086766 99.2941841,14.6131542 99.2941841,9.24648756 C99.2956766,3.98081592 95.152393,0.461910448 88.9573682,0.461910448 L88.9573682,0.461910448 Z M1.18622388,0.994746269 L1.18622388,5.09723383 C2.61756716,3.98778109 5.6110995,3.56937313 8.88075124,3.54449751 L8.88075124,14.7385274 C8.88075124,16.3663881 8.73697015,16.8300697 8.04642289,17.6823085 L14.5130896,17.6823085 C13.7872189,16.8300697 13.6782637,16.3663881 13.6782637,14.7385274 L13.6782637,3.45096517 C16.5120945,3.4758408 19.8951791,3.98678607 21.3265224,5.09773134 L21.3265224,0.995243781 L1.18622388,0.995243781 L1.18622388,0.994746269 L1.18622388,0.994746269 Z M23.0653284,0.994746269 C23.7419453,1.84648756 23.8762736,2.3320597 23.8762736,3.96141294 L23.8762736,14.7385274 C23.8762736,16.3663881 23.7538856,16.8554428 23.111597,17.6823085 L38.73299,17.6823085 L38.73299,13.6265871 C36.5897065,15.1524577 32.510602,15.1579303 30.8528905,15.1325572 L28.5817463,15.1325572 L28.5817463,10.4743483 L30.250403,10.4743483 C31.3812488,10.4743483 33.4215473,10.6081791 34.6076169,10.9614129 L34.6076169,7.48529353 C33.4384627,7.86091542 31.3777662,7.97235821 30.250403,7.97235821 L28.5817463,7.97235821 L28.5817463,3.54648756 L30.8528905,3.54648756 C32.8822438,3.54648756 36.411597,3.96638806 37.7364726,5.07633831 L37.7364726,0.997233831 L23.0653284,0.997233831 L23.0653284,0.994746269 L23.0653284,0.994746269 Z M88.5185622,2.98827861 C91.9673184,2.98827861 94.2429403,5.84151244 94.2429403,9.36191045 C94.2429403,12.8823085 91.9673184,15.7360398 88.5185622,15.7360398 C85.0135871,15.7360398 82.7693085,12.8823085 82.7693085,9.36191045 C82.769806,5.84200995 85.0135871,2.98827861 88.5185622,2.98827861 L88.5185622,2.98827861 Z"></path>
+                </svg>
+              </li>
+
+              <li>
+                <svg viewBox="0 0 100 37" alt="Disney">
+                  <path fill="#108FF7"
+                        d="M5.4,18.5C5.6,17,7.7,14,15.9,13.7s11.9,1.9,11.9,2.8c0.1,1-1.6,2.3-2.7,2.4c-1.1,0.2-1-0.3-0.9-0.5c0-0.2,1.2-1,1.3-1.1c0.1-0.1,0.2-0.2-0.1-0.2c-0.3-0.1-2-0.6-8.3-0.6c-6.3,0.1-10.1,0.9-10.2,2.7c-0.2,2,6.9,6.4,14.9,6.5c8.3,0.2,12.3-3.7,12.4-7.7C34.1,11.1,22.1,2.5,6.1,1.5C1.3,1.2,1.4,1.7,1.4,1.8s1.3,0.5,1.3,1c0,0.4-1.1,0.2-1.5,0C0.9,2.9,0,2.2,0,1.6C0,1.1,0.6-0.2,7.1,0c6,0.2,15.4,1.9,23.8,7.8c4.2,3,6.9,6.2,6.9,11c-0.2,6.7-7.6,9.5-15.4,9.4C16.5,28,5.2,24.6,5.4,18.5"></path>
+                  <path fill="#108FF7"
+                        d="M15.7,8.1c0.6,0,1.4,3.7,1.3,10.6c-0.1,6.3,0.2,11.9-1.7,11.7c-1.6-0.1-1.4-6.1-1.3-10.2C14.1,16.1,14.6,8.1,15.7,8.1"></path>
+                  <path fill="#108FF7"
+                        d="M38.3,10.7c-0.2-0.1-0.4-1.3,1.5-3.6c0.9-1,2.3-2.5,4.5-3.5c2.8-1.3,5.7-1.7,6.7-0.2c1.3,1.9-0.9,4.4-3.4,5.7c-2.6,1.4-7.8,1.9-9.5-1c-1.1-1.9,0.2-4.6,2.4-5.9c2.6-1.6,5.2-1.4,7-0.7c1.3,0.5,1,2-0.4,2c-1,0-3.4-0.7-5.5,0.6c-1.3,0.8-2,2.1-1.3,3.4c1,1.8,4.5,1.7,6.5,0.6c2.4-1.2,3.4-2.9,2.8-3.6c-0.6-0.9-3.5,0.5-5.3,1.7c-1.7,1.2-3.7,2.9-4.6,3.9C39.4,10.2,38.7,11.1,38.3,10.7"></path>
+                  <path fill="#108FF7"
+                        d="M41.7,12.9c0.6,0,1.5,1.3,1.3,6.6c-0.2,5.3-0.6,7.6-1.7,7.6s-1.5-2.9-1.3-5.9S40.7,12.9,41.7,12.9"></path>
+                  <path fill="#108FF7"
+                        d="M59.3,22.5c0-2.7-3.9-3.5-7.6-4.3c-2.8-0.6-4-1-4-1.6c0-0.6,2-1.1,6.5-1c4.5,0.1,5-0.9,5-1.2c-0.1-0.4-0.9-1.3-5.9-1.2c-5,0.1-8.3,2-8.3,3.7c0.1,1.7,3,2.3,5.9,3c2.9,0.6,5.7,1.3,5.7,2.5c0,1.3-2.8,2.3-5.4,2.3s-4.7-0.4-4.7-1.1c0-0.3,0.9-0.2,1.3-0.2c0.3,0,2.4,0.1,3.2,0.1c0.8,0,2.3-0.1,2.3-0.9c-0.1-0.8-1.9-1.2-3.9-1.3c-2,0-5,0.5-5,2c0,1.7,3.8,3.3,7.4,3.3C55.7,26.9,59.3,25.1,59.3,22.5"></path>
+                  <path fill="#108FF7"
+                        d="M63.5,14.5c-0.6,0-1.6,1.3-2,5.5c-0.5,4.1-0.2,5-0.2,5.4c0.2,0.6,0.6,0.9,0.9,1.1c0.3,0.2,1,0.9,1.2-0.2c0.2-1,0.5-7.1,0.6-7.2c0-0.2,0.1-0.5,0.5,0c0.6,0.7,3.4,5.1,4.7,6.8c0.9,1.1,1.5,1.7,2,1.6c0.6,0,2-0.2,2.4-7.8c0.2-5.5-1.9-7.6-2.3-7.9c-0.5-0.3-0.6-0.3-0.7-0.2c-0.1,0.1-0.1,0.2,0.2,0.6c0.2,0.4,0.8,2.3,0.8,5.9c0,2.6-0.3,4.1-0.6,4.9c-0.1,0.4-0.2,0.7-0.6,0.2c-0.6-0.6-1.6-2-2.7-3.8C66.1,17.5,64.3,14.5,63.5,14.5"></path>
+                  <path fill="#108FF7"
+                        d="M76,14.4c0-0.6,3-1.3,5.4-1.5c2.4-0.2,3.9,0.2,4.2,0.5c0.2,0.2,0.9,1.2,0.6,1.6c-0.4,0.4-3.6,0.5-5.9,0.4c-0.4,1.3-1.4,4.6-1.5,7.1c-0.2,2.4,1.1,2.1,2.2,2c1.1-0.1,3.1-0.3,3.9-0.4c0.2,0,0.7,0,0.7,0.3S85.3,25,85,25.3c-0.6,0.4-3.3,2-6.1,1.9c-2-0.1-2.5-1.2-2.5-2.6c-0.1-2.3,1.3-8,1.8-9.3C77.4,15.2,75.9,15.2,76,14.4"></path>
+                  <path fill="#108FF7"
+                        d="M75.2,20.1c-0.1,0.2,0.4,1,2.2,1.3c1.7,0.2,4.2,0,4.7-0.2c0.6-0.2,1.2-0.7,1.4-1.1c0.2-0.5,0.3-0.7,0.1-0.9c-0.2-0.2-1.1-0.2-2.3-0.2c-1.8,0.2-4.6,0.5-5.4,0.6C75.5,19.8,75.3,19.9,75.2,20.1"></path>
+                  <path fill="#108FF7"
+                        d="M91.2,12.2c0.4,0,0.2,0.5-0.1,1c-0.2,0.6-2,4.3-2.4,7.4c-0.3,2.4,0.5,4,3,4.3c2.4,0.2,4.8-3,5.6-4.9c0.8-1.9,1.4-4.2,0.5-4.6c-1-0.4-3.1,2.8-4.6,5.7c-1.1,2.2-3.1,6.1-5,14.3C87.8,37,87.6,37,87.2,37c-0.3-0.1-1.6-0.8-1.2-3.7c0.4-2.9,2.2-7,3.5-9.8c1.3-2.8,6.1-11.1,8.8-10.5c2.8,0.6,1.2,6.2,0.6,7.6c-0.9,2.1-3.9,8-9.5,6c-2.5-0.9-3.1-4.3-2.3-7.2c0.6-2.1,2.2-5.2,3.1-6.4C90.6,12.5,90.8,12,91.2,12.2"></path>
+                </svg>
+              </li>
+
+              <li>
+                <svg viewBox="0 0 100 13.3" alt="Pixar">
+                  <path fill="#111111"
+                        d="M0,12.8c0-0.3,0-0.3,1.1-0.4l1-0.1l0-0.2c0-0.3,0-5.8,0-9l0-2.3L1.8,0.6c-0.2,0-0.6-0.1-1-0.1C0.1,0.4,0,0.3,0,0.1C0,0,0.2,0,2.7,0c4,0,5.2,0.1,6.3,0.7c0.8,0.4,1.4,1.1,1.4,1.9c0.1,0.7-0.2,1.7-0.7,2.3c-0.7,1-2.1,1.9-3.5,2.2c-0.8,0.2-1,0.2-1,0.1c0-0.3,0.1-0.3,0.6-0.6c0.7-0.3,1.2-0.6,1.5-1C8,5.1,8.3,4.3,8.2,3.3c0-0.6,0-0.7-0.2-1.1c-0.5-1-1.4-1.5-3-1.6l-0.6,0l0,0.3c-0.1,0.3,0,9.4,0,10.6c0,0.7,0,0.8,0.2,0.8c0.1,0,0.6,0.1,1.1,0.1c0.6,0,1,0.1,1.1,0.1c0,0,0.1,0.1,0.1,0.2v0.2H4.1c-1.5,0-3,0-3.4,0C0.1,12.8,0,12.8,0,12.8z"></path>
+                  <path fill="#111111"
+                        d="M21.9,12.7c0-0.1,0-0.2,0-0.2c0,0,0.3-0.1,0.7-0.1c0.4,0,0.8-0.1,1-0.2c0.3-0.1,0.3-0.1,0.3-0.4c0.1-0.6,0-11-0.1-11.1c0,0-0.5-0.1-1-0.2C22.5,0.5,22,0.4,22,0.4s0-0.1,0-0.2l0-0.2h2.7c1.5,0,2.9,0,3.2,0l0.5,0l0,0.2c0,0.1-0.1,0.2-0.1,0.2c0,0-0.5,0.1-1,0.2c-0.5,0.1-0.9,0.1-1,0.2c-0.1,0.1-0.1,8.2,0,10l0,1.5l0.3,0.1c0.2,0,0.6,0.1,1,0.1c0.4,0,0.7,0.1,0.7,0.1s0,0.1,0,0.2l0,0.2l-3,0c-1.7,0-3.1,0-3.2,0C22,12.8,21.9,12.8,21.9,12.7z"></path>
+                  <path fill="#111111"
+                        d="M51.4,13c-1-0.8-2.8-2.8-5.1-5.5c-0.3-0.3-0.5-0.5-0.5-0.5c-0.2,0-2.6,3.6-3.2,4.9l-0.2,0.4l0.6,0.1c0.3,0,0.6,0.1,0.8,0.1c0.2,0,0.3,0.1,0.3,0.3c0,0-0.6,0.1-2.4,0.1h-2.4l0-0.1c0.1-0.2,0.2-0.3,0.6-0.3c0.6-0.1,0.8-0.2,1.3-0.7c0.6-0.6,3.5-4.4,4.2-5.2c0-0.1-0.1-0.2-0.4-0.6c-0.2-0.3-1-1.3-1.8-2.3c-0.8-1-1.6-2.1-1.8-2.3c-0.4-0.5-0.4-0.5-0.8-0.6c-0.2-0.1-0.5-0.1-0.6-0.1c-0.2,0-0.2,0-0.2-0.2c0-0.1,0-0.2,0-0.2c0,0,1.3,0,2.8-0.1c2.7,0,2.9,0,2.9,0.1c0,0.2-0.1,0.2-0.7,0.3c-0.3,0-0.7,0.1-0.8,0.1l-0.2,0l0.4,0.6c0.8,1.2,2.4,3.5,2.5,3.5c0.1,0,2.2-2.9,2.7-3.8c0.2-0.3,0.2-0.3-0.6-0.5c-0.5-0.1-0.6-0.1-0.6-0.3c0-0.1,0-0.2,0-0.2s1,0,2.2,0l2.2,0l0,0.2c0,0.1,0,0.2,0,0.2c0,0-0.3,0.1-0.6,0.1c-0.6,0.1-0.6,0.1-0.9,0.4c-0.4,0.4-1.9,2.1-3.1,3.4L47,5.3l0.5,0.6c0.5,0.6,0.6,0.9,2.8,3.9c0.9,1.3,2.3,3.1,2.5,3.4c0,0.1-0.1,0.1-0.5,0.1h-0.6L51.4,13z"></path>
+                  <path fill="#111111"
+                        d="M98.7,12.8c-1-0.7-3.1-2.8-5.2-5.1l-0.8-0.9l-0.8,0c-0.5,0-0.9,0.1-0.9,0.1c-0.1,0,0,5.1,0.1,5.1c0.1,0.1,0.4,0.2,1.2,0.2c0.7,0.1,0.7,0.1,0.8,0.2c0,0.1,0,0.2,0,0.2c0,0-1.4,0-3.1,0l-3.1,0c0-0.1,0-0.2,0.1-0.3c0,0,0.5-0.1,1-0.2c0.5-0.1,0.9-0.1,0.9-0.2c0,0,0.1-0.3,0.1-0.6c0-0.6,0-10.5-0.1-10.7c0-0.2-0.2-0.3-1-0.3c-1-0.1-1-0.1-1-0.3V0.1h2.1c5.9,0,7.2,0.2,8.1,1.2c0.6,0.6,0.6,1.5,0.2,2.4c-0.3,0.7-1.2,1.7-2,2.1L94.9,6l0.2,0.4c0.3,0.5,2,3,2.7,4c0.7,1,1.1,1.4,1.7,2.2l0.5,0.6l-0.4,0.1c-0.2,0-0.4,0.1-0.4,0.1C99.2,13.2,99,13,98.7,12.8z M92.5,6.1c0.8-0.2,1.4-0.4,1.9-0.9c0.5-0.5,0.7-0.9,0.8-1.5c0.3-1.4-0.6-2.5-2.3-2.9c-0.6-0.2-1.8-0.3-1.9-0.2c0,0-0.1,0.8-0.1,2.9l0,2.8l0.5,0C91.7,6.2,92.2,6.2,92.5,6.1z"></path>
+                  <path fill="#111111"
+                        d="M61.7,12.6c0-0.2,0-0.2,0.9-0.3l0.7-0.1l0.2-0.4c0.4-0.8,1.3-3,3.1-7.6c0.7-1.9,1.3-3.5,1.3-3.5c0,0-0.3-0.1-0.6-0.1c-0.9-0.1-0.8-0.1-0.8-0.3V0.1l2.8,0C71.8,0,72,0,72,0.1c0,0,0,0.1,0,0.2s-0.2,0.1-0.7,0.2c-0.4,0.1-0.7,0.1-0.7,0.2c0,0,0.3,0.9,0.7,2c1.4,4,2.6,7,3.4,8.7l0.3,0.7l0.3,0.1c0.3,0.1,1.1,0.2,1.3,0.2c0.1,0,0.1,0.1,0.1,0.2l0,0.2l-3.1,0c-1.7,0-3.1,0-3.1,0s0-0.1,0-0.2l0-0.2l0.8-0.1c1-0.1,1.1-0.2,1-0.3c-0.1-0.2-0.6-1.6-0.9-2.7c-0.2-0.5-0.5-1.3-0.6-1.7l-0.3-0.8h-0.3c-0.9,0-3.9,0.2-4,0.3c-0.1,0.1-0.9,3.1-1.2,4.2c-0.1,0.4-0.2,0.8-0.2,0.8c0,0,0.3,0.1,0.9,0.2c0.7,0.1,0.7,0.1,0.7,0.3l0,0.2h-2.2c-1.2,0-2.3,0-2.5,0l-0.3,0L61.7,12.6z M70.3,6.2c0-0.1-0.1-0.2-0.2-0.3c-0.1-0.2-0.8-2.3-1.4-4.1c-0.2-0.4-0.3-0.8-0.3-0.8c-0.1-0.1-2,5-2,5.3c0,0,0.7,0.1,1.5,0.1s1.7,0,1.9,0l0.5,0L70.3,6.2z"></path>
+                </svg>
+              </li>
+
+              <li>
+                <svg viewBox="0 0 100 45.2" alt="Marvel">
+                  <path fill="#F11E22" d="M100,45.2H0V0h100V45.2z"></path>
+                  <path fill="#FFFFFF" d="M86.3,6.4h5.6V33h4.8v6.7H86.3V6.4z"></path>
+                  <path fill="#FFFFFF"
+                        d="M47.8,22.2c4-0.2,3.6-5.2,3.6-5.2c-0.6-4.9-3.6-4.7-3.6-4.7V22.2z M34.9,29.8l-1.7-10.1l-1.5,10.1H34.9z M4,39.5V6.4h7.6l2.7,13.9l3-13.9h7.3v29.8l4.8-29.8h7.5l4.7,29.8V6.5h9.8c0,0,3.4,0.6,5.1,5.4l-0.7-5.5h6l2.8,17.2l2.9-17h16.8v6.2h-5v6.8h4.8v6.9h-4.7V33h4.9v6.7H73.3V7.8l-5.6,31.9h-6.7l-3.5-21.1c0,0-0.6,5.8-3.9,8.5l4.2,12.6h-5.8l-4.1-11.1v11.1H36l-0.6-3.2h-4.5l-0.9,3.2H18.8V27.6l-2.9,12.1h-3l-2.7-12v11.7L4,39.5z"></path>
+                </svg>
+              </li>
+            </ul>
+          </div>
+          <div class="screenshots__frame"></div>
+        </div>
+        <p class="project__description project__description--inverted">
+          <b>Since 2000</b>, I’ve worked on a huge variety of projects for a diverse range of clients, from the smallest startups to the biggest multinationals.&nbsp;
+          As an accomplished developer, I enjoy the thrill of the chase – facing problems head-on and quickly learning new skills and techniques to overcome the trickiest of situations.&nbsp;
+          I work quickly, but also take huge pride in the code I create – leaving it in the best possible state for future development.&nbsp;
+          I also bring with me a keen eye for design and a clear understanding of UX.&nbsp;
+          A willing and valued contributor to any design workshop or brainstorm, I’m also a great guy to have around the office.&nbsp;
+          Try me.
+        </p>
+      </section>
+
+      <section class="contact">
+        <div class="contact__content">
+          <h2 class="contact__heading">If you'd like my help,<br> please get in touch...</h2>
+
+          <a class="contact__button" title="Email me" href="mailto:steve@stevenhall.uk">
+            <svg viewBox="0 0 34 34">
+              <circle id="background" fill="#D0021B" cx="17" cy="17" r="17"></circle>
+              <path fill="#FFFFFF"
+                    d="M8.2,10.5c-1.2,0-0.6,0.4,0,0.9l8.2,6.8l9.4-6.8c0.6-0.5,1.2-0.9,0-0.9h-9.4H8.2z"></path>
+              <path fill="#FFFFFF"
+                    d="M7,12.3v10c0,0.6,0.6,1.2,1.1,1.2h17.9c0.5,0,1.1-0.6,1.1-1.2v-10l-10.6,7.6L7,12.3z"></path>
+            </svg>
+          </a>
+
+          <a class="contact__button" title="Follow me" target="_blank" href="https://twitter.com/S_Hl">
+            <svg viewBox="0 0 34 34">
+              <circle id="background" fill="#1DA1F2" cx="17" cy="17" r="17"></circle>
+              <path fill="#FFFFFF"
+                    d="M25.5,12.6c-0.6,0.3-1.3,0.5-2,0.6c0.7-0.4,1.3-1.1,1.5-1.9c-0.7,0.4-1.4,0.7-2.2,0.8c-0.6-0.7-1.5-1.1-2.6-1.1c-1.9,0-3.5,1.6-3.5,3.5c0,0.3,0,0.5,0.1,0.8c-2.9-0.1-5.5-1.5-7.2-3.7c-0.3,0.5-0.5,1.1-0.5,1.8c0,1.2,0.6,2.3,1.6,2.9c-0.6,0-1.1-0.2-1.6-0.4v0c0,1.7,1.2,3.1,2.8,3.4c-0.3,0.1-0.6,0.1-0.9,0.1c-0.2,0-0.4,0-0.7-0.1c0.4,1.4,1.7,2.4,3.3,2.4c-1.2,0.9-2.7,1.5-4.3,1.5c-0.3,0-0.6,0-0.8,0c1.5,1,3.4,1.6,5.4,1.6c6.4,0,9.9-5.3,9.9-9.9c0-0.2,0-0.3,0-0.5C24.5,13.9,25.1,13.3,25.5,12.6"></path>
+            </svg>
+          </a>
+
+          <a class="contact__button" title="LinkedIn" target="_blank"
+             href="https://www.linkedin.com/in/stevenjohnhall">
+            <svg viewBox="0 0 34 34">
+              <circle id="background" fill="#0077B5" cx="17" cy="17" r="17"></circle>
+              <path fill="#FFFFFF"
+                    d="M12.2,24.1H8.9V13.5h3.3V24.1z M10.5,12.2L10.5,12.2c-1.2,0-2-0.8-2-1.8c0-1,0.8-1.8,2-1.8c1.2,0,2,0.8,2,1.8C12.5,11.4,11.8,12.2,10.5,12.2z M25.5,24.1h-3.8v-5.5c0-1.4-0.6-2.4-1.9-2.4c-1,0-1.5,0.7-1.8,1.3C18,17.7,18,18.1,18,18.4v5.7h-3.7c0,0,0-9.7,0-10.6H18v1.7c0.2-0.7,1.4-1.8,3.3-1.8c2.4,0,4.2,1.5,4.2,4.8V24.1z"></path>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+    </article>
+  </body>
 </html>
