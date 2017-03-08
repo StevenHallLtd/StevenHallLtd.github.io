@@ -79,9 +79,15 @@
         color: #FFF;
       }
 
+      @keyframes intro-animation {
+        0% {filter: hue-rotate(0deg)}
+        100% {filter: hue-rotate(360deg)}
+      }
+
       .intro {
         height: 100%;
-        background: #3023AE radial-gradient(farthest-corner at 100% 0, #FFCC00 0%, #3300FF 100%);
+        background: #3023AE radial-gradient(farthest-corner at 125% 125%, #FF6699 0%, #9900FF 75%);
+        animation: intro-animation 10s linear infinite;
       }
 
       .intro__container {
