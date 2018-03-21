@@ -1,96 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Steven Hall – Senior Frontend Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Since 2000 I’ve worked on a huge variety of projects for a diverse range of clients, from the smallest startups to the largest multinationals. My recent work for Google is some of the best in my career, yet I’m always keen to improve and take on new challenges.">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Page not found</title>
+    <meta property="og:url" content="http://stevenhall.uk"/>
+    <meta property="og:title" content="Steven Hall – Senior Frontend Developer"/>
+    <meta property="og:description" content="Since 2000 I’ve worked on a huge variety of projects for a diverse range of clients, from the smallest startups to the largest multinationals. My recent work for Google is some of the best in my career, yet I’m always keen to improve and take on new challenges."/>
+    <meta property="og:image" content="http://stevenhall.uk/facebook.png"/>
+    <meta property="og:image:type" content="image/png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
 
-        <script>
-            (function(d) {
-                var config = {
-                            kitId: 'hyf5yvq',
-                            scriptTimeout: 3000,
-                            async: true
-                        },
-                        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-            })(document);
-        </script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#ffffff">
 
-        <style>
-            * {
-                box-sizing: border-box;
-            }
+    <link rel="canonical" href="http://stevenhall.uk" />
 
-            html {
-                height: 100%;
-                transition: opacity 0.25s ease-out, background 0.5s ease-out;
-                -webkit-transition: opacity 0.25s ease-out, background 0.5s ease-out;
-                -moz-transition: opacity 0.25s ease-out, background 0.5s ease-out;
-                -o-transition: opacity 0.25s ease-out, background 0.5s ease-out;
-            }
+    <style>
+        * {
+            box-sizing: border-box;
+            cursor: default;
+        }
 
-            /* Class added by TypeKit while fonts are loading */
-            html.wf-loading {
-                opacity: 0;
-                background: #FFF;
-            }
+        html {
+            font-family: Avenir, Arial, sans-serif;
+            background: #4A4A4F radial-gradient(ellipse, #FFFFFF 50%, #F3F3F9 75%) no-repeat center fixed;
+            color: #4A4A4F;
+        }
 
-            body {
-                height: 100%;
-                margin: 0 auto;
+        body {
+            margin: 0;
+            padding: 0 2em;
+            min-width: 320px;
+        }
 
-                min-width: 320px;
-                max-width: 1440px;
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0 0 1rem;
+            letter-spacing: -0.05em;
+        }
 
-                font-size: 15px;
-                font-family: "futura-pt", sans-serif;
-                letter-spacing: -0.02em;
+        h1 {
+            margin: 0 0 1rem;
+            font-size: 56px;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
 
-                text-align: center;
-            }
+        h2, h3 {
+            font-size: 22px;
+        }
 
-            h1, h2, h3 {
-                margin-top: 0;
-                letter-spacing: -0.025em;
+        p {
+            margin: 0 0 1rem;
+            line-height: 2;
+        }
 
-                /* Stop displaying the text cursor everywhere */
-                cursor: default;
-            }
+        a {
+            color: inherit;
+            text-decoration: underline;
+            transition: color 0.2s ease-in-out;
+            cursor: pointer;
+        }
 
-            .error {
-                top: 50%;
-                width: 100%;
-                transform: translate(0, -60%);
-                position: absolute;
-            }
+        a:hover {
+            color: #4A90E2;
+        }
 
-            .error__heading {
-                font-size: 5.6em;
-                margin-bottom: 0;
-            }
+        ::selection {
+            color: #FFFFFF;
+            background: #FF0099;
+        }
 
-            .error__subheading {
-                font-size: 3em;
-            }
+        .section {
+            display: flex;
+            align-items: center;
+            max-width: 40em;
+            margin: 0 auto;
+            padding: 20vh 0;
+            border-bottom: 1px solid #E3E3E9;
+        }
 
-            .error__link {
-                color: #FFF;
-                background: #111;
-                padding: 0.1em 0.3em 0.1em 0.25em;
-                line-height: 1.8em;
-                font-weight: bold;
-                font-size: 2em;
-                text-decoration: none;
-            }
-        </style>
-    </head>
+        .container {
+            width: 100%;
+        }
 
-    <body>
-        <div class="error">
-            <h1 class="error__heading">404</h1>
-            <h1 class="error__subheading">Page not found</h1>
-            <a class="error__link" href="/">Go home</a>
+        .section.intro {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <header class="section intro">
+        <div class="container">
+            <h1>Error 404</h1>
+            <h2>Page not found</h2>
+            <p><a href="/">Go Home</a></p>
         </div>
-    </body>
-
+    </header>
+</body>
 </html>

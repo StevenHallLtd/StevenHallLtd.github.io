@@ -1,803 +1,426 @@
 <!DOCTYPE html>
-<html lang="en" class="wf-loading">
-
-  <head>
-
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>Steven Hall – Frontend Developer</title>
-
-    <meta name="description" content="Over ten years experience in front-end development. A keen eye for design with a clear understanding of UX. An expert problem-solver and avid brainstormer. A lean, agile approach for quick, testable results. A master craftsman of clean, maintainable code. A real team-player and all-round nice guy ;-)">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven Hall – Senior Frontend Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Since 2000 I’ve worked on a huge variety of projects for a diverse range of clients, from the smallest startups to the largest multinationals. My recent work for Google is some of the best in my career, yet I’m always keen to improve and take on new challenges.">
 
     <meta property="og:url" content="http://stevenhall.uk"/>
-    <meta property="og:title" content="Steven Hall – Frontend Developer"/>
-    <meta property="og:description" content="Over ten years experience in front-end development. A keen eye for design with a clear understanding of UX. An expert problem-solver and avid brainstormer. A lean, agile approach for quick, testable results. A master craftsman of clean, maintainable code. A real team-player and all-round nice guy ;-)"/>
-    <meta property="og:image" content="http://stevenhall.uk/facebook-hero.png"/>
+    <meta property="og:title" content="Steven Hall – Senior Frontend Developer"/>
+    <meta property="og:description" content="Since 2000 I’ve worked on a huge variety of projects for a diverse range of clients, from the smallest startups to the largest multinationals. My recent work for Google is some of the best in my career, yet I’m always keen to improve and take on new challenges."/>
+    <meta property="og:image" content="http://stevenhall.uk/facebook.png"/>
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="1200"/>
     <meta property="og:image:height" content="630"/>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="canonical" href="http://stevenhall.uk" />
 
     <style>
-      * {
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-      }
-
-      /* Class added by TypeKit while fonts are loading */
-      html.wf-loading {
-        opacity: 0;
-        background: #FFF;
-      }
-
-      html {
-        height: 100%;
-        background: #F2F2F2;
-        transition: opacity 0.25s ease-out, background 0.5s ease-out;
-        -webkit-transition: opacity 0.25s ease-out, background 0.5s ease-out;
-        -moz-transition: opacity 0.25s ease-out, background 0.5s ease-out;
-        -o-transition: opacity 0.25s ease-out, background 0.5s ease-out;
-      }
-
-      body {
-        height: 100%;
-        margin: 0 auto;
-
-        min-width: 320px;
-        max-width: 1440px;
-
-        font-size: 15px;
-        font-family: "futura-pt", sans-serif;
-        letter-spacing: -0.02em;
-      }
-
-      h1, h2, h3 {
-        margin-top: 0;
-        letter-spacing: -0.025em;
-
-        /* Stop displaying the text cursor everywhere */
-        cursor: default;
-      }
-
-      .main__container {
-        height: 100%;
-      }
-
-      .intro,
-      .project,
-      .promo,
-      .contact {
-        padding: 1em;
-        border: 1em solid #FFF;
-        cursor: default;
-      }
-
-      .intro,
-      .project {
-        color: #FFF;
-      }
-
-      @keyframes intro-animation {
-        0% {filter: hue-rotate(0deg)}
-        100% {filter: hue-rotate(360deg)}
-      }
-
-      .intro {
-        height: 100%;
-        background: #3023AE radial-gradient(farthest-corner at 125% 125%, #FF6699 0%, #9900FF 75%);
-        animation: intro-animation 10s linear infinite;
-      }
-
-      .intro__container {
-        height: 100%;
-        background: url(images/logo.svg) no-repeat left;
-        background-size: contain;
-      }
-
-      .intro__heading {
-        display: none;
-      }
-
-      .promo {
-        padding: 4em 0;
-      }
-
-      .promo,
-      .contact {
-        background: #FFF;
-        text-align: center;
-      }
-
-      .promo__heading {
-        margin: 0;
-        font-size: 1.5em;
-      }
-
-      .project__link,
-      .project__heading,
-      .project__keywords li {
-        display: inline;
-        background: #111;
-        color: #FFF;
-
-        /* Fix for multi-line padded text */
-        box-decoration-break: clone;
-        -webkit-box-decoration-break: clone;
-      }
-
-      .project {
-        overflow: auto;
-      }
-
-      .project__heading {
-        margin: 1em 0;
-        padding: 0 0.3em 0 0.25em;
-        font-size: 1.5em;
-      }
-
-      .project__keywords {
-        margin: 1em 0;
-        padding: 0;
-        cursor: default;
-      }
-
-      .project__link,
-      .project__keywords li {
-        padding: 0.1em 0.3em 0.1em 0.25em;
-        margin-right: 0.15em;
-        line-height: 1.8em;
-        font-weight: bold;
-      }
-
-      .project__keywords li {
-        cursor: default;
-      }
-
-      .project__link {
-        background: rgba(0, 0, 0, 0.5);
-        color: #FFF;
-        margin: 0.5em 0;
-        padding-left: 1.8em;
-        padding-right: 0.6em;
-        display: inline-block;
-        text-decoration: none;
-        font-weight: bold;
-        transition: background 0.2s ease-in-out;
-        -webkit-transition: background 0.2s ease-in-out;
-        -moz-transition: background 0.2s ease-in-out;
-        -o-transition: background 0.2s ease-in-out;
-      }
-
-      .project__link:hover {
-        background: rgba(0, 0, 0, 1);
-      }
-
-      .project__link::before {
-        content: "";
-        display: block;
-        position: absolute;
-        background: url(images/link.svg) no-repeat center;
-        background-size: 0.8em;
-        margin-left: -1.7em;
-        height: 1.8em;
-        width: 1.8em;
-      }
-
-      .project__link--inactive::before {
-        background-image: url(images/link--broken.svg);
-      }
-
-      .project__description {
-        line-height: 1.5em;
-        cursor: default;
-      }
-
-      .project__description--inverted {
-        color: #111;
-      }
-
-      .project--beano {
-        background: #FFE300;
-      }
-
-      .project--kindeo {
-        background: #7ED321;
-      }
-
-      .project--barometer {
-        background: #4A90E2;
-      }
-
-      .project--chromebooks {
-        background: #D0021B;
-      }
-
-      .project--nexus {
-        background: #4A4A4A;
-      }
-
-      .screenshots {
-        margin: 2em auto;
-        position: relative;
-      }
-
-      .screenshots__frame {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: none no-repeat center;
-        background-size: contain;
-        pointer-events: none;
-      }
-
-      .screenshots__content {
-        position: absolute;
-      }
-
-      .screenshots--tablet {
-        width: 96%;
-        padding-top: 64.86%;
-      }
-
-      .screenshots--tablet .screenshots__content {
-        top: 5.15%;
-        left: 10%;
-        width: 80%;
-        height: 88.24%;
-      }
-
-      .screenshots--tablet .screenshots__frame {
-        background-image: url(images/tablet.svg);
-      }
-
-      .screenshots--desktop {
-        padding-top: 58%;
-      }
-
-      .screenshots--desktop .screenshots__content {
-        top: 5.41%;
-        left: 11.56%;
-        width: 76.3%;
-        height: 82.22%;
-      }
-
-      .screenshots--desktop .screenshots__frame {
-        background-image: url(images/desktop.svg);
-      }
-
-      .screenshot {
-        width: 100%;
-        height: 100%;
-        box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.75);
-        background: #4A4A4A no-repeat top;
-        background-size: cover;
-      }
-
-      .screenshot--beano {
-        background-image: url(images/screenshots/beano--mobile.jpg);
-      }
-
-      .screenshot--kindeo {
-        background-image: url(images/screenshots/kindeo--mobile.jpg);
-      }
-
-      .screenshot--barometer {
-        background-image: url(images/screenshots/barometer--mobile.jpg);
-      }
-
-      .screenshot--chromebooks {
-        background-image: url(images/screenshots/chromebooks--mobile.jpg);
-      }
-
-      .screenshot--nexus {
-        background-image: url(images/screenshots/nexus--mobile.jpg);
-      }
-
-      .client__logos {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        position: relative;
-      }
-
-      .client__logos li {
-        float: left;
-        height: 50%;
-        width: 33.333%;
-        list-style: none;
-        position: relative;
-        box-shadow: 0 0 0 2px #FFF;
-        transition: background 0.2s ease-in-out;
-        -webkit-transition: background 0.2s ease-in-out;
-        -moz-transition: background 0.2s ease-in-out;
-        -o-transition: background 0.2s ease-in-out;
-      }
-
-      .client__logos li:hover {
-        background: #FFF;
-      }
-
-      .client__logos li svg {
-        top: 50%;
-        left: 50%;
-        width: 65%;
-        display: block;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-      }
-
-      .contact {
-        height: 100%;
-        position: relative;
-      }
-
-      .contact__heading {
-        font-size: 1.5em;
-      }
-
-      .contact__button {
-        width: 3.6em;
-        margin: 0 5px;
-        display: inline-block;
-        transition: opacity 0.2s ease-in-out;
-        -webkit-transition: opacity 0.2s ease-in-out;
-        -moz-transition: opacity 0.2s ease-in-out;
-        -o-transition: opacity 0.2s ease-in-out;
-      }
-
-      .contact__button:hover {
-        opacity: 0.75;
-      }
-
-      .contact__content {
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-      }
-
-      @media screen and (min-width: 480px) {
-        html, body {
-          font-size: 20px;
+        * {
+            box-sizing: border-box;
+            cursor: default;
         }
 
-        .promo {
-          padding: 3em 1em;
+        html {
+            font-family: Avenir, Arial, sans-serif;
+            background: #4A4A4F radial-gradient(ellipse, #FFFFFF 50%, #F3F3F9 75%) no-repeat center fixed;
+            color: #4A4A4F;
         }
 
-        .project__description {
-          line-height: 1.75em;
+        body {
+            margin: 0;
+            padding: 0 2em;
+            min-width: 320px;
         }
 
-        .screenshot--beano {
-          background-image: url(images/screenshots/beano--phablet.jpg);
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0 0 1rem;
+            letter-spacing: -0.05em;
         }
 
-        .screenshot--kindeo {
-          background-image: url(images/screenshots/kindeo--phablet.jpg);
+        h1 {
+            margin: 0 0 1rem;
+            font-size: 56px;
+            line-height: 1;
+            letter-spacing: -4px;
         }
 
-        .screenshot--barometer {
-          background-image: url(images/screenshots/barometer--phablet.jpg);
+        h2, h3 {
+            font-size: 22px;
         }
 
-        .screenshot--chromebooks {
-          background-image: url(images/screenshots/chromebooks--phablet.jpg);
+        p {
+            margin: 0 0 1rem;
+            line-height: 2;
         }
 
-        .screenshot--nexus {
-          background-image: url(images/screenshots/nexus--phablet.jpg);
-        }
-      }
-
-      @media screen and (min-width: 720px) {
-        html, body {
-          font-size: 25px;
+        a {
+            color: inherit;
+            text-decoration: underline;
+            transition: color 0.2s ease-in-out;
+            cursor: pointer;
         }
 
-        .screenshot--beano {
-          background-image: url(images/screenshots/beano--tablet.jpg);
+        a:hover {
+            color: #4A90E2;
         }
 
-        .screenshot--kindeo {
-          background-image: url(images/screenshots/kindeo--tablet.jpg);
+        ::selection {
+            color: #FFFFFF;
+            background: #FF0099;
         }
 
-        .screenshot--barometer {
-          background-image: url(images/screenshots/barometer--tablet.jpg);
+        .section {
+            display: flex;
+            align-items: center;
+            max-width: 40em;
+            margin: 0 auto;
+            padding: 20vh 0;
+            border-bottom: 1px solid #E3E3E9;
         }
 
-        .screenshot--chromebooks {
-          background-image: url(images/screenshots/chromebooks--tablet.jpg);
+        .container {
+            width: 100%;
         }
 
-        .screenshot--nexus {
-          background-image: url(images/screenshots/nexus--tablet.jpg);
-        }
-      }
-
-      @media screen and (min-width: 960px) {
-        .intro,
-        .project,
-        .promo,
-        .contact {
-          padding: 2em;
-          border: 2em solid #FFF;
+        .section.intro,
+        .section.contact {
+            min-height: 100vh;
         }
 
-        .project__keywords li {
-          font-size: 1.2em;
+        .section.intro small {
+            display: block;
+            max-width: 600px;
+            color: #A3A3A9;
+            line-height: 2;
         }
 
-        .promo__heading,
-        .project__heading,
-        .contact__heading {
-          font-size: 2em;
+        .screenshot {
+            display: block;
+            width: 100%;
+            margin: 0 0 1.5rem;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
         }
 
-        .project__description {
-          line-height: 2em;
+        .project__skills {
+            padding: 0;
+            margin: 0 0 12px;
         }
 
-        .screenshot--beano {
-          background-image: url(images/screenshots/beano--desktop.jpg);
+        .project__skills li {
+            display: inline-block;
+            margin: 0 0 4px;
+            padding: 4px 6px;
+            color: #FFFFFF;
+            background: #4A4A4F;
+            list-style: none;
+            font-size: 14px;
+            font-weight: bold;
         }
 
-        .screenshot--kindeo {
-          background-image: url(images/screenshots/kindeo--desktop.jpg);
+        .project__link {
+            font-size: 14px;
+            font-weight: 500;
         }
 
-        .screenshot--barometer {
-          background-image: url(images/screenshots/barometer--desktop.jpg);
+        .project__link:before {
+            content: '';
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin-right: 4px;
+            background: url(images/icon--link.svg) no-repeat center;
+            background-size: contain;
+            vertical-align: -1.5px;
         }
 
-        .screenshot--chromebooks {
-          background-image: url(images/screenshots/chromebooks--desktop.jpg);
+        .project__link--disabled {
+            cursor: not-allowed;
         }
 
-        .screenshot--nexus {
-          background-image: url(images/screenshots/nexus--desktop.jpg);
+        .project__link--disabled:before {
+            background-image: url(images/icon--broken_link.svg);
         }
-      }
+
+        .clients__list {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -5%;
+            padding: 0;
+        }
+
+        .clients__list li {
+            display: flex;
+            width: 20%;
+            flex-grow: 1;
+            margin: 0 5%;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+
+        .clients__list li:before {
+            content: '';
+            display: block;
+            padding-top: 80%;
+        }
+
+        .clients__list svg {
+            width: 100%;
+            height: 60%;
+        }
+
+        .contact > .container {
+            text-align: center;
+        }
+
+        .contact__options {
+            padding: 0;
+        }
+
+        .contact__options li {
+            display: inline-block;
+            width: 42px;
+            margin: 5px;
+            list-style: none;
+        }
     </style>
-
-    <script>
-      (function (d) {
-        var config = {
-            kitId: 'hyf5yvq',
-            scriptTimeout: 3000,
-            async: true
-          },
-          h = d.documentElement, t = setTimeout(function () {
-            h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-          }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a;
-        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
-        tk.async = true;
-        tk.onload = tk.onreadystatechange = function () {
-          a = this.readyState;
-          if (f || a && a != "complete" && a != "loaded")return;
-          f = true;
-          clearTimeout(t);
-          try {
-            Typekit.load(config)
-          } catch (e) {
-          }
-        };
-        s.parentNode.insertBefore(tk, s)
-      })(document);
-    </script>
-
-    <script>
-      (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-          }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-      ga('create', 'UA-74521129-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-  </head>
-
-  <body>
-    <article class="main__container" role="main">
-
-      <header class="intro">
-        <div class="intro__container">
-          <h1 class="intro__heading">Steven Hall</h1>
+</head>
+<body>
+    <header class="section intro">
+        <div class="container">
+            <h1>Steven Hall</h1>
+            <h2>Senior Frontend Developer</h2>
+            <p>Since 2000 I’ve worked on a huge variety of projects for a diverse range of clients, from the smallest startups to the largest multinationals. My recent work for Google is some of the best in my career, yet I’m always keen to improve and take on new challenges.</p>
+            <small>This site features just a few noteworthy projects from recent years. <br>If you'd like a copy of my full CV, please <a href="mailto:steve@stevenhall.uk" title="Email me">get in touch</a>.</small>
         </div>
-      </header>
+    </header>
 
-      <section class="promo">
-        <h2 class="promo__heading">Over ten years experience<br> in front-end development.</h2>
-      </section>
-
-      <section class="project project--beano">
-        <h2 class="project__heading">Beano.com</h2>
-        <div class="screenshots screenshots--tablet">
-          <div class="screenshots__content">
-            <div class="screenshot screenshot--beano"></div>
-          </div>
-          <div class="screenshots__frame"></div>
-        </div>
-        <ul class="project__keywords">
-          <li>React</li>
-          <li>Redux</li>
-          <li>CSS Modules</li>
-          <li>Webpack</li>
-        </ul>
-        <p class="project__description project__description--inverted">
-          <strong>Beano.com</strong> is the new digital face of The Beano – the nation's favourite comic since its first appearance in 1938.&nbsp;
-          Featuring a mix of original and curated third-party content, the site is aimed at the 7–11 year old YouTube generation.&nbsp;
-          Working amongst a dream-team of highly experienced designers and developers, my task was to help develop the site from a rough prototype to a highly polished website prior to a grand unveiling in front of the nation's media.&nbsp;
-          The result is a bonkers, funny, highly colourful and visually charged website which should hopefully propel this great british brand into the digital age and have kids talking about Beano again.
-        </p>
-        <a class="project__link" href="https://www.beano.com" target="_blank">Beano.com</a>
-      </section>
-
-      <section class="promo">
-        <h2 class="promo__heading">A keen eye for design with<br> a clear understanding of UX.</h2>
-      </section>
-
-      <section class="project project--kindeo">
-        <h2 class="project__heading">Kindeo</h2>
-        <div class="screenshots screenshots--tablet">
-          <div class="screenshots__content">
-            <div class="screenshot screenshot--kindeo"></div>
-          </div>
-          <div class="screenshots__frame"></div>
-        </div>
-        <ul class="project__keywords">
-          <li>React</li>
-          <li>Fluxible</li>
-          <li>Sass</li>
-          <li>Webpack</li>
-        </ul>
-        <p class="project__description">
-          <strong>Kindeo</strong> is an easy-to-use iPad app that helps you record stories and memories onto video.&nbsp;
-          Opting for a hybrid approach for maximum portability, I was quickly able to establish a solid foundation using React, Fluxible and Webpack – allowing us to build features in record time without accruing technical debt.&nbsp;
-          Working within a lean, agile team, I was very much hands-on in pinning down project requirements and helping to shape the product – working directly with the product owners to explain key considerations and pain points.&nbsp;
-          The result is an app which, due to its responsiveness and silky-smooth transitions, feels every bit like a native app.
-        </p>
-        <a class="project__link" href="https://geo.itunes.apple.com/app/kindeo-capture-a-life-story/id1020197282?mt=8" target="_blank">Kindeo on the App Store</a>
-      </section>
-
-      <section class="promo">
-        <h2 class="promo__heading">An expert problem-solver<br> and avid brainstormer.</h2>
-      </section>
-
-      <section class="project project--barometer">
-        <h2 class="project__heading">Google Consumer Barometer</h2>
-        <div class="screenshots screenshots--desktop">
-          <div class="screenshots__content">
-            <div class="screenshot screenshot--barometer"></div>
-          </div>
-          <div class="screenshots__frame"></div>
-        </div>
-        <ul class="project__keywords">
-          <li>Angular</li>
-          <li>Foundation</li>
-          <li>Less</li>
-          <li>Gulp</li>
-        </ul>
-        <p class="project__description">
-          <strong>Google Consumer Barometer</strong> is a tool to help you understand how people use the Internet across the world.&nbsp;
-          Working with data from surveys around the world, the challenge was clear: How to present some really big data in a clear, informative, interesting way.&nbsp;
-          Working within a small, agile team through an extensive design and discovery phase, the result is a tool which successfully masks its immense complexity behind a beautifully simple, yet powerful user interface.&nbsp;
-          My main responsibility was to develop that interface, which is fully responsive – taking some occasionally very rough middleware and honing it into a great user experience.
-        </p>
-        <a class="project__link" href="http://consumerbarometer.com" target="_blank">Consumer Barometer</a>
-      </section>
-
-      <section class="promo">
-        <h2 class="promo__heading">A lean, agile approach<br> for quick, testable results.</h2>
-      </section>
-
-      <section class="project project--chromebooks">
-        <h2 class="project__heading">Google Chromebooks</h2>
-        <div class="screenshots screenshots--desktop">
-          <div class="screenshots__content">
-            <div class="screenshot screenshot--chromebooks"></div>
-          </div>
-          <div class="screenshots__frame"></div>
-        </div>
-        <ul class="project__keywords">
-          <li>Assemble</li>
-          <li>Foundation</li>
-          <li>Sass</li>
-          <li>Grunt</li>
-        </ul>
-        <p class="project__description">
-          <strong>Google Chromebooks</strong> is a static site promoting Google’s range of Chromebook computers.&nbsp;
-          Working side-by-side with a designer, we set about creating a number of prototypes for user testing – which I also helped conduct and analyse.&nbsp;
-          Given the target audience, many of the earlier, more radical designs caused some major usability concerns – and so the design was pared back to a simple, yet striking layout.&nbsp;
-          The site is fully responsive and localised into numerous languages at compile-time using JSON data.&nbsp;
-          The project was hosted on Google App Engine, which allowed for simple A/B testing and a blue-green deployment process.</p>
-        <div class="project__link project__link--inactive">Site no longer live</div>
-      </section>
-
-      <section class="promo">
-        <h2 class="promo__heading">A master craftsman of<br> clean, maintainable code.</h2>
-      </section>
-
-      <section class="project project--nexus">
-        <h2 class="project__heading">Google Nexus</h2>
-        <div class="screenshots screenshots--desktop">
-          <div class="screenshots__content">
-            <div class="screenshot screenshot--nexus"></div>
-          </div>
-          <div class="screenshots__frame"></div>
-        </div>
-        <ul class="project__keywords">
-          <li>Angular</li>
-          <li>Foundation</li>
-          <li>Sass</li>
-          <li>Grunt</li>
-        </ul>
-        <p class="project__description">
-          <strong>Google Nexus</strong> is the main retail site for Google’s range of phones and tablets.&nbsp;
-          Joining a small team of developers, the requirement was to turn the site around in record time to tie in with the release of the latest handset.&nbsp;
-          As this was a major international google retail site, we had to meet a lot of strict conditions and work with some interesting, proprietary tools to get the site published and localised.&nbsp;
-          Nevertheless, we were able to collectively deal with issues, working around problems as they arose to deliver the project on time.</p>
-        <div class="project__link project__link--inactive">Site no longer live</div>
-      </section>
-
-      <section class="promo">
-        <h2 class="promo__heading">A real team-player and<br> all-round nice guy ;-)</h2>
-      </section>
-
-      <section class="project project--miscellaneous">
-        <h2 class="project__heading">Ask me about...</h2>
-        <div class="screenshots screenshots--desktop">
-          <div class="screenshots__content">
-            <ul class="client__logos">
-              <li>
-                <svg viewBox="0 0 100 34" alt="Google">
-                  <path fill="#EA4335"
-                        d="M42.8703704,17.4740741 C42.8703704,22.2037037 39.1703704,25.6888889 34.6296296,25.6888889 C30.0888889,25.6888889 26.3888889,22.2037037 26.3888889,17.4740741 C26.3888889,12.7111111 30.0888889,9.25925926 34.6296296,9.25925926 C39.1703704,9.25925926 42.8703704,12.7111111 42.8703704,17.4740741 L42.8703704,17.4740741 Z M39.262963,17.4740741 C39.262963,14.5185185 37.1185185,12.4962963 34.6296296,12.4962963 C32.1407407,12.4962963 29.9962963,14.5185185 29.9962963,17.4740741 C29.9962963,20.4 32.1407407,22.4518519 34.6296296,22.4518519 C37.1185185,22.4518519 39.262963,20.3962963 39.262963,17.4740741 L39.262963,17.4740741 Z"></path>
-                  <path fill="#FBBC05"
-                        d="M60.6481481,17.4740741 C60.6481481,22.2037037 56.9481481,25.6888889 52.4074074,25.6888889 C47.8666667,25.6888889 44.1666667,22.2037037 44.1666667,17.4740741 C44.1666667,12.7148148 47.8666667,9.25925926 52.4074074,9.25925926 C56.9481481,9.25925926 60.6481481,12.7111111 60.6481481,17.4740741 L60.6481481,17.4740741 Z M57.0407407,17.4740741 C57.0407407,14.5185185 54.8962963,12.4962963 52.4074074,12.4962963 C49.9185185,12.4962963 47.7740741,14.5185185 47.7740741,17.4740741 C47.7740741,20.4 49.9185185,22.4518519 52.4074074,22.4518519 C54.8962963,22.4518519 57.0407407,20.3962963 57.0407407,17.4740741 L57.0407407,17.4740741 Z"></path>
-                  <path fill="#4285F4"
-                        d="M77.6851852,9.75555556 L77.6851852,24.5037037 C77.6851852,30.5703704 74.1074074,33.0481481 69.8777778,33.0481481 C65.8962963,33.0481481 63.5,30.3851852 62.5962963,28.2074074 L65.737037,26.9 C66.2962963,28.237037 67.6666667,29.8148148 69.8740741,29.8148148 C72.5814815,29.8148148 74.2592593,28.1444444 74.2592593,25 L74.2592593,23.8185185 L74.1333333,23.8185185 C73.3259259,24.8148148 71.7703704,25.6851852 69.8074074,25.6851852 C65.7,25.6851852 61.937037,22.1074074 61.937037,17.5037037 C61.937037,12.8666667 65.7,9.25925926 69.8074074,9.25925926 C71.7666667,9.25925926 73.3222222,10.1296296 74.1333333,11.0962963 L74.2592593,11.0962963 L74.2592593,9.75925926 L77.6851852,9.75925926 L77.6851852,9.75555556 Z M74.5148148,17.5037037 C74.5148148,14.6111111 72.5851852,12.4962963 70.1296296,12.4962963 C67.6407407,12.4962963 65.5555556,14.6111111 65.5555556,17.5037037 C65.5555556,20.3666667 67.6407407,22.4518519 70.1296296,22.4518519 C72.5851852,22.4518519 74.5148148,20.3666667 74.5148148,17.5037037 L74.5148148,17.5037037 Z"></path>
-                  <path fill="#34A853"
-                        d="M83.3333333,1.11111111 L83.3333333,25.1851852 L79.8148148,25.1851852 L79.8148148,1.11111111 L83.3333333,1.11111111 L83.3333333,1.11111111 Z"></path>
-                  <path fill="#EA4335"
-                        d="M97.0444444,20.1777778 L99.8444444,22.0444444 C98.9407407,23.3814815 96.762963,25.6851852 93,25.6851852 C88.3333333,25.6851852 84.8481481,22.0777778 84.8481481,17.4703704 C84.8481481,12.5851852 88.362963,9.25555556 92.5962963,9.25555556 C96.8592593,9.25555556 98.9444444,12.6481481 99.6259259,14.4814815 L100,15.4148148 L89.0185185,19.962963 C89.8592593,21.6111111 91.1666667,22.4518519 93,22.4518519 C94.837037,22.4518519 96.1111111,21.5481481 97.0444444,20.1777778 L97.0444444,20.1777778 Z M88.4259259,17.2222222 L95.7666667,14.1740741 C95.362963,13.1481481 94.1481481,12.4333333 92.7185185,12.4333333 C90.8851852,12.4333333 88.3333333,14.0518519 88.4259259,17.2222222 L88.4259259,17.2222222 Z"></path>
-                  <path fill="#4285F4"
-                        d="M13.0703704,15.337037 L13.0703704,11.8518519 L24.8148148,11.8518519 C24.9296296,12.4592593 24.9888889,13.1777778 24.9888889,13.9555556 C24.9888889,16.5703704 24.2740741,19.8037037 21.9703704,22.1074074 C19.7296296,24.4407407 16.8666667,25.6851852 13.0740741,25.6851852 C6.04444444,25.6851852 0.133333333,19.9592593 0.133333333,12.9296296 C0.133333333,5.9 6.04444444,0.174074074 13.0740741,0.174074074 C16.962963,0.174074074 19.7333333,1.7 21.8148148,3.68888889 L19.3555556,6.14814815 C17.862963,4.74814815 15.8407407,3.65925926 13.0703704,3.65925926 C7.93703704,3.65925926 3.92222222,7.7962963 3.92222222,12.9296296 C3.92222222,18.062963 7.93703704,22.2 13.0703704,22.2 C16.4,22.2 18.2962963,20.862963 19.5111111,19.6481481 C20.4962963,18.662963 21.1444444,17.2555556 21.4,15.3333333 L13.0703704,15.337037 L13.0703704,15.337037 Z"></path>
-                </svg>
-              </li>
-
-              <li>
-                <svg viewBox="0 0 100 21.3" alt="Microsoft">
-                  <path fill="#706D6E"
-                        d="M100,9.7V7.9h-2.2V5.2l-0.1,0l-2.1,0.6l0,0v2.1h-3.2V6.7c0-0.5,0.1-0.9,0.4-1.2c0.2-0.3,0.6-0.4,1-0.4c0.3,0,0.6,0.1,0.9,0.2l0.1,0V3.5l0,0c-0.3-0.1-0.7-0.2-1.2-0.2c-0.6,0-1.2,0.1-1.7,0.4c-0.5,0.3-0.9,0.7-1.2,1.2c-0.3,0.5-0.4,1.1-0.4,1.7v1.3h-1.5v1.8h1.5v7.4h2.2V9.7h3.2v4.7c0,1.9,0.9,2.9,2.7,2.9c0.3,0,0.6,0,0.9-0.1c0.3-0.1,0.5-0.1,0.7-0.2l0,0v-1.8l-0.1,0.1c-0.1,0.1-0.3,0.1-0.4,0.2c-0.2,0-0.3,0.1-0.4,0.1c-0.4,0-0.7-0.1-0.9-0.3c-0.2-0.2-0.3-0.6-0.3-1.2V9.7L100,9.7L100,9.7z M83.8,15.5c-0.8,0-1.4-0.3-1.9-0.8c-0.4-0.5-0.7-1.3-0.7-2.2c0-1,0.2-1.7,0.7-2.3c0.4-0.5,1.1-0.8,1.8-0.8c0.8,0,1.4,0.3,1.8,0.8c0.4,0.5,0.7,1.3,0.7,2.2c0,1-0.2,1.8-0.6,2.3C85.2,15.2,84.6,15.5,83.8,15.5 M83.9,7.7c-1.5,0-2.7,0.4-3.6,1.3c-0.9,0.9-1.3,2.1-1.3,3.6c0,1.4,0.4,2.6,1.3,3.4s2,1.3,3.4,1.3c1.5,0,2.6-0.4,3.5-1.3c0.9-0.9,1.3-2.1,1.3-3.6c0-1.5-0.4-2.6-1.2-3.5C86.5,8.1,85.4,7.7,83.9,7.7 M75.5,7.7c-1,0-1.9,0.3-2.5,0.8c-0.7,0.5-1,1.2-1,2c0,0.4,0.1,0.8,0.2,1.1c0.1,0.3,0.4,0.6,0.6,0.9c0.3,0.2,0.7,0.5,1.3,0.7c0.5,0.2,0.9,0.4,1.1,0.5c0.2,0.1,0.4,0.3,0.5,0.4c0.1,0.1,0.1,0.3,0.1,0.5c0,0.6-0.5,0.9-1.4,0.9c-0.3,0-0.8-0.1-1.2-0.2s-0.9-0.3-1.2-0.6L72,14.7v2.1l0,0c0.3,0.1,0.7,0.3,1.2,0.4c0.5,0.1,0.9,0.1,1.2,0.1c1.1,0,2-0.3,2.7-0.8c0.7-0.5,1-1.2,1-2.1c0-0.6-0.2-1.2-0.5-1.6c-0.3-0.4-1-0.8-1.8-1.2c-0.7-0.3-1.1-0.5-1.3-0.7c-0.2-0.2-0.3-0.4-0.3-0.7c0-0.3,0.1-0.5,0.3-0.7c0.2-0.2,0.5-0.3,0.9-0.3c0.4,0,0.7,0.1,1.1,0.2c0.4,0.1,0.7,0.3,1,0.4l0.1,0.1v-2l0,0c-0.3-0.1-0.6-0.2-1-0.3C76.2,7.7,75.9,7.7,75.5,7.7 M66.3,15.5c-0.8,0-1.4-0.3-1.9-0.8c-0.4-0.5-0.7-1.3-0.7-2.2c0-1,0.2-1.7,0.7-2.3c0.4-0.5,1.1-0.8,1.8-0.8c0.8,0,1.4,0.3,1.8,0.8c0.4,0.5,0.7,1.3,0.7,2.2c0,1-0.2,1.8-0.6,2.3C67.8,15.2,67.1,15.5,66.3,15.5 M66.4,7.7c-1.5,0-2.7,0.4-3.6,1.3c-0.9,0.9-1.3,2.1-1.3,3.6c0,1.4,0.4,2.6,1.3,3.4s2,1.3,3.4,1.3c1.5,0,2.6-0.4,3.5-1.3c0.9-0.9,1.3-2.1,1.3-3.6c0-1.5-0.4-2.6-1.2-3.5C69,8.1,67.9,7.7,66.4,7.7 M58.3,9.5V7.9h-2.2v9.2h2.2v-4.7c0-0.8,0.2-1.5,0.5-1.9c0.3-0.5,0.8-0.7,1.4-0.7c0.2,0,0.4,0,0.6,0.1c0.2,0.1,0.4,0.1,0.5,0.2l0.1,0.1V7.9l0,0c-0.2-0.1-0.5-0.1-0.8-0.1c-0.5,0-1,0.2-1.4,0.5C58.8,8.6,58.5,9,58.3,9.5C58.3,9.5,58.3,9.5,58.3,9.5z M52.3,7.7c-1,0-1.9,0.2-2.6,0.6c-0.8,0.4-1.3,1-1.7,1.8c-0.4,0.8-0.6,1.6-0.6,2.6c0,0.9,0.2,1.7,0.6,2.4c0.4,0.7,0.9,1.2,1.6,1.6c0.7,0.4,1.5,0.6,2.4,0.6c1,0,1.9-0.2,2.6-0.6l0,0v-2l-0.1,0.1c-0.3,0.2-0.7,0.4-1.1,0.6c-0.4,0.1-0.7,0.2-1,0.2c-0.8,0-1.5-0.3-2-0.8c-0.5-0.5-0.7-1.3-0.7-2.2c0-0.9,0.3-1.7,0.8-2.2c0.5-0.6,1.2-0.8,2-0.8c0.7,0,1.4,0.2,2.1,0.7l0.1,0.1V8.2l0,0c-0.2-0.1-0.6-0.3-1-0.3C53,7.7,52.6,7.7,52.3,7.7 M45.8,7.9h-2.2v9.2h2.2V7.9z M44.8,4c-0.4,0-0.7,0.1-0.9,0.4c-0.3,0.2-0.4,0.5-0.4,0.9c0,0.3,0.1,0.6,0.4,0.9c0.3,0.2,0.6,0.3,0.9,0.3c0.4,0,0.7-0.1,0.9-0.3c0.3-0.2,0.4-0.5,0.4-0.9s-0.1-0.6-0.4-0.9C45.5,4.1,45.1,4,44.8,4 M39.4,7.2v9.8h2.2V4.3h-3l-3.9,9.5l-3.8-9.5h-3.2v12.8h2.1V7.2h0.1l4,9.8h1.6L39.4,7.2L39.4,7.2L39.4,7.2z"></path>
-                  <path fill="#F1511B" d="M10.1,10.1H0V0h10.1V10.1z"></path>
-                  <path fill="#80CC28" d="M21.3,10.1H11.2V0h10.1L21.3,10.1L21.3,10.1z"></path>
-                  <path fill="#00ADEF" d="M10.1,21.3H0V11.2h10.1V21.3z"></path>
-                  <path fill="#FBBC09" d="M21.3,21.3H11.2V11.2h10.1L21.3,21.3L21.3,21.3z"></path>
-                </svg>
-              </li>
-
-              <li>
-                <svg viewBox="0 0 100 28" alt="Tesco">
-                  <path fill="#0054A4"
-                        d="M8.09269154,22.4569353 C6.10214428,22.4569353 4.49020398,23.5962388 3.71209453,24.4037015 C3.71209453,24.4037015 1.81856219,26.2803184 0.536472637,26.9300697 C0.480253731,26.9609154 0.481248756,27.0231045 0.559358209,27.0231045 L12.1484129,27.0231045 C14.4394577,27.0231045 15.5165721,26.2469851 16.8762736,25.0295721 C16.8762736,25.0295721 18.8558756,23.1897711 20.2135871,22.5957413 C20.350403,22.544 20.3180647,22.4569353 20.2135871,22.4569353 L8.09269154,22.4569353 L8.09269154,22.4569353 Z M28.0021443,22.4569353 C26.011597,22.4569353 24.4011493,23.5962388 23.6215473,24.4037015 C23.6215473,24.4037015 21.7285124,26.2803184 20.4464229,26.9300697 C20.3897065,26.9609154 20.3907015,27.0231045 20.4693085,27.0231045 L32.0812488,27.0231045 C34.371796,27.0231045 35.4499055,26.2469851 36.8091095,25.0295721 C36.8091095,25.0295721 38.7668209,23.1897711 40.1235373,22.5957413 C40.2603532,22.544 40.250403,22.4569353 40.1464229,22.4569353 L28.0021443,22.4569353 L28.0021443,22.4569353 Z M47.9344826,22.4569353 C45.9444328,22.4569353 44.33299,23.5962388 43.5538856,24.4037015 C43.5538856,24.4037015 41.6603532,26.2803184 40.3782637,26.9300697 C40.3225423,26.9609154 40.3240348,27.0231045 40.4021443,27.0231045 L52.0140846,27.0231045 C54.3046318,27.0231045 55.3588607,26.2469851 56.7190597,25.0295721 C56.7190597,25.0295721 58.6986617,23.1897711 60.0558756,22.5957413 C60.1931891,22.544 60.1832388,22.4569353 60.0792587,22.4569353 L47.9344826,22.4569353 L47.9344826,22.4569353 Z M67.8439353,22.4569353 C65.8543831,22.4569353 64.2658259,23.5962388 63.4862239,24.4037015 C63.4862239,24.4037015 61.569806,26.2803184 60.2872189,26.9300697 C60.2314975,26.9609154 60.23299,27.0231045 60.3110995,27.0231045 L71.9225423,27.0231045 C74.2135871,27.0231045 75.291199,26.2469851 76.6509005,25.0295721 C76.6509005,25.0295721 78.631995,23.1897711 79.9887114,22.5957413 C80.1265224,22.544 80.092194,22.4569353 79.9887114,22.4569353 L67.8439353,22.4569353 L67.8439353,22.4569353 Z M87.7757761,22.4569353 C85.7857264,22.4569353 84.1732886,23.5962388 83.3951791,24.4037015 C83.3951791,24.4037015 81.5006517,26.2803184 80.2190597,26.9300697 C80.1623433,26.9609154 80.1643333,27.0231045 80.2419453,27.0231045 L91.8548806,27.0231045 C94.1454279,27.0231045 95.2220448,26.2469851 96.5832388,25.0295721 C96.5832388,25.0295721 98.5414478,23.1897711 99.8966716,22.5957413 C100.033488,22.544 100.02503,22.4569353 99.9200547,22.4569353 L87.7757761,22.4569353 L87.7757761,22.4569353 Z"></path>
-                  <path fill="#F02E25"
-                        d="M48.6533881,0.415641791 C44.4170697,0.415641791 40.2862239,1.67335323 40.2862239,5.88529353 C40.2862239,13.1793234 53.0101045,9.32608955 53.0101045,13.7887761 C53.0101045,15.2435025 50.7538856,15.8285771 48.9314975,15.8285771 C45.6578657,15.8285771 43.4016468,15.3415124 40.5414478,13.6265871 L40.5414478,17.2882786 C42.6737861,17.9912637 45.5747811,18.3315622 48.7230398,18.3315622 C53.1175672,18.3315622 57.22901,17.1967363 57.22901,12.884796 C57.22901,5.26887562 44.5046318,8.69076617 44.5046318,4.95842786 C44.5046318,3.45544279 46.5464229,2.94200995 48.3295075,2.94200995 C51.330005,2.94200995 54.5693085,3.8201194 56.3489104,5.4678806 L56.3489104,1.57434826 C54.0459254,0.847482587 50.9882139,0.415641791 48.6533881,0.415641791 L48.6533881,0.415641791 Z M71.1349801,0.461910448 C63.4936866,0.461910448 58.4339851,4.13504478 58.4339851,9.73255721 C58.4339851,14.8698706 63.0777662,18.3081791 70.0225423,18.3081791 C72.2722935,18.3081791 74.2802537,18.0131542 76.6275174,17.4499701 L76.6275174,13.1156418 C74.9683134,14.8688756 72.9961741,15.5723582 70.8797562,15.5723582 C66.7782637,15.5723582 63.972791,13.0171343 63.972791,9.33753234 C63.972791,5.7081791 66.8812488,3.05643781 70.9484129,3.05643781 C73.1648308,3.05643781 74.9414478,3.86240796 76.371796,5.25892537 L76.371796,0.924597015 C74.8847313,0.618129353 73.0195572,0.461910448 71.1349801,0.461910448 L71.1349801,0.461910448 Z M88.9573682,0.461910448 C82.372791,0.461910448 77.7165721,4.25245771 77.7165721,9.59325373 C77.7165721,14.8325572 81.8976667,18.3086766 88.1235373,18.3086766 C94.7379652,18.3086766 99.2941841,14.6131542 99.2941841,9.24648756 C99.2956766,3.98081592 95.152393,0.461910448 88.9573682,0.461910448 L88.9573682,0.461910448 Z M1.18622388,0.994746269 L1.18622388,5.09723383 C2.61756716,3.98778109 5.6110995,3.56937313 8.88075124,3.54449751 L8.88075124,14.7385274 C8.88075124,16.3663881 8.73697015,16.8300697 8.04642289,17.6823085 L14.5130896,17.6823085 C13.7872189,16.8300697 13.6782637,16.3663881 13.6782637,14.7385274 L13.6782637,3.45096517 C16.5120945,3.4758408 19.8951791,3.98678607 21.3265224,5.09773134 L21.3265224,0.995243781 L1.18622388,0.995243781 L1.18622388,0.994746269 L1.18622388,0.994746269 Z M23.0653284,0.994746269 C23.7419453,1.84648756 23.8762736,2.3320597 23.8762736,3.96141294 L23.8762736,14.7385274 C23.8762736,16.3663881 23.7538856,16.8554428 23.111597,17.6823085 L38.73299,17.6823085 L38.73299,13.6265871 C36.5897065,15.1524577 32.510602,15.1579303 30.8528905,15.1325572 L28.5817463,15.1325572 L28.5817463,10.4743483 L30.250403,10.4743483 C31.3812488,10.4743483 33.4215473,10.6081791 34.6076169,10.9614129 L34.6076169,7.48529353 C33.4384627,7.86091542 31.3777662,7.97235821 30.250403,7.97235821 L28.5817463,7.97235821 L28.5817463,3.54648756 L30.8528905,3.54648756 C32.8822438,3.54648756 36.411597,3.96638806 37.7364726,5.07633831 L37.7364726,0.997233831 L23.0653284,0.997233831 L23.0653284,0.994746269 L23.0653284,0.994746269 Z M88.5185622,2.98827861 C91.9673184,2.98827861 94.2429403,5.84151244 94.2429403,9.36191045 C94.2429403,12.8823085 91.9673184,15.7360398 88.5185622,15.7360398 C85.0135871,15.7360398 82.7693085,12.8823085 82.7693085,9.36191045 C82.769806,5.84200995 85.0135871,2.98827861 88.5185622,2.98827861 L88.5185622,2.98827861 Z"></path>
-                </svg>
-              </li>
-
-              <li>
-                <svg viewBox="0 0 100 37" alt="Disney">
-                  <path fill="#108FF7"
-                        d="M5.4,18.5C5.6,17,7.7,14,15.9,13.7s11.9,1.9,11.9,2.8c0.1,1-1.6,2.3-2.7,2.4c-1.1,0.2-1-0.3-0.9-0.5c0-0.2,1.2-1,1.3-1.1c0.1-0.1,0.2-0.2-0.1-0.2c-0.3-0.1-2-0.6-8.3-0.6c-6.3,0.1-10.1,0.9-10.2,2.7c-0.2,2,6.9,6.4,14.9,6.5c8.3,0.2,12.3-3.7,12.4-7.7C34.1,11.1,22.1,2.5,6.1,1.5C1.3,1.2,1.4,1.7,1.4,1.8s1.3,0.5,1.3,1c0,0.4-1.1,0.2-1.5,0C0.9,2.9,0,2.2,0,1.6C0,1.1,0.6-0.2,7.1,0c6,0.2,15.4,1.9,23.8,7.8c4.2,3,6.9,6.2,6.9,11c-0.2,6.7-7.6,9.5-15.4,9.4C16.5,28,5.2,24.6,5.4,18.5"></path>
-                  <path fill="#108FF7"
-                        d="M15.7,8.1c0.6,0,1.4,3.7,1.3,10.6c-0.1,6.3,0.2,11.9-1.7,11.7c-1.6-0.1-1.4-6.1-1.3-10.2C14.1,16.1,14.6,8.1,15.7,8.1"></path>
-                  <path fill="#108FF7"
-                        d="M38.3,10.7c-0.2-0.1-0.4-1.3,1.5-3.6c0.9-1,2.3-2.5,4.5-3.5c2.8-1.3,5.7-1.7,6.7-0.2c1.3,1.9-0.9,4.4-3.4,5.7c-2.6,1.4-7.8,1.9-9.5-1c-1.1-1.9,0.2-4.6,2.4-5.9c2.6-1.6,5.2-1.4,7-0.7c1.3,0.5,1,2-0.4,2c-1,0-3.4-0.7-5.5,0.6c-1.3,0.8-2,2.1-1.3,3.4c1,1.8,4.5,1.7,6.5,0.6c2.4-1.2,3.4-2.9,2.8-3.6c-0.6-0.9-3.5,0.5-5.3,1.7c-1.7,1.2-3.7,2.9-4.6,3.9C39.4,10.2,38.7,11.1,38.3,10.7"></path>
-                  <path fill="#108FF7"
-                        d="M41.7,12.9c0.6,0,1.5,1.3,1.3,6.6c-0.2,5.3-0.6,7.6-1.7,7.6s-1.5-2.9-1.3-5.9S40.7,12.9,41.7,12.9"></path>
-                  <path fill="#108FF7"
-                        d="M59.3,22.5c0-2.7-3.9-3.5-7.6-4.3c-2.8-0.6-4-1-4-1.6c0-0.6,2-1.1,6.5-1c4.5,0.1,5-0.9,5-1.2c-0.1-0.4-0.9-1.3-5.9-1.2c-5,0.1-8.3,2-8.3,3.7c0.1,1.7,3,2.3,5.9,3c2.9,0.6,5.7,1.3,5.7,2.5c0,1.3-2.8,2.3-5.4,2.3s-4.7-0.4-4.7-1.1c0-0.3,0.9-0.2,1.3-0.2c0.3,0,2.4,0.1,3.2,0.1c0.8,0,2.3-0.1,2.3-0.9c-0.1-0.8-1.9-1.2-3.9-1.3c-2,0-5,0.5-5,2c0,1.7,3.8,3.3,7.4,3.3C55.7,26.9,59.3,25.1,59.3,22.5"></path>
-                  <path fill="#108FF7"
-                        d="M63.5,14.5c-0.6,0-1.6,1.3-2,5.5c-0.5,4.1-0.2,5-0.2,5.4c0.2,0.6,0.6,0.9,0.9,1.1c0.3,0.2,1,0.9,1.2-0.2c0.2-1,0.5-7.1,0.6-7.2c0-0.2,0.1-0.5,0.5,0c0.6,0.7,3.4,5.1,4.7,6.8c0.9,1.1,1.5,1.7,2,1.6c0.6,0,2-0.2,2.4-7.8c0.2-5.5-1.9-7.6-2.3-7.9c-0.5-0.3-0.6-0.3-0.7-0.2c-0.1,0.1-0.1,0.2,0.2,0.6c0.2,0.4,0.8,2.3,0.8,5.9c0,2.6-0.3,4.1-0.6,4.9c-0.1,0.4-0.2,0.7-0.6,0.2c-0.6-0.6-1.6-2-2.7-3.8C66.1,17.5,64.3,14.5,63.5,14.5"></path>
-                  <path fill="#108FF7"
-                        d="M76,14.4c0-0.6,3-1.3,5.4-1.5c2.4-0.2,3.9,0.2,4.2,0.5c0.2,0.2,0.9,1.2,0.6,1.6c-0.4,0.4-3.6,0.5-5.9,0.4c-0.4,1.3-1.4,4.6-1.5,7.1c-0.2,2.4,1.1,2.1,2.2,2c1.1-0.1,3.1-0.3,3.9-0.4c0.2,0,0.7,0,0.7,0.3S85.3,25,85,25.3c-0.6,0.4-3.3,2-6.1,1.9c-2-0.1-2.5-1.2-2.5-2.6c-0.1-2.3,1.3-8,1.8-9.3C77.4,15.2,75.9,15.2,76,14.4"></path>
-                  <path fill="#108FF7"
-                        d="M75.2,20.1c-0.1,0.2,0.4,1,2.2,1.3c1.7,0.2,4.2,0,4.7-0.2c0.6-0.2,1.2-0.7,1.4-1.1c0.2-0.5,0.3-0.7,0.1-0.9c-0.2-0.2-1.1-0.2-2.3-0.2c-1.8,0.2-4.6,0.5-5.4,0.6C75.5,19.8,75.3,19.9,75.2,20.1"></path>
-                  <path fill="#108FF7"
-                        d="M91.2,12.2c0.4,0,0.2,0.5-0.1,1c-0.2,0.6-2,4.3-2.4,7.4c-0.3,2.4,0.5,4,3,4.3c2.4,0.2,4.8-3,5.6-4.9c0.8-1.9,1.4-4.2,0.5-4.6c-1-0.4-3.1,2.8-4.6,5.7c-1.1,2.2-3.1,6.1-5,14.3C87.8,37,87.6,37,87.2,37c-0.3-0.1-1.6-0.8-1.2-3.7c0.4-2.9,2.2-7,3.5-9.8c1.3-2.8,6.1-11.1,8.8-10.5c2.8,0.6,1.2,6.2,0.6,7.6c-0.9,2.1-3.9,8-9.5,6c-2.5-0.9-3.1-4.3-2.3-7.2c0.6-2.1,2.2-5.2,3.1-6.4C90.6,12.5,90.8,12,91.2,12.2"></path>
-                </svg>
-              </li>
-
-              <li>
-                <svg viewBox="0 0 100 13.3" alt="Pixar">
-                  <path fill="#111111"
-                        d="M0,12.8c0-0.3,0-0.3,1.1-0.4l1-0.1l0-0.2c0-0.3,0-5.8,0-9l0-2.3L1.8,0.6c-0.2,0-0.6-0.1-1-0.1C0.1,0.4,0,0.3,0,0.1C0,0,0.2,0,2.7,0c4,0,5.2,0.1,6.3,0.7c0.8,0.4,1.4,1.1,1.4,1.9c0.1,0.7-0.2,1.7-0.7,2.3c-0.7,1-2.1,1.9-3.5,2.2c-0.8,0.2-1,0.2-1,0.1c0-0.3,0.1-0.3,0.6-0.6c0.7-0.3,1.2-0.6,1.5-1C8,5.1,8.3,4.3,8.2,3.3c0-0.6,0-0.7-0.2-1.1c-0.5-1-1.4-1.5-3-1.6l-0.6,0l0,0.3c-0.1,0.3,0,9.4,0,10.6c0,0.7,0,0.8,0.2,0.8c0.1,0,0.6,0.1,1.1,0.1c0.6,0,1,0.1,1.1,0.1c0,0,0.1,0.1,0.1,0.2v0.2H4.1c-1.5,0-3,0-3.4,0C0.1,12.8,0,12.8,0,12.8z"></path>
-                  <path fill="#111111"
-                        d="M21.9,12.7c0-0.1,0-0.2,0-0.2c0,0,0.3-0.1,0.7-0.1c0.4,0,0.8-0.1,1-0.2c0.3-0.1,0.3-0.1,0.3-0.4c0.1-0.6,0-11-0.1-11.1c0,0-0.5-0.1-1-0.2C22.5,0.5,22,0.4,22,0.4s0-0.1,0-0.2l0-0.2h2.7c1.5,0,2.9,0,3.2,0l0.5,0l0,0.2c0,0.1-0.1,0.2-0.1,0.2c0,0-0.5,0.1-1,0.2c-0.5,0.1-0.9,0.1-1,0.2c-0.1,0.1-0.1,8.2,0,10l0,1.5l0.3,0.1c0.2,0,0.6,0.1,1,0.1c0.4,0,0.7,0.1,0.7,0.1s0,0.1,0,0.2l0,0.2l-3,0c-1.7,0-3.1,0-3.2,0C22,12.8,21.9,12.8,21.9,12.7z"></path>
-                  <path fill="#111111"
-                        d="M51.4,13c-1-0.8-2.8-2.8-5.1-5.5c-0.3-0.3-0.5-0.5-0.5-0.5c-0.2,0-2.6,3.6-3.2,4.9l-0.2,0.4l0.6,0.1c0.3,0,0.6,0.1,0.8,0.1c0.2,0,0.3,0.1,0.3,0.3c0,0-0.6,0.1-2.4,0.1h-2.4l0-0.1c0.1-0.2,0.2-0.3,0.6-0.3c0.6-0.1,0.8-0.2,1.3-0.7c0.6-0.6,3.5-4.4,4.2-5.2c0-0.1-0.1-0.2-0.4-0.6c-0.2-0.3-1-1.3-1.8-2.3c-0.8-1-1.6-2.1-1.8-2.3c-0.4-0.5-0.4-0.5-0.8-0.6c-0.2-0.1-0.5-0.1-0.6-0.1c-0.2,0-0.2,0-0.2-0.2c0-0.1,0-0.2,0-0.2c0,0,1.3,0,2.8-0.1c2.7,0,2.9,0,2.9,0.1c0,0.2-0.1,0.2-0.7,0.3c-0.3,0-0.7,0.1-0.8,0.1l-0.2,0l0.4,0.6c0.8,1.2,2.4,3.5,2.5,3.5c0.1,0,2.2-2.9,2.7-3.8c0.2-0.3,0.2-0.3-0.6-0.5c-0.5-0.1-0.6-0.1-0.6-0.3c0-0.1,0-0.2,0-0.2s1,0,2.2,0l2.2,0l0,0.2c0,0.1,0,0.2,0,0.2c0,0-0.3,0.1-0.6,0.1c-0.6,0.1-0.6,0.1-0.9,0.4c-0.4,0.4-1.9,2.1-3.1,3.4L47,5.3l0.5,0.6c0.5,0.6,0.6,0.9,2.8,3.9c0.9,1.3,2.3,3.1,2.5,3.4c0,0.1-0.1,0.1-0.5,0.1h-0.6L51.4,13z"></path>
-                  <path fill="#111111"
-                        d="M98.7,12.8c-1-0.7-3.1-2.8-5.2-5.1l-0.8-0.9l-0.8,0c-0.5,0-0.9,0.1-0.9,0.1c-0.1,0,0,5.1,0.1,5.1c0.1,0.1,0.4,0.2,1.2,0.2c0.7,0.1,0.7,0.1,0.8,0.2c0,0.1,0,0.2,0,0.2c0,0-1.4,0-3.1,0l-3.1,0c0-0.1,0-0.2,0.1-0.3c0,0,0.5-0.1,1-0.2c0.5-0.1,0.9-0.1,0.9-0.2c0,0,0.1-0.3,0.1-0.6c0-0.6,0-10.5-0.1-10.7c0-0.2-0.2-0.3-1-0.3c-1-0.1-1-0.1-1-0.3V0.1h2.1c5.9,0,7.2,0.2,8.1,1.2c0.6,0.6,0.6,1.5,0.2,2.4c-0.3,0.7-1.2,1.7-2,2.1L94.9,6l0.2,0.4c0.3,0.5,2,3,2.7,4c0.7,1,1.1,1.4,1.7,2.2l0.5,0.6l-0.4,0.1c-0.2,0-0.4,0.1-0.4,0.1C99.2,13.2,99,13,98.7,12.8z M92.5,6.1c0.8-0.2,1.4-0.4,1.9-0.9c0.5-0.5,0.7-0.9,0.8-1.5c0.3-1.4-0.6-2.5-2.3-2.9c-0.6-0.2-1.8-0.3-1.9-0.2c0,0-0.1,0.8-0.1,2.9l0,2.8l0.5,0C91.7,6.2,92.2,6.2,92.5,6.1z"></path>
-                  <path fill="#111111"
-                        d="M61.7,12.6c0-0.2,0-0.2,0.9-0.3l0.7-0.1l0.2-0.4c0.4-0.8,1.3-3,3.1-7.6c0.7-1.9,1.3-3.5,1.3-3.5c0,0-0.3-0.1-0.6-0.1c-0.9-0.1-0.8-0.1-0.8-0.3V0.1l2.8,0C71.8,0,72,0,72,0.1c0,0,0,0.1,0,0.2s-0.2,0.1-0.7,0.2c-0.4,0.1-0.7,0.1-0.7,0.2c0,0,0.3,0.9,0.7,2c1.4,4,2.6,7,3.4,8.7l0.3,0.7l0.3,0.1c0.3,0.1,1.1,0.2,1.3,0.2c0.1,0,0.1,0.1,0.1,0.2l0,0.2l-3.1,0c-1.7,0-3.1,0-3.1,0s0-0.1,0-0.2l0-0.2l0.8-0.1c1-0.1,1.1-0.2,1-0.3c-0.1-0.2-0.6-1.6-0.9-2.7c-0.2-0.5-0.5-1.3-0.6-1.7l-0.3-0.8h-0.3c-0.9,0-3.9,0.2-4,0.3c-0.1,0.1-0.9,3.1-1.2,4.2c-0.1,0.4-0.2,0.8-0.2,0.8c0,0,0.3,0.1,0.9,0.2c0.7,0.1,0.7,0.1,0.7,0.3l0,0.2h-2.2c-1.2,0-2.3,0-2.5,0l-0.3,0L61.7,12.6z M70.3,6.2c0-0.1-0.1-0.2-0.2-0.3c-0.1-0.2-0.8-2.3-1.4-4.1c-0.2-0.4-0.3-0.8-0.3-0.8c-0.1-0.1-2,5-2,5.3c0,0,0.7,0.1,1.5,0.1s1.7,0,1.9,0l0.5,0L70.3,6.2z"></path>
-                </svg>
-              </li>
-
-              <li>
-                <svg viewBox="0 0 100 45.2" alt="Marvel">
-                  <path fill="#F11E22" d="M100,45.2H0V0h100V45.2z"></path>
-                  <path fill="#FFFFFF" d="M86.3,6.4h5.6V33h4.8v6.7H86.3V6.4z"></path>
-                  <path fill="#FFFFFF"
-                        d="M47.8,22.2c4-0.2,3.6-5.2,3.6-5.2c-0.6-4.9-3.6-4.7-3.6-4.7V22.2z M34.9,29.8l-1.7-10.1l-1.5,10.1H34.9z M4,39.5V6.4h7.6l2.7,13.9l3-13.9h7.3v29.8l4.8-29.8h7.5l4.7,29.8V6.5h9.8c0,0,3.4,0.6,5.1,5.4l-0.7-5.5h6l2.8,17.2l2.9-17h16.8v6.2h-5v6.8h4.8v6.9h-4.7V33h4.9v6.7H73.3V7.8l-5.6,31.9h-6.7l-3.5-21.1c0,0-0.6,5.8-3.9,8.5l4.2,12.6h-5.8l-4.1-11.1v11.1H36l-0.6-3.2h-4.5l-0.9,3.2H18.8V27.6l-2.9,12.1h-3l-2.7-12v11.7L4,39.5z"></path>
-                </svg>
-              </li>
+    <section class="section project">
+        <div class="container">
+            <h3>Google</h3>
+            <img class="screenshot"
+                 src="images/google_screenshot@0.5x.png"
+                 srcset="images/google_screenshot@1x.png 640w, images/google_screenshot@2x.png 1280w"
+                 alt="Google Screenshot" />
+            <ul class="project__skills">
+                <li>Polymer</li>
+                <li>Web Components</li>
+                <li>CSS Variables</li>
             </ul>
-          </div>
-          <div class="screenshots__frame"></div>
+            <p>My fourth major project for Google, this was probably the highlight of my career to date. Coming soon to a browser near you, there is unfortunately not much else I can divulge publicly until the site launches. I can discuss my general approach in person, though.</p>
+            <a class="project__link project__link--disabled">Coming soon!</a>
         </div>
-        <p class="project__description project__description--inverted">
-          <b>Since 2000</b>, I’ve worked on a huge variety of projects for a diverse range of clients, from the smallest startups to the biggest multinationals.&nbsp;
-          As an accomplished developer, I enjoy the thrill of the chase – facing problems head-on and quickly learning new skills and techniques to overcome the trickiest of situations.&nbsp;
-          I work quickly, but also take huge pride in the code I create – leaving it in the best possible state for future development.&nbsp;
-          I also bring with me a keen eye for design and a clear understanding of UX.&nbsp;
-          A willing and valued contributor to any design workshop or brainstorm, I’m also a great guy to have around the office.&nbsp;
-          Try me.
-        </p>
-      </section>
+    </section>
 
-      <section class="contact">
-        <div class="contact__content">
-          <h2 class="contact__heading">If you'd like my help,<br> please get in touch...</h2>
-
-          <a class="contact__button" title="Email me" href="mailto:steve@stevenhall.uk">
-            <svg viewBox="0 0 34 34">
-              <circle id="background" fill="#D0021B" cx="17" cy="17" r="17"></circle>
-              <path fill="#FFFFFF"
-                    d="M8.2,10.5c-1.2,0-0.6,0.4,0,0.9l8.2,6.8l9.4-6.8c0.6-0.5,1.2-0.9,0-0.9h-9.4H8.2z"></path>
-              <path fill="#FFFFFF"
-                    d="M7,12.3v10c0,0.6,0.6,1.2,1.1,1.2h17.9c0.5,0,1.1-0.6,1.1-1.2v-10l-10.6,7.6L7,12.3z"></path>
-            </svg>
-          </a>
-
-          <a class="contact__button" title="Follow me" target="_blank" href="https://twitter.com/S_Hl">
-            <svg viewBox="0 0 34 34">
-              <circle id="background" fill="#1DA1F2" cx="17" cy="17" r="17"></circle>
-              <path fill="#FFFFFF"
-                    d="M25.5,12.6c-0.6,0.3-1.3,0.5-2,0.6c0.7-0.4,1.3-1.1,1.5-1.9c-0.7,0.4-1.4,0.7-2.2,0.8c-0.6-0.7-1.5-1.1-2.6-1.1c-1.9,0-3.5,1.6-3.5,3.5c0,0.3,0,0.5,0.1,0.8c-2.9-0.1-5.5-1.5-7.2-3.7c-0.3,0.5-0.5,1.1-0.5,1.8c0,1.2,0.6,2.3,1.6,2.9c-0.6,0-1.1-0.2-1.6-0.4v0c0,1.7,1.2,3.1,2.8,3.4c-0.3,0.1-0.6,0.1-0.9,0.1c-0.2,0-0.4,0-0.7-0.1c0.4,1.4,1.7,2.4,3.3,2.4c-1.2,0.9-2.7,1.5-4.3,1.5c-0.3,0-0.6,0-0.8,0c1.5,1,3.4,1.6,5.4,1.6c6.4,0,9.9-5.3,9.9-9.9c0-0.2,0-0.3,0-0.5C24.5,13.9,25.1,13.3,25.5,12.6"></path>
-            </svg>
-          </a>
-
-          <a class="contact__button" title="LinkedIn" target="_blank"
-             href="https://www.linkedin.com/in/stevenjohnhall">
-            <svg viewBox="0 0 34 34">
-              <circle id="background" fill="#0077B5" cx="17" cy="17" r="17"></circle>
-              <path fill="#FFFFFF"
-                    d="M12.2,24.1H8.9V13.5h3.3V24.1z M10.5,12.2L10.5,12.2c-1.2,0-2-0.8-2-1.8c0-1,0.8-1.8,2-1.8c1.2,0,2,0.8,2,1.8C12.5,11.4,11.8,12.2,10.5,12.2z M25.5,24.1h-3.8v-5.5c0-1.4-0.6-2.4-1.9-2.4c-1,0-1.5,0.7-1.8,1.3C18,17.7,18,18.1,18,18.4v5.7h-3.7c0,0,0-9.7,0-10.6H18v1.7c0.2-0.7,1.4-1.8,3.3-1.8c2.4,0,4.2,1.5,4.2,4.8V24.1z"></path>
-            </svg>
-          </a>
+    <section class="section promo">
+        <div class="container">
+            <h3>A master craftsman of clean, maintainable code</h3>
+            <p>Like any craftsman I take huge pride in my work, using the right tools for the job and working quickly and efficiently while maintaining the highest possible standards. The result is an easy to follow, well documented, adaptable and maintainable codebase.</p>
         </div>
-      </section>
+    </section>
 
-    </article>
-  </body>
+    <section class="section project">
+        <div class="container">
+            <h3>Facebook</h3>
+            <img class="screenshot"
+                 src="images/facebook_screenshot@0.5x.png"
+                 srcset="images/facebook_screenshot@1x.png 640w, images/facebook_screenshot@2x.png 1280w"
+                 alt="Facebook Screenshot" />
+            <ul class="project__skills">
+                <li>React</li>
+                <li>Redux</li>
+                <li>Webpack</li>
+                <li>Sass</li>
+            </ul>
+            <p>A whole suite of sites developed for Facebook within a seemingly impossible time frame, the largest of which was a pair of sites to teach digital skills to startups and individuals in India. All multilingual and CMS-based, with many more markets being rolled out soon.</p>
+            <div class="project__link">
+                Facebook's impact in
+                <a href="https://france.fb.com/en/" target="_blank" rel="noopener noreferrer">France</a>,
+                <a href="https://deutschland.fb.com/en/" target="_blank" rel="noopener noreferrer">Germany</a> and
+                <a href="https://eu.fb.com" target="_blank" rel="noopener noreferrer">Europe</a>
+            </div>
+            <div class="project__link">
+                <a href="https://startups.fb.com" target="_blank" rel="noopener noreferrer">Startup Training Hub</a> and
+                <a href="https://digitalskills.fb.com" target="_blank" rel="noopener noreferrer">Digital Training Hub</a>
+            </div>
+        </div>
+    </section>
 
+    <section class="section promo">
+        <div class="container">
+            <h3>A keen eye for design with a clear understanding of UX</h3>
+            <p>I started out briefly as a designer, so I understand the basics of design and bring layouts to life with the care and attention they deserve. I can fill in any gaps and add small details which really improve the finesse and quality of the overall product and user experience.</p>
+        </div>
+    </section>
+
+    <section class="section project">
+        <div class="container">
+            <h3>HBO</h3>
+            <img class="screenshot"
+                 src="images/pipey_screenshot@0.5x.png"
+                 srcset="images/pipey_screenshot@1x.png 640w, images/pipey_screenshot@2x.png 1280w"
+                 alt="Pipey Screenshot" />
+            <ul class="project__skills">
+                <li>Chrome Extension</li>
+                <li>HTML</li>
+                <li>JavaScript</li>
+                <li>CSS</li>
+            </ul>
+            <p>From the hit TV series Silicon Valley, Pipey is the digital assistant nobody wants or needs. Brought to life as a Chrome Extension, Pipey sits in your browser communicating with a chatbot engine to make hilarious yet unhelpful remarks about the websites you visit.</p>
+            <a class="project__link" href="http://getpipey.com" target="_blank" rel="noopener noreferrer">Get the Pipey Chrome Extension</a>
+        </div>
+    </section>
+
+    <section class="section promo">
+        <div class="container">
+            <h3>An expert problem solver and avid brainstormer</h3>
+            <p>The most successful projects I've worked on have taken a collaborative, agile approach to fleshing out product features. A willing and valued contributor to any design workshop, brainstorm or client meeting, I often hit on elegant solutions which others might miss.</p>
+        </div>
+    </section>
+
+    <section class="section project">
+        <div class="container">
+            <h3>Beano</h3>
+            <img class="screenshot"
+                 src="images/beano_screenshot@0.5x.png"
+                 srcset="images/beano_screenshot@1x.png 640w, images/beano_screenshot@2x.png 1280w"
+                 alt="Beano Screenshot" />
+            <ul class="project__skills">
+                <li>React</li>
+                <li>Redux</li>
+                <li>Webpack</li>
+                <li>CSS Modules</li>
+            </ul>
+            <p>As the classic kids' cartoon struggled to maintain relevance in this digital age, a drastic solution was needed. The result is a BuzzFeed style safe haven for kids to safely enjoy the best the Internet has to offer, alongside original content featuring Beano characters.</p>
+            <a class="project__link" href="https://www.beano.com" target="_blank" rel="noopener noreferrer">Beano Website</a>
+        </div>
+    </section>
+
+    <section class="section promo">
+        <div class="container">
+            <h3>Self-motivated with remarkable time management</h3>
+            <p>I've been in this game long enough to have a fair idea how long things take. With one eye always on the bigger picture I won't obsess or get bogged down, instead taking an iterative approach to ensure features remain shippable within an agreed time frame.</p>
+        </div>
+    </section>
+
+    <section class="section project">
+        <div class="container">
+            <h3>Google</h3>
+            <img class="screenshot"
+                 src="images/barometer_screenshot@0.5x.png"
+                 srcset="images/barometer_screenshot@1x.png 640w, images/barometer_screenshot@2x.png 1280w"
+                 alt="Google Screenshot" />
+                <ul class="project__skills">
+                    <li>Angular</li>
+                    <li>Foundation</li>
+                    <li>Less</li>
+                    <li>Gulp</li>
+                </ul>
+            <p>Google Consumer Barometer is a tool to help understand how people use the Internet around the world. A real 'big data' project, the UI does a great job of hiding the almost endless complexity of the underlying data, particularly within the graph builder section.</p>
+            <a class="project__link" href="https://www.consumerbarometer.com" target="_blank" rel="noopener noreferrer">Google Consumer Barometer</a>
+        </div>
+    </section>
+
+    <section class="section promo">
+        <div class="container">
+            <h3>A real team-player and all-round nice guy ;-)</h3>
+            <p>Whatever your way of working, I'm flexible enough to fit the mould. I'll offer helpful suggestions where appropriate, but I'm not overbearing with my opinions. Always keen to help in any situation, I'm also just a great guy to have around the office. Try me!</p>
+        </div>
+    </section>
+
+    <section class="section clients">
+        <div class="container">
+            <h3>Ask me about...</h3>
+            <ul class="clients__list">
+                <li>
+                    <svg viewBox="0 0 100 34" alt="Google">
+                        <path fill="#EA4335" d="M42.87 17.474c0 4.73-3.7 8.215-8.24 8.215-4.541 0-8.241-3.485-8.241-8.215 0-4.763 3.7-8.215 8.24-8.215 4.541 0 8.241 3.452 8.241 8.215zm-3.607 0c0-2.955-2.144-4.978-4.633-4.978-2.49 0-4.634 2.023-4.634 4.978 0 2.926 2.145 4.978 4.634 4.978 2.489 0 4.633-2.056 4.633-4.978z"/>
+                        <path fill="#FBBC05" d="M60.648 17.474c0 4.73-3.7 8.215-8.24 8.215-4.541 0-8.241-3.485-8.241-8.215 0-4.76 3.7-8.215 8.24-8.215 4.541 0 8.241 3.452 8.241 8.215zm-3.607 0c0-2.955-2.145-4.978-4.634-4.978-2.488 0-4.633 2.023-4.633 4.978 0 2.926 2.145 4.978 4.633 4.978 2.49 0 4.634-2.056 4.634-4.978z"/>
+                        <path fill="#4285F4" d="M77.685 9.756v14.748c0 6.066-3.578 8.544-7.807 8.544-3.982 0-6.378-2.663-7.282-4.84l3.141-1.308c.56 1.337 1.93 2.915 4.137 2.915 2.707 0 4.385-1.67 4.385-4.815v-1.181h-.126c-.807.996-2.363 1.866-4.326 1.866-4.107 0-7.87-3.578-7.87-8.181 0-4.637 3.763-8.245 7.87-8.245 1.96 0 3.515.87 4.326 1.837h.126V9.76h3.426v-.003zm-3.17 7.748c0-2.893-1.93-5.008-4.385-5.008-2.49 0-4.574 2.115-4.574 5.008 0 2.863 2.085 4.948 4.574 4.948 2.455 0 4.385-2.085 4.385-4.948z"/>
+                        <path fill="#34A853" d="M83.333 1.111v24.074h-3.518V1.111h3.518z"/>
+                        <path fill="#EA4335" d="M97.044 20.178l2.8 1.866c-.903 1.337-3.081 3.641-6.844 3.641-4.667 0-8.152-3.607-8.152-8.215 0-4.885 3.515-8.214 7.748-8.214 4.263 0 6.348 3.392 7.03 5.225l.374.934-10.981 4.548c.84 1.648 2.148 2.489 3.981 2.489 1.837 0 3.111-.904 4.044-2.274zm-8.618-2.956l7.34-3.048c-.403-1.026-1.618-1.74-3.047-1.74-1.834 0-4.386 1.618-4.293 4.788z"/>
+                        <path fill="#4285F4" d="M13.07 15.337v-3.485h11.745c.115.607.174 1.326.174 2.104 0 2.614-.715 5.848-3.019 8.151-2.24 2.334-5.103 3.578-8.896 3.578-7.03 0-12.94-5.726-12.94-12.755C.133 5.9 6.043.174 13.073.174c3.889 0 6.66 1.526 8.74 3.515l-2.458 2.46c-1.493-1.4-3.515-2.49-6.286-2.49-5.133 0-9.148 4.137-9.148 9.27 0 5.134 4.015 9.271 9.148 9.271 3.33 0 5.226-1.337 6.441-2.552.985-.985 1.633-2.392 1.889-4.315l-8.33.004z"/>
+                    </svg>
+                </li>
+                <li>
+                    <svg viewBox="0 0 100 38" alt="Facebook">
+                        <path fill="#3B5998" d="M0 0h100v37.594H0z"/>
+                        <path d="M54.09 16.105c-1.235-.132-2.304.242-3.208 1.33v-6.667l-3.273.397v15.428h3.273v-.916c.44.315.87.695 1.373.875 1.906.683 4.42.126 5.3-2.425.565-1.636.55-3.313.125-4.968-.472-1.838-1.695-2.853-3.59-3.054zm.489 6.682c-.144 1.017-.953 1.55-1.915 1.475a2.254 2.254 0 0 1-.652-.144c-.775-.445-1.009-1.19-1.077-1.657h-.002c-.052-.723-.11-2.236.243-2.951.3-.548.823-.847 1.516-.87.986-.032 1.732.457 1.878 1.457.13.88.136 1.81.01 2.69h-.001zm11.109-6.492a6.535 6.535 0 0 0-3.42.002c-1.7.453-2.838 1.528-3.205 3.238-.2.933-.24 1.925-.187 2.882.121 2.188 1.474 3.748 3.575 4.232l.09.019.015.003c.08.016.161.031.243.044l.081.007h.003c.101.019.224.033.352.043.412.044.935.075 1.372.023h.007c.022 0 .045 0 .066-.003 2.17-.112 3.815-1.48 4.296-3.579a7.8 7.8 0 0 0 .009-3.458c-.4-1.807-1.496-2.97-3.297-3.452zm.14 6.326c-.012.068-.023.135-.039.202-.218.966-.918 1.488-1.853 1.445-1.006-.046-1.695-.634-1.792-1.638a12.624 12.624 0 0 1-.015-2.218c.096-1.159.82-1.793 1.908-1.771.893.017 1.53.524 1.757 1.383.206.864.053 2.4.033 2.597zm-49.266-6.38h-2.336v-1.553c.17-1.468 2.596-1.19 2.596-1.19v-2.524h-.002c-.083-.02-4.825-1.145-5.767 2.464v.002l-.007.024c-.148.451-.138 2.517-.136 2.777H8.886v2.763h2.15v7.515h3.13v-7.515h2.395l.27-2.763h-.27zm7.466 1.322a5.765 5.765 0 0 0-.109-.118l-.015-.015-.077-.078c-.737-.75-1.015-.937-1.593-1.107-2.22-.654-4.382.509-5.067 2.743-.42 1.373-.427 2.786-.18 4.177.533 3.01 2.772 4.018 5.159 3.521.732-.152 1.277-.609 1.782-1.243 0 0 .045-.056.1-.164v1.325h3.055V16.253h-3.054v1.31zm-.269 5.209c-.102.957-.876 1.532-1.792 1.496-.938-.037-1.558-.54-1.761-1.44-.243-1.28.041-2.8.065-2.924.246-.86.87-1.285 1.788-1.263.9.02 1.595.553 1.697 1.486.095.873.097 1.771.003 2.645zm12.652 3.09c-.142-.52-.303-1.03-.46-1.524l-.147-.55s-3.828 1.838-4.425-1.654a7.498 7.498 0 0 1 .04-1.74c.15-1.073.805-1.648 1.847-1.746a4.102 4.102 0 0 1 1.066.042c.474.08.938.223 1.457.351.18-.552.364-1.097.536-1.648a6.3 6.3 0 0 0 .068-.227l.086-.33a.398.398 0 0 0-.144-.134c-.088-.073-.238-.135-.472-.22a8.257 8.257 0 0 0-.282-.094l-.139-.043c-1.005-.287-2.037-.31-3.086-.199-2.21.233-3.71 1.538-4.127 3.692a8.389 8.389 0 0 0 .042 3.416c.376 1.702 1.408 2.802 3.085 3.293 1.094.321 2.215.337 3.331.163.47-.073 1.142-.316 1.625-.49l.185-.064-.088-.295.001.001zm10.077-4.05c-.015-.716-.005-1.436-.107-2.14-.28-1.931-1.455-3.153-3.356-3.472-.725-.121-1.492-.105-2.23-.035-2.018.192-3.549 1.449-3.863 3.34a12.016 12.016 0 0 0-.061 3.518c.233 1.733 1.076 2.838 2.537 3.368l.02.002v.001c.665.2 3.928 1.053 6.803-.392l-.116-.424h-.003c-.134-.564-.294-1.122-.445-1.682l-.016-.055-.165.055-.008.001a5.61 5.61 0 0 0-.373.113 12.314 12.314 0 0 1-1.783.38 8.99 8.99 0 0 1-1.671.009c-.914-.15-1.612-.64-1.58-1.796h5.894l.127-.001s.385-.004.401-.008v-.114l-.006-.668zm-2.944-1.41h-3.536c.019-.704.107-1.358.732-1.757.664-.42 1.397-.437 2.08-.059.69.382.744 1.07.724 1.815zm47.57-4.041h-3.472l-3.015 4.713V10.778l-3.272.396v15.429h3.272v-4.722l3.015 4.73h3.472l-3.272-5.134 3.272-5.116zm-14.264-.067a6.543 6.543 0 0 0-3.421.001c-1.699.453-2.837 1.528-3.204 3.237-.2.934-.24 1.926-.187 2.883.12 2.189 1.474 3.748 3.574 4.232.03.008.06.013.091.02l.014.003c.08.016.162.03.244.043a1.988 1.988 0 0 0 .083.007c.103.02.224.033.352.044.412.043.936.075 1.372.023l.007-.002.066-.001c2.17-.113 3.816-1.481 4.297-3.58a7.81 7.81 0 0 0 .009-3.458c-.4-1.807-1.495-2.97-3.297-3.452zm.138 6.325a3.707 3.707 0 0 1-.038.203c-.218.965-.918 1.487-1.853 1.444-1.005-.047-1.695-.634-1.792-1.638a12.511 12.511 0 0 1-.015-2.217c.097-1.16.82-1.793 1.909-1.772.892.017 1.529.524 1.756 1.383.205.864.053 2.4.033 2.598z" fill="#FFF"/>
+                    </svg>
+                </li>
+                <li>
+                    <svg viewBox="0 0 100 21.3" alt="Microsoft">
+                        <path fill="#706D6E" d="M100 9.7V7.9h-2.2V5.2h-.1l-2.1.6v2.1h-3.2V6.7c0-.5.1-.9.4-1.2.2-.3.6-.4 1-.4.3 0 .6.1.9.2h.1V3.5c-.3-.1-.7-.2-1.2-.2-.6 0-1.2.1-1.7.4-.5.3-.9.7-1.2 1.2-.3.5-.4 1.1-.4 1.7v1.3h-1.5v1.8h1.5v7.4h2.2V9.7h3.2v4.7c0 1.9.9 2.9 2.7 2.9.3 0 .6 0 .9-.1.3-.1.5-.1.7-.2v-1.8l-.1.1c-.1.1-.3.1-.4.2-.2 0-.3.1-.4.1-.4 0-.7-.1-.9-.3-.2-.2-.3-.6-.3-1.2V9.7h2.1zm-16.2 5.8c-.8 0-1.4-.3-1.9-.8-.4-.5-.7-1.3-.7-2.2 0-1 .2-1.7.7-2.3.4-.5 1.1-.8 1.8-.8.8 0 1.4.3 1.8.8.4.5.7 1.3.7 2.2 0 1-.2 1.8-.6 2.3-.4.5-1 .8-1.8.8m.1-7.8c-1.5 0-2.7.4-3.6 1.3-.9.9-1.3 2.1-1.3 3.6 0 1.4.4 2.6 1.3 3.4s2 1.3 3.4 1.3c1.5 0 2.6-.4 3.5-1.3.9-.9 1.3-2.1 1.3-3.6s-.4-2.6-1.2-3.5c-.8-.8-1.9-1.2-3.4-1.2m-8.4 0c-1 0-1.9.3-2.5.8-.7.5-1 1.2-1 2 0 .4.1.8.2 1.1.1.3.4.6.6.9.3.2.7.5 1.3.7.5.2.9.4 1.1.5.2.1.4.3.5.4.1.1.1.3.1.5 0 .6-.5.9-1.4.9-.3 0-.8-.1-1.2-.2s-.9-.3-1.2-.6v2.1c.3.1.7.3 1.2.4.5.1.9.1 1.2.1 1.1 0 2-.3 2.7-.8.7-.5 1-1.2 1-2.1 0-.6-.2-1.2-.5-1.6-.3-.4-1-.8-1.8-1.2-.7-.3-1.1-.5-1.3-.7-.2-.2-.3-.4-.3-.7 0-.3.1-.5.3-.7.2-.2.5-.3.9-.3s.7.1 1.1.2c.4.1.7.3 1 .4l.1.1v-2c-.3-.1-.6-.2-1-.3-.4.1-.7.1-1.1.1m-9.2 7.8c-.8 0-1.4-.3-1.9-.8-.4-.5-.7-1.3-.7-2.2 0-1 .2-1.7.7-2.3.4-.5 1.1-.8 1.8-.8.8 0 1.4.3 1.8.8.4.5.7 1.3.7 2.2 0 1-.2 1.8-.6 2.3-.3.5-1 .8-1.8.8m.1-7.8c-1.5 0-2.7.4-3.6 1.3-.9.9-1.3 2.1-1.3 3.6 0 1.4.4 2.6 1.3 3.4s2 1.3 3.4 1.3c1.5 0 2.6-.4 3.5-1.3.9-.9 1.3-2.1 1.3-3.6s-.4-2.6-1.2-3.5c-.8-.8-1.9-1.2-3.4-1.2m-8.1 1.8V7.9h-2.2v9.2h2.2v-4.7c0-.8.2-1.5.5-1.9.3-.5.8-.7 1.4-.7.2 0 .4 0 .6.1.2.1.4.1.5.2l.1.1V7.9c-.2-.1-.5-.1-.8-.1-.5 0-1 .2-1.4.5-.4.3-.7.7-.9 1.2zm-6-1.8c-1 0-1.9.2-2.6.6-.8.4-1.3 1-1.7 1.8-.4.8-.6 1.6-.6 2.6 0 .9.2 1.7.6 2.4.4.7.9 1.2 1.6 1.6.7.4 1.5.6 2.4.6 1 0 1.9-.2 2.6-.6v-2l-.1.1c-.3.2-.7.4-1.1.6-.4.1-.7.2-1 .2-.8 0-1.5-.3-2-.8s-.7-1.3-.7-2.2c0-.9.3-1.7.8-2.2.5-.6 1.2-.8 2-.8.7 0 1.4.2 2.1.7l.1.1V8.2c-.2-.1-.6-.3-1-.3-.7-.2-1.1-.2-1.4-.2m-6.5.2h-2.2v9.2h2.2V7.9zm-1-3.9c-.4 0-.7.1-.9.4-.3.2-.4.5-.4.9 0 .3.1.6.4.9.3.2.6.3.9.3.4 0 .7-.1.9-.3.3-.2.4-.5.4-.9s-.1-.6-.4-.9c-.2-.3-.6-.4-.9-.4m-5.4 3.2V17h2.2V4.3h-3l-3.9 9.5-3.8-9.5h-3.2v12.8h2.1V7.2h.1l4 9.8h1.6l3.9-9.8z"/>
+                        <path fill="#F1511B" d="M10.1 10.1H0V0h10.1v10.1z"/>
+                        <path fill="#80CC28" d="M21.3 10.1H11.2V0h10.1v10.1z"/>
+                        <path fill="#00ADEF" d="M10.1 21.3H0V11.2h10.1v10.1z"/>
+                        <path fill="#FBBC09" d="M21.3 21.3H11.2V11.2h10.1v10.1z"/>
+                    </svg>
+                </li>
+                <li>
+                    <svg viewBox="0 0 100 28" alt="Tesco">
+                        <path fill="#0054A4" d="M8.093 22.457c-1.99 0-3.603 1.14-4.38 1.947 0 0-1.894 1.876-3.177 2.526-.056.03-.055.093.023.093h11.59c2.29 0 3.368-.776 4.727-1.993 0 0 1.98-1.84 3.338-2.434.136-.052.104-.14 0-.14H8.093zm19.91 0c-1.991 0-3.602 1.14-4.381 1.947 0 0-1.893 1.876-3.176 2.526-.056.03-.055.093.023.093h11.612c2.29 0 3.369-.776 4.728-1.993 0 0 1.958-1.84 3.315-2.434.136-.052.126-.14.022-.14H28.002zm19.931 0c-1.99 0-3.601 1.14-4.38 1.947 0 0-1.894 1.876-3.176 2.526-.055.03-.054.093.024.093h11.612c2.29 0 3.345-.776 4.705-1.993 0 0 1.98-1.84 3.337-2.434.137-.052.127-.14.023-.14H47.934zm19.91 0c-1.99 0-3.578 1.14-4.358 1.947 0 0-1.916 1.876-3.199 2.526-.056.03-.054.093.024.093h11.612c2.29 0 3.368-.776 4.728-1.993 0 0 1.981-1.84 3.338-2.434.138-.052.103-.14 0-.14H67.844zm19.932 0c-1.99 0-3.603 1.14-4.38 1.947 0 0-1.895 1.876-3.177 2.526-.057.03-.055.093.023.093h11.613c2.29 0 3.367-.776 4.728-1.993 0 0 1.958-1.84 3.314-2.434.136-.052.128-.14.023-.14H87.776z"/>
+                        <path fill="#F02E25" d="M48.653.416c-4.236 0-8.367 1.257-8.367 5.47 0 7.293 12.724 3.44 12.724 7.903 0 1.455-2.256 2.04-4.079 2.04-3.273 0-5.53-.487-8.39-2.202v3.661c2.133.703 5.034 1.044 8.182 1.044 4.395 0 8.506-1.135 8.506-5.447 0-7.616-12.724-4.194-12.724-7.927 0-1.503 2.041-2.016 3.825-2.016 3 0 6.24.878 8.019 2.526V1.574C54.046.847 50.989.416 48.653.416zm22.482.046c-7.641 0-12.701 3.673-12.701 9.27 0 5.138 4.644 8.576 11.589 8.576 2.25 0 4.257-.295 6.605-.858v-4.334c-1.66 1.753-3.632 2.456-5.748 2.456-4.102 0-6.907-2.555-6.907-6.234 0-3.63 2.908-6.282 6.975-6.282 2.217 0 3.993.806 5.424 2.203V.925C74.885.618 73.02.462 71.135.462zm17.822 0c-6.584 0-11.24 3.79-11.24 9.131 0 5.24 4.18 8.716 10.407 8.716 6.614 0 11.17-3.696 11.17-9.063.002-5.265-4.142-8.784-10.337-8.784zM1.187.995v4.102C2.616 3.987 5.61 3.57 8.88 3.544V14.74c0 1.627-.144 2.091-.835 2.943h6.467c-.726-.852-.835-1.316-.835-2.943V3.45c2.834.025 6.217.536 7.649 1.647V.995H1.187zm21.878 0c.677.851.811 1.337.811 2.966V14.74c0 1.627-.122 2.116-.764 2.943h15.621v-4.055c-2.143 1.525-6.222 1.53-7.88 1.506h-2.271v-4.659h1.668c1.131 0 3.172.134 4.358.487V7.485c-1.17.376-3.23.487-4.358.487h-1.668V3.546h2.27c2.03 0 5.56.42 6.884 1.53V.997h-14.67V.995zM88.52 2.988c3.448 0 5.724 2.854 5.724 6.374 0 3.52-2.276 6.374-5.724 6.374-3.505 0-5.75-2.854-5.75-6.374 0-3.52 2.245-6.374 5.75-6.374z"/>
+                    </svg>
+                </li>
+                <li>
+                    <svg viewBox="0 0 100 100" alt="Lego">
+                        <path fill="#FFF" d="M.678.669v98.665h98.667V.669z"/>
+                        <path d="M.678.669v98.665h98.667V.669H.678zM92.78 41.68c-.162 3.073-1.141 6.905-2.003 9.464-3.47 10.308-7.492 16.698-16.807 16.698-2.743 0-7.609-.727-9.401-5.607l-.425-1.158-.764.968c-2.913 3.69-7.242 5.82-11.875 5.841-3.555.016-6.41-1.174-8.259-3.445l-.506-.623-.54.595c-1.974 2.18-5.41 3.429-9.43 3.429-3.155 0-5.88-1.074-7.673-3.018l-.488-.53-.508.512c-1.993 2.013-5.134 3.026-9.083 2.934-4.79-.114-7.708-2.788-7.802-7.155-.145-6.733 6.372-20.9 9.07-25.208 1.75-2.877 4.159-4.272 7.364-4.272 2.182 0 3.674.456 4.56 1.395.807.854.967 1.575 1.039 3.308l.092 2.24 1.183-1.905c2.86-4.609 7.6-5.245 12.298-5.245 3.265 0 6.115 1.2 7.26 3.059l.422.685.61-.52c2.422-2.057 5.837-3.19 9.617-3.19 4.127 0 7.125 1.026 8.914 3.05.407.459.675.78 1.049 1.565l.459.964.69-.815c2.618-3.097 6.193-4.667 10.63-4.667 3.514 0 6.181.934 7.927 2.776 2.19 2.308 2.503 5.557 2.38 7.875z" fill="#F6EC36"/><path d="M.678.669v98.665h98.667V.669H.678zm94.88 44.797c-.446 3.591-2.873 10.244-4.162 12.902-3.46 7.128-8.08 12.604-16.986 12.604-4.756 0-8.67-1.517-10.958-4.433-3.35 2.936-7.498 4.474-11.963 4.474-3.44 0-6.48-.993-8.8-2.83-2.558 1.802-6.01 2.808-9.837 2.808-3.196 0-6.072-.878-8.323-2.5-2.49 1.652-5.753 2.474-9.584 2.383-6.373-.15-10.774-4.193-10.9-10.063-.166-7.797 6.4-22.068 9.494-27.01 2.316-3.804 5.85-5.85 10.182-5.85 4.701 0 6.405 1.342 7.244 3.051 3.628-3.08 8.436-3.257 11.86-3.257 3.778 0 6.15 1.003 8.166 2.608 2.786-1.67 5.981-2.539 9.787-2.539 4.867 0 8.482 1.132 11.004 3.624 2.94-2.447 6.623-3.563 10.745-3.563 5.45 0 9.037 1.966 11.143 4.897 2.966 4.134 2.435 8.295 1.888 12.694z" fill="#D01012"/><path d="M0 0v100h100V0H0zm98.625 1.377v97.25H1.377V1.376h97.248z" fill="#000"/><path d="M95.077 30.008v-.681h.462c.338 0 .513.118.513.338 0 .174-.113.343-.456.343h-.52zm1.658 1.412l-.288-.5c-.25-.436-.318-.505-.532-.58v-.014c.42-.049.67-.32.67-.693 0-.395-.25-.694-.782-.694h-1.238v2.482h.513v-1.016h.094c.22 0 .307.024.406.124.1.102.25.313.338.487l.2.405h.62zm-1.221-3.173c1.065 0 1.931.86 1.931 1.924a1.93 1.93 0 0 1-1.931 1.926 1.922 1.922 0 0 1-1.92-1.926 1.92 1.92 0 0 1 1.92-1.924zm0-.473a2.391 2.391 0 0 0-2.393 2.397 2.39 2.39 0 0 0 2.393 2.394 2.39 2.39 0 0 0 2.397-2.394 2.39 2.39 0 0 0-2.397-2.397zM82.473 30.34c-5.168 0-8.74 2.05-11.156 4.912-.409-.857-.72-1.232-1.156-1.727-1.98-2.236-5.16-3.28-9.43-3.28-4.17 0-7.648 1.303-10.063 3.355-1.254-2.04-4.242-3.39-7.846-3.39-4.71 0-9.84.667-12.885 5.572-.073-1.766-.233-2.701-1.225-3.752-1.207-1.277-3.16-1.61-5.061-1.61-3.466 0-6.072 1.514-7.95 4.597C12.98 39.365 6.38 53.673 6.53 60.603c.096 4.476 3.1 7.702 8.473 7.829 4.2.1 7.494-1.023 9.59-3.138 1.88 2.043 4.748 3.241 8.18 3.241 3.823 0 7.669-1.147 9.94-3.656 1.914 2.351 4.925 3.72 8.798 3.7 5.062-.024 9.509-2.426 12.413-6.104 1.594 4.337 5.634 6.06 10.048 6.06 9.673 0 13.92-6.652 17.461-17.167.798-2.369 1.862-6.324 2.039-9.647.291-5.53-2.049-11.38-10.998-11.38zm-64.36 26.442c5.005-.87 6.263.94 6.106 2.615-.472 5.016-5.074 6.138-9.07 6.044-2.898-.07-5.503-1.397-5.576-4.761-.127-5.886 5.876-19.503 8.702-24.016 1.305-2.143 2.896-3.203 5.431-3.203 2.404 0 2.999 1.234 2.964 2.712-.095 3.944-6.466 15.928-8.557 20.609zm16.297-4.623c-.33.896-.957 2.773-1.464 4.762 1.642-.41 2.874-.695 4.985-.645 2.404.06 3.94 1.056 3.94 3.044 0 4.82-5.327 6.236-9.023 6.236-4.057 0-7.622-2.31-7.622-6.748 0-5.202 2.82-13.09 5.467-18.345 3.25-6.454 6.57-7.311 12.29-7.311 2.513 0 5.41 1.075 5.41 3.448 0 3.29-2.787 4.544-5.55 4.703-1.18.068-2.996.133-4.083.056 0 0-.919 1.4-1.896 3.896 5.117-.72 7.286.441 6.423 3.401-1.17 3.999-4.634 4.262-8.877 3.503zm25.167-12.44c-1.384 0-2.29.876-2.962 1.822-1.483 2.082-4.697 10.429-5.197 13.857-.343 2.348.671 2.826 1.78 2.826 1.778 0 3.77-1.88 4.451-4.984 0 0-3.385-.082-2.452-3.084.907-2.912 2.627-3.543 5.478-3.66 5.617-.23 5.063 3.918 4.613 6.13-1.46 7.182-6.571 12.95-13.802 12.95-4.95 0-8.023-2.738-8.023-7.786 0-3.596 1.784-9.243 3.199-12.547 3.01-7.033 6.168-11.955 14.212-11.955 4.826 0 8.633 1.734 8.075 6.255-.41 3.318-2.07 5.267-5.087 5.503-.844.066-4.297-.022-3.151-3.288.398-1.142.563-2.04-1.134-2.04zm30.38 5.935c-.851 4.235-2.764 9.244-4.84 12.977-3.388 6.09-7.503 6.944-11.094 6.9-3.593-.042-7.641-1.369-7.672-6.91-.022-3.979 1.694-9.594 3.15-13.275 2.54-6.673 5.135-12.115 13.339-12.017 9.567.114 7.86 8.622 7.116 12.325zm-8.116-5.797c-.821-.011-1.538.15-2.182 1.143-1.448 1.875-5.678 13.436-5.603 15.741.026.829.484 1.553 1.505 1.553 1.17.002 1.82-.808 2.396-1.784 1.331-2.253 5.075-12.472 5.178-15.026.03-.745-.094-1.612-1.294-1.627z" fill="#000"/>
+                    </svg>
+                </li>
+                <li>
+                    <svg viewBox="0 0 100 37" alt="Disney">
+                        <path fill="#108FF7" d="M5.4 18.5c.2-1.5 2.3-4.5 10.5-4.8s11.9 1.9 11.9 2.8c.1 1-1.6 2.3-2.7 2.4-1.1.2-1-.3-.9-.5 0-.2 1.2-1 1.3-1.1.1-.1.2-.2-.1-.2-.3-.1-2-.6-8.3-.6-6.3.1-10.1.9-10.2 2.7-.2 2 6.9 6.4 14.9 6.5 8.3.2 12.3-3.7 12.4-7.7-.1-6.9-12.1-15.5-28.1-16.5-4.8-.3-4.7.2-4.7.3s1.3.5 1.3 1c0 .4-1.1.2-1.5 0C.9 2.9 0 2.2 0 1.6 0 1.1.6-.2 7.1 0c6 .2 15.4 1.9 23.8 7.8 4.2 3 6.9 6.2 6.9 11-.2 6.7-7.6 9.5-15.4 9.4-5.9-.2-17.2-3.6-17-9.7"/>
+                        <path fill="#108FF7" d="M15.7 8.1c.6 0 1.4 3.7 1.3 10.6-.1 6.3.2 11.9-1.7 11.7-1.6-.1-1.4-6.1-1.3-10.2.1-4.1.6-12.1 1.7-12.1M38.3 10.7c-.2-.1-.4-1.3 1.5-3.6.9-1 2.3-2.5 4.5-3.5 2.8-1.3 5.7-1.7 6.7-.2 1.3 1.9-.9 4.4-3.4 5.7-2.6 1.4-7.8 1.9-9.5-1-1.1-1.9.2-4.6 2.4-5.9 2.6-1.6 5.2-1.4 7-.7 1.3.5 1 2-.4 2-1 0-3.4-.7-5.5.6-1.3.8-2 2.1-1.3 3.4 1 1.8 4.5 1.7 6.5.6 2.4-1.2 3.4-2.9 2.8-3.6-.6-.9-3.5.5-5.3 1.7-1.7 1.2-3.7 2.9-4.6 3.9-.3.1-1 1-1.4.6M41.7 12.9c.6 0 1.5 1.3 1.3 6.6-.2 5.3-.6 7.6-1.7 7.6s-1.5-2.9-1.3-5.9.7-8.3 1.7-8.3M59.3 22.5c0-2.7-3.9-3.5-7.6-4.3-2.8-.6-4-1-4-1.6 0-.6 2-1.1 6.5-1 4.5.1 5-.9 5-1.2-.1-.4-.9-1.3-5.9-1.2-5 .1-8.3 2-8.3 3.7.1 1.7 3 2.3 5.9 3 2.9.6 5.7 1.3 5.7 2.5 0 1.3-2.8 2.3-5.4 2.3s-4.7-.4-4.7-1.1c0-.3.9-.2 1.3-.2.3 0 2.4.1 3.2.1.8 0 2.3-.1 2.3-.9-.1-.8-1.9-1.2-3.9-1.3-2 0-5 .5-5 2 0 1.7 3.8 3.3 7.4 3.3 3.9.3 7.5-1.5 7.5-4.1M63.5 14.5c-.6 0-1.6 1.3-2 5.5-.5 4.1-.2 5-.2 5.4.2.6.6.9.9 1.1.3.2 1 .9 1.2-.2.2-1 .5-7.1.6-7.2 0-.2.1-.5.5 0 .6.7 3.4 5.1 4.7 6.8.9 1.1 1.5 1.7 2 1.6.6 0 2-.2 2.4-7.8.2-5.5-1.9-7.6-2.3-7.9-.5-.3-.6-.3-.7-.2-.1.1-.1.2.2.6.2.4.8 2.3.8 5.9 0 2.6-.3 4.1-.6 4.9-.1.4-.2.7-.6.2-.6-.6-1.6-2-2.7-3.8-1.6-1.9-3.4-4.9-4.2-4.9M76 14.4c0-.6 3-1.3 5.4-1.5 2.4-.2 3.9.2 4.2.5.2.2.9 1.2.6 1.6-.4.4-3.6.5-5.9.4-.4 1.3-1.4 4.6-1.5 7.1-.2 2.4 1.1 2.1 2.2 2 1.1-.1 3.1-.3 3.9-.4.2 0 .7 0 .7.3s-.3.6-.6.9c-.6.4-3.3 2-6.1 1.9-2-.1-2.5-1.2-2.5-2.6-.1-2.3 1.3-8 1.8-9.3-.8-.1-2.3-.1-2.2-.9"/>
+                        <path fill="#108FF7" d="M75.2 20.1c-.1.2.4 1 2.2 1.3 1.7.2 4.2 0 4.7-.2.6-.2 1.2-.7 1.4-1.1.2-.5.3-.7.1-.9-.2-.2-1.1-.2-2.3-.2-1.8.2-4.6.5-5.4.6-.4.2-.6.3-.7.5M91.2 12.2c.4 0 .2.5-.1 1-.2.6-2 4.3-2.4 7.4-.3 2.4.5 4 3 4.3 2.4.2 4.8-3 5.6-4.9.8-1.9 1.4-4.2.5-4.6-1-.4-3.1 2.8-4.6 5.7-1.1 2.2-3.1 6.1-5 14.3-.4 1.6-.6 1.6-1 1.6-.3-.1-1.6-.8-1.2-3.7.4-2.9 2.2-7 3.5-9.8 1.3-2.8 6.1-11.1 8.8-10.5 2.8.6 1.2 6.2.6 7.6-.9 2.1-3.9 8-9.5 6-2.5-.9-3.1-4.3-2.3-7.2.6-2.1 2.2-5.2 3.1-6.4.4-.5.6-1 1-.8"/>
+                    </svg>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="section contact">
+        <div class="container">
+            <h3 class="contact__heading">For more information <br>or to get in touch...</h3>
+            <ul class="contact__options">
+                <li>
+                    <a title="Email" href="mailto:steve@stevenhall.uk">
+                        <svg viewBox="0 0 34 34">
+                            <circle fill="#D0021B" cx="17" cy="17" r="17"/>
+                            <path fill="#FFF" d="M8.2 10.5c-1.2 0-.6.4 0 .9l8.2 6.8 9.4-6.8c.6-.5 1.2-.9 0-.9H8.2z"/>
+                            <path fill="#FFF" d="M7 12.3v10c0 .6.6 1.2 1.1 1.2H26c.5 0 1.1-.6 1.1-1.2v-10l-10.6 7.6L7 12.3z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a title="LinkedIn" href="https://www.linkedin.com/in/stevenjohnhall" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 34 34">
+                            <circle fill="#0077B5" cx="17" cy="17" r="17"/>
+                            <path fill="#FFF" d="M12.2 24.1H8.9V13.5h3.3v10.6zm-1.7-11.9c-1.2 0-2-.8-2-1.8s.8-1.8 2-1.8 2 .8 2 1.8-.7 1.8-2 1.8zm15 11.9h-3.8v-5.5c0-1.4-.6-2.4-1.9-2.4-1 0-1.5.7-1.8 1.3V24.1h-3.7V13.5H18v1.7c.2-.7 1.4-1.8 3.3-1.8 2.4 0 4.2 1.5 4.2 4.8v5.9z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a title="Twitter" href="https://twitter.com/S_Hl" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 34 34">
+                            <circle fill="#1DA1F2" cx="17" cy="17" r="17"/>
+                            <path fill="#FFF" d="M25.5 12.6c-.6.3-1.3.5-2 .6.7-.4 1.3-1.1 1.5-1.9-.7.4-1.4.7-2.2.8-.6-.7-1.5-1.1-2.6-1.1-1.9 0-3.5 1.6-3.5 3.5 0 .3 0 .5.1.8-2.9-.1-5.5-1.5-7.2-3.7-.3.5-.5 1.1-.5 1.8 0 1.2.6 2.3 1.6 2.9-.6 0-1.1-.2-1.6-.4 0 1.7 1.2 3.1 2.8 3.4-.3.1-.6.1-.9.1-.2 0-.4 0-.7-.1.4 1.4 1.7 2.4 3.3 2.4-1.2.9-2.7 1.5-4.3 1.5h-.8c1.5 1 3.4 1.6 5.4 1.6 6.4 0 9.9-5.3 9.9-9.9v-.5c.7-.5 1.3-1.1 1.7-1.8"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
 </html>
