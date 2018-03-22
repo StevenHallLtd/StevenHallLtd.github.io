@@ -111,8 +111,14 @@
         .screenshot {
             display: block;
             width: 100%;
+            min-height: 56.25%;
             margin: 0 0 1.5rem;
             box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .screenshot img {
+            display: block;
+            width: 100%;
         }
 
         .project__skills {
@@ -213,10 +219,11 @@
         <div class="container">
             <h3>Google</h3>
             <a class="project__link--disabled">
-                <img class="screenshot"
-                     src="images/google_screenshot@0.5x.png"
-                     srcset="images/google_screenshot@1x.png 640w, images/google_screenshot@2x.png 1280w"
-                     alt="Google Screenshot" />
+                <figure class="screenshot">
+                    <img src="images/google_screenshot@0.5x.png"
+                         srcset="images/google_screenshot@1x.png 640w, images/google_screenshot@2x.png 1280w"
+                         alt="Google Screenshot" />
+                </figure>
             </a>
             <ul class="project__skills">
                 <li>Polymer</li>
@@ -239,10 +246,11 @@
         <div class="container">
             <h3>Facebook</h3>
             <a href="https://france.fb.com/en/" target="_blank" rel="noopener noreferrer">
-                <img class="screenshot"
-                     src="images/facebook_screenshot@0.5x.png"
-                     srcset="images/facebook_screenshot@1x.png 640w, images/facebook_screenshot@2x.png 1280w"
-                     alt="Facebook Screenshot" />
+                <figure class="screenshot">
+                    <img src="images/facebook_screenshot@0.5x.png"
+                         srcset="images/facebook_screenshot@1x.png 640w, images/facebook_screenshot@2x.png 1280w"
+                         alt="Facebook Screenshot" />
+                </figure>
             </a>
             <ul class="project__skills">
                 <li>React</li>
@@ -275,10 +283,11 @@
         <div class="container">
             <h3>HBO</h3>
             <a href="http://getpipey.com" target="_blank" rel="noopener noreferrer">
-                <img class="screenshot"
-                     src="images/pipey_screenshot@0.5x.png"
-                     srcset="images/pipey_screenshot@1x.png 640w, images/pipey_screenshot@2x.png 1280w"
-                     alt="Pipey Screenshot" />
+                <figure class="screenshot">
+                    <img src="images/pipey_screenshot@0.5x.png"
+                         srcset="images/pipey_screenshot@1x.png 640w, images/pipey_screenshot@2x.png 1280w"
+                         alt="Pipey Screenshot" />
+                </figure>
             </a>
             <ul class="project__skills">
                 <li>Chrome Extension</li>
@@ -302,10 +311,11 @@
         <div class="container">
             <h3>Beano</h3>
             <a href="https://www.beano.com" target="_blank" rel="noopener noreferrer">
-                <img class="screenshot"
-                     src="images/beano_screenshot@0.5x.png"
-                     srcset="images/beano_screenshot@1x.png 640w, images/beano_screenshot@2x.png 1280w"
-                     alt="Beano Screenshot" />
+                <figure class="screenshot">
+                    <img src="images/beano_screenshot@0.5x.png"
+                         srcset="images/beano_screenshot@1x.png 640w, images/beano_screenshot@2x.png 1280w"
+                         alt="Beano Screenshot" />
+                </figure>
             </a>
             <ul class="project__skills">
                 <li>React</li>
@@ -329,10 +339,11 @@
         <div class="container">
             <h3>Google</h3>
                 <a href="https://www.consumerbarometer.com" target="_blank" rel="noopener noreferrer">
-                    <img class="screenshot"
-                         src="images/barometer_screenshot@0.5x.png"
-                         srcset="images/barometer_screenshot@1x.png 640w, images/barometer_screenshot@2x.png 1280w"
-                         alt="Google Screenshot" />
+                    <figure class="screenshot">
+                        <img src="images/barometer_screenshot@0.5x.png"
+                             srcset="images/barometer_screenshot@1x.png 640w, images/barometer_screenshot@2x.png 1280w"
+                             alt="Google Screenshot" />
+                    </figure>
                 </a>
                 <ul class="project__skills">
                     <li>Angular</li>
