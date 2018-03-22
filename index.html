@@ -27,13 +27,13 @@
     <style>
         * {
             box-sizing: border-box;
-            cursor: default;
         }
 
         html {
-            font-family: Avenir, Arial, sans-serif;
-            background: #4A4A4F radial-gradient(ellipse, #FFFFFF 50%, #F3F3F9 75%) no-repeat center fixed;
             color: #4A4A4F;
+            background: #4A4A4F radial-gradient(ellipse, #FFFFFF 50%, #F3F3F9 75%) no-repeat center fixed;
+            font-family: Avenir, Arial, sans-serif;
+            cursor: default;
         }
 
         body {
@@ -45,6 +45,7 @@
         h1, h2, h3, h4, h5, h6 {
             margin: 0 0 1rem;
             letter-spacing: -0.05em;
+            cursor: default;
         }
 
         h1 {
@@ -67,7 +68,6 @@
             color: inherit;
             text-decoration: underline;
             transition: color 0.2s ease-in-out;
-            cursor: pointer;
         }
 
         a:hover {
@@ -86,6 +86,10 @@
             margin: 0 auto;
             padding: 20vh 0;
             border-bottom: 1px solid #E3E3E9;
+        }
+
+        .section:last-of-type {
+            border: none;
         }
 
         .container {
@@ -208,10 +212,12 @@
     <section class="section project">
         <div class="container">
             <h3>Google</h3>
-            <img class="screenshot"
-                 src="images/google_screenshot@0.5x.png"
-                 srcset="images/google_screenshot@1x.png 640w, images/google_screenshot@2x.png 1280w"
-                 alt="Google Screenshot" />
+            <a class="project__link--disabled">
+                <img class="screenshot"
+                     src="images/google_screenshot@0.5x.png"
+                     srcset="images/google_screenshot@1x.png 640w, images/google_screenshot@2x.png 1280w"
+                     alt="Google Screenshot" />
+            </a>
             <ul class="project__skills">
                 <li>Polymer</li>
                 <li>Web Components</li>
@@ -232,10 +238,12 @@
     <section class="section project">
         <div class="container">
             <h3>Facebook</h3>
-            <img class="screenshot"
-                 src="images/facebook_screenshot@0.5x.png"
-                 srcset="images/facebook_screenshot@1x.png 640w, images/facebook_screenshot@2x.png 1280w"
-                 alt="Facebook Screenshot" />
+            <a href="https://france.fb.com/en/" target="_blank" rel="noopener noreferrer">
+                <img class="screenshot"
+                     src="images/facebook_screenshot@0.5x.png"
+                     srcset="images/facebook_screenshot@1x.png 640w, images/facebook_screenshot@2x.png 1280w"
+                     alt="Facebook Screenshot" />
+            </a>
             <ul class="project__skills">
                 <li>React</li>
                 <li>Redux</li>
@@ -266,10 +274,12 @@
     <section class="section project">
         <div class="container">
             <h3>HBO</h3>
-            <img class="screenshot"
-                 src="images/pipey_screenshot@0.5x.png"
-                 srcset="images/pipey_screenshot@1x.png 640w, images/pipey_screenshot@2x.png 1280w"
-                 alt="Pipey Screenshot" />
+            <a href="http://getpipey.com" target="_blank" rel="noopener noreferrer">
+                <img class="screenshot"
+                     src="images/pipey_screenshot@0.5x.png"
+                     srcset="images/pipey_screenshot@1x.png 640w, images/pipey_screenshot@2x.png 1280w"
+                     alt="Pipey Screenshot" />
+            </a>
             <ul class="project__skills">
                 <li>Chrome Extension</li>
                 <li>HTML</li>
@@ -291,10 +301,12 @@
     <section class="section project">
         <div class="container">
             <h3>Beano</h3>
-            <img class="screenshot"
-                 src="images/beano_screenshot@0.5x.png"
-                 srcset="images/beano_screenshot@1x.png 640w, images/beano_screenshot@2x.png 1280w"
-                 alt="Beano Screenshot" />
+            <a href="https://www.beano.com" target="_blank" rel="noopener noreferrer">
+                <img class="screenshot"
+                     src="images/beano_screenshot@0.5x.png"
+                     srcset="images/beano_screenshot@1x.png 640w, images/beano_screenshot@2x.png 1280w"
+                     alt="Beano Screenshot" />
+            </a>
             <ul class="project__skills">
                 <li>React</li>
                 <li>Redux</li>
@@ -316,10 +328,12 @@
     <section class="section project">
         <div class="container">
             <h3>Google</h3>
-            <img class="screenshot"
-                 src="images/barometer_screenshot@0.5x.png"
-                 srcset="images/barometer_screenshot@1x.png 640w, images/barometer_screenshot@2x.png 1280w"
-                 alt="Google Screenshot" />
+                <a href="https://www.consumerbarometer.com" target="_blank" rel="noopener noreferrer">
+                    <img class="screenshot"
+                         src="images/barometer_screenshot@0.5x.png"
+                         srcset="images/barometer_screenshot@1x.png 640w, images/barometer_screenshot@2x.png 1280w"
+                         alt="Google Screenshot" />
+                </a>
                 <ul class="project__skills">
                     <li>Angular</li>
                     <li>Foundation</li>
