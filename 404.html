@@ -1,107 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Steven Hall – Senior Frontend Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Since 2000 I’ve worked on a huge variety of projects for a diverse range of clients, from the smallest startups to the largest multinationals. My recent work for Google is some of the best in my career, yet I’m always keen to improve and take on new challenges.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Steven Hall – Frontend Development</title>
+    <meta
+      name="description"
+      content="Since 2000, I’ve worked on a huge variety of projects for a diverse range of clients, from the smallest startups to the largest multinationals. My recent work for Google is some of the best in my career, yet I’m always keen to improve and take on new challenges."
+    />
 
-    <meta property="og:url" content="http://stevenhall.uk"/>
-    <meta property="og:title" content="Steven Hall – Senior Frontend Developer"/>
-    <meta property="og:description" content="Since 2000 I’ve worked on a huge variety of projects for a diverse range of clients, from the smallest startups to the largest multinationals. My recent work for Google is some of the best in my career, yet I’m always keen to improve and take on new challenges."/>
-    <meta property="og:image" content="http://stevenhall.uk/facebook.png"/>
-    <meta property="og:image:type" content="image/png"/>
-    <meta property="og:image:width" content="1200"/>
-    <meta property="og:image:height" content="630"/>
+    <meta property="og:url" content="http://stevenhall.uk" />
+    <meta
+      property="og:title"
+      content="Steven Hall – Senior Frontend Developer"
+    />
+    <meta
+      property="og:description"
+      content="Since 2000, I’ve worked on a huge variety of projects for a diverse range of clients, from the smallest startups to the largest multinationals. My recent work for Google is some of the best in my career, yet I’m always keen to improve and take on new challenges."
+    />
+    <meta property="og:image" content="http://stevenhall.uk/facebook.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#b91d47">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4a90e2" />
+
+    <meta name="apple-mobile-web-app-title" content="Steven Hall" />
+    <meta name="application-name" content="Steven Hall" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
     <link rel="canonical" href="http://stevenhall.uk" />
 
-    <style>
-        * {
-            box-sizing: border-box;
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        custom: {
+          families: ["Gilroy"]
         }
+      });
+    </script>
 
-        html {
-            color: #4A4A4F;
-            background: #4A4A4F radial-gradient(ellipse, #FFFFFF 50%, #F3F3F9 75%) no-repeat center fixed;
-            font-family: Avenir, Arial, sans-serif;
-            cursor: default;
-        }
+    <style type="text/css">
+      @font-face {
+        font-family: "Gilroy";
+        font-weight: bold;
+        src: url("fonts/gilroy-extra-bold.woff") format("woff");
+      }
 
-        body {
-            margin: 0;
-            padding: 0 2em;
-            min-width: 320px;
-        }
+      @font-face {
+        font-family: "Gilroy";
+        font-weight: normal;
+        src: url("fonts/gilroy-light.woff") format("woff");
+      }
 
-        h1, h2, h3, h4, h5, h6 {
-            margin: 0 0 1rem;
-            letter-spacing: -0.05em;
-        }
+      * {
+        box-sizing: border-box;
+      }
 
-        h1 {
-            margin: 0 0 1rem;
-            font-size: 56px;
-            line-height: 1;
-            letter-spacing: -2px;
-        }
+      html {
+        min-width: 20em;
+        color: #4a4a4a;
+        font-family: "Gilroy", sans-serif;
+        text-align: center;
+        transition: opacity 0.3s ease-out;
 
-        h2, h3 {
-            font-size: 22px;
-        }
+        -webkit-font-smoothing: antialiased;
+      }
 
-        p {
-            margin: 0 0 1rem;
-            line-height: 2;
-        }
+      html.wf-loading {
+        opacity: 0;
+      }
 
-        a {
-            color: inherit;
-            text-decoration: underline;
-            transition: color 0.2s ease-in-out;
-        }
+      body {
+        margin: 0;
+      }
 
-        a:hover {
-            color: #4A90E2;
-        }
+      h1,
+      h2,
+      p {
+        margin: 0;
+        line-height: 1;
+      }
 
-        ::selection {
-            color: #FFFFFF;
-            background: #FF0099;
-        }
+      h1 {
+        font-size: 6em;
+      }
 
-        .section {
-            display: flex;
-            align-items: center;
-            max-width: 40em;
-            margin: 0 auto;
-            padding: 20vh 0;
-        }
+      h2 {
+        margin-bottom: 2rem;
+      }
 
-        .container {
-            width: 100%;
-        }
+      a {
+        color: inherit;
+        font-weight: bold;
+        transition: color 0.2s ease-in-out;
+      }
 
-        .section.intro {
-            min-height: 100vh;
-        }
+      a:hover {
+        color: #4a90e2;
+      }
+
+      .section {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 800px;
+        padding: 2rem 1rem;
+      }
     </style>
-</head>
-<body>
-    <header class="section intro">
-        <div class="container">
-            <h1>Error 404</h1>
-            <h2>Page not found</h2>
-            <p><a href="/">Go Home</a></p>
-        </div>
+  </head>
+  <body>
+    <header class="section error">
+      <div class="container">
+        <h1>404</h1>
+        <h2>Page not found</h2>
+        <p><a href="/">Go Home</a></p>
+      </div>
     </header>
-</body>
+  </body>
 </html>
