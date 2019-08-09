@@ -158,9 +158,37 @@
       }
 
       .project {
+        position: relative;
         background: #f5f5f5;
-        box-shadow: 0 3px 5px inset rgba(0, 0, 0, 0.1);
         text-align: justify;
+      }
+
+      .project:before,
+      .project:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 0;
+      }
+
+      .project:before {
+        top: 0;
+        height: 5px;
+        background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.05) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
+
+      .project:after {
+        bottom: 0;
+        height: 3px;
+        background-image: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.02) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
       }
 
       .project__screenshot {
@@ -168,7 +196,7 @@
         width: 100%;
         min-height: 56.25%;
         margin: 0 0 1.5rem;
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
       }
 
       .project__screenshot img {
