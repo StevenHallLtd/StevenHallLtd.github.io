@@ -66,8 +66,8 @@
       html {
         min-width: 20em;
         min-height: 20em;
-        background: #000000;
-        color: #ffffff;
+        background: #18171C linear-gradient(180deg, #18171C 0%, #3C3946 100%) center fixed;
+        color: #FFFFFF;
         font-family: "Gilroy", sans-serif;
         text-align: center;
         line-height: 2;
@@ -107,7 +107,7 @@
       }
 
       a:hover {
-        color: #4a90e2;
+        color: #3399FF;
       }
 
       .section {
@@ -126,7 +126,7 @@
       }
 
       .home {
-        min-height: 100vmin;
+        min-height: 100vh;
       }
 
       .home__heading {
@@ -140,10 +140,16 @@
 
       .home__subheading {
         margin-left: -0.4rem;
-        color: #9b9b9b;
+        color: #B0AFB6;
         font-size: 24px;
         line-height: 24px;
         letter-spacing: -0.05em;
+      }
+
+      .promo, .contact {
+        background: rgba(0, 0, 0, 0.25);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25) inset;
+        min-height: 100vh;
       }
 
       .promo__heading {
@@ -192,6 +198,7 @@
       }
 
       .project__link {
+        display: inline-block;
         font-weight: bold;
       }
 
@@ -221,7 +228,7 @@
       .clients__logos {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -5%;
+        margin: 1.5rem -5% 3rem;
         padding: 0;
       }
 
@@ -290,7 +297,6 @@
       @media screen and (min-width: 45em) {
         .home {
           padding: 20vw 0;
-          min-height: 100vh;
         }
 
         .home > .container {
@@ -319,11 +325,14 @@
 
     <section class="section promo intro">
       <div class="container">
+        <h3 class="promo__heading">
+          Building websites and apps since the year 2000.
+        </h3>
         <p class="promo__description">
-          Since 2000, I’ve worked on a huge variety of projects for a diverse
-          range&nbsp;of clients, from the smallest startups to the largest
-          multinationals. With over 20 years experience, I work incredibly
-          fast to bring new experiences to life – and revive old ones – in record time.
+          For over 20 years, I’ve worked on a huge variety of projects for a diverse
+          range of clients, from the smallest startups to the largest multinationals.
+          Typically working with React and React Native, I work quickly to bring new
+          products to life – or rebuild tired old ones – in record time.
         </p>
       </div>
     </section>
@@ -363,7 +372,7 @@
     <section class="section promo">
       <div class="container">
         <h3 class="promo__heading">
-          A master craftsman of clean, maintainable&nbsp;code
+          A master craftsman of clean, maintainable&nbsp;code.
         </h3>
         <p>
           Like any craftsman I take huge pride in my work, using the right tools
@@ -410,7 +419,7 @@
     <section class="section promo">
       <div class="container">
         <h3 class="promo__heading">
-          A keen eye for design with a clear understanding of&nbsp;UX
+          A keen eye for design with a clear understanding of&nbsp;UX.
         </h3>
         <p class="promo__description">
           I started my career in design, so I understand design principles and
@@ -469,7 +478,7 @@
     <section class="section promo">
       <div class="container">
         <h3 class="promo__heading">
-          An expert problem solver and avid&nbsp;brainstormer
+          An expert problem solver and avid&nbsp;brainstormer.
         </h3>
         <p class="promo__description">
           The most productive projects I've worked on have taken a team-wide
@@ -521,7 +530,7 @@
     <section class="section promo">
       <div class="container">
         <h3 class="promo__heading">
-          Self-motivated with superb time&nbsp;management
+          Self-motivated with superb time&nbsp;management.
         </h3>
         <p class="promo__description">
           I like to keep myself busy, always pushing a project forward with one
