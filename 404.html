@@ -5,40 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Steven Hall – Frontend Development</title>
     <meta
-      name="description"
-      content="Since 2000, I’ve worked on a huge variety of projects for a diverse range of clients, from the smallest startups to the largest multinationals. My recent work for Google is some of the best in my career, yet I’m always keen to improve and take on new challenges."
+            name="description"
+            content="Over 20 years experience making websites and apps. Since 2000, I’ve worked on a huge variety of projects for a diverse range of clients, from the smallest startups to the largest multinationals. Using React/React Native, I work quickly to bring new products to life – or rebuild old ones – with remarkable pace and quality."
     />
 
     <meta property="og:url" content="https://stevenhall.uk" />
     <meta property="og:title" content="Steven Hall – Frontend Development" />
     <meta
-      property="og:description"
-      content="Since 2000, I’ve worked on a huge variety of projects for a diverse range of clients, from the smallest startups to the largest multinationals. My recent work for Google is some of the best in my career, yet I’m always keen to improve and take on new challenges."
+            property="og:description"
+            content="Over 20 years experience making websites and apps. Since 2000, I’ve worked on a huge variety of projects for a diverse range of clients, from the smallest startups to the largest multinationals. Using React/React Native, I work quickly to bring new products to life – or rebuild old ones – with remarkable pace and quality."
     />
     <meta property="og:image" content="https://stevenhall.uk/facebook.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4a90e2" />
-
-    <meta name="apple-mobile-web-app-title" content="Steven Hall" />
-    <meta name="application-name" content="Steven Hall" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#18171c">
+    <meta name="theme-color" content="#18171c">
 
     <link rel="canonical" href="https://stevenhall.uk" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
       WebFont.load({
         custom: {
-          families: ["Gilroy"]
-        }
+          families: ["Gilroy"],
+        },
       });
     </script>
 
@@ -61,16 +57,23 @@
 
       html {
         min-width: 20em;
-        color: #4a4a4a;
+        min-height: 20em;
+        background: #18171C linear-gradient(180deg, #18171C 0%, #3C3946 100%) center fixed;
+        color: #FFFFFF;
         font-family: "Gilroy", sans-serif;
         text-align: center;
-        transition: opacity 0.3s ease-out;
-
+        line-height: 2;
+        scroll-behavior: smooth;
         -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
 
       html.wf-loading {
         opacity: 0;
+      }
+
+      html.wf-active {
+        transition: opacity 0.3s ease-out;
       }
 
       body {
@@ -99,7 +102,7 @@
       }
 
       a:hover {
-        color: #4a90e2;
+        color: #3399FF;
       }
 
       .section {
