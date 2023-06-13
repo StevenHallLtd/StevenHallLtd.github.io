@@ -24,12 +24,12 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#18171c">
-    <meta name="theme-color" content="#18171c">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#18171c" />
+    <meta name="theme-color" content="#18171c" />
 
     <link rel="canonical" href="https://stevenhall.uk" />
 
@@ -62,8 +62,8 @@
       html {
         min-width: 20em;
         min-height: 20em;
-        background: #18171C linear-gradient(135deg, #18171C 0%, #3C3946 100%) center fixed;
-        color: #FFFFFF;
+        background: #18171c;
+        color: #ffffff;
         font-family: "Gilroy", sans-serif;
         text-align: center;
         line-height: 2;
@@ -103,7 +103,18 @@
       }
 
       a:hover {
-        color: #3399FF;
+        color: #3399ff;
+      }
+
+      .background {
+        /* Workaround for mobile safari stretching gradients */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(135deg, #18171c 0%, #3c3946 100%) center
+          fixed;
       }
 
       .section {
@@ -133,13 +144,14 @@
 
       .home__subheading {
         margin-left: -0.4rem;
-        color: #B0AFB6;
+        color: #b0afb6;
         font-size: 24px;
         line-height: 24px;
         letter-spacing: -0.05em;
       }
 
-      .promo, .contact {
+      .promo,
+      .contact {
         background: rgba(24, 23, 28, 0.5);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25) inset;
       }
@@ -308,6 +320,8 @@
     </style>
   </head>
   <body>
+    <div class="background"></div>
+
     <header class="section home">
       <div class="container">
         <h1 class="home__heading">Steven Hall</h1>
@@ -322,9 +336,10 @@
         </h3>
         <p class="promo__description">
           Since 2000, I’ve worked on a huge variety of projects for a diverse
-          range of clients, from the smallest startups to the largest multinationals.
-          Using React/React Native, I work quickly to bring new products to life
-          – or&nbsp;rebuild old ones – with remarkable pace and quality.
+          range of clients, from the smallest startups to the largest
+          multinationals. Using React/React Native, I work quickly to bring new
+          products to life – or&nbsp;rebuild old ones – with exceptional pace
+          and quality.
         </p>
       </div>
     </section>
@@ -364,13 +379,14 @@
     <section class="section promo">
       <div class="container">
         <h3 class="promo__heading">
-          A master craftsman of quick, clean, maintainable&nbsp;code.
+          A master craftsman of clean, maintainable&nbsp;code.
         </h3>
         <p>
-          Experience has taught me how to get the best results while using less code –
-          leading to quicker development and reducing the surface area for bugs. The
-          result is an easy to follow, adaptable, maintainable and well-documented
-          codebase – creating an intuitive launchpad for fellow&nbsp;developers.
+          Experience has taught me how to get the best results while using less
+          code – leading to quicker development and reducing the surface area
+          for bugs. The result is an easy to follow, adaptable, maintainable and
+          well-documented codebase – creating an intuitive launchpad for
+          fellow&nbsp;developers.
         </p>
       </div>
     </section>
@@ -413,10 +429,11 @@
           A former designer who strives for the best&nbsp;UX.
         </h3>
         <p class="promo__description">
-          I started my career in design, so I bring products to life with the care
-          and attention they deserve – seamlessly filling gaps and adding details
-          which really improve the overall finesse and quality of the product and
-          its user experience. I can even create new designs from scratch.
+          I started my career in design, so I bring products to life with the
+          care and attention they deserve – seamlessly filling gaps and adding
+          details which really improve the overall quality and finesse of the
+          product and its user experience. I can also create new designs from
+          scratch.
         </p>
       </div>
     </section>
