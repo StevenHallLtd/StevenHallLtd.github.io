@@ -106,17 +106,6 @@
         color: #3399ff;
       }
 
-      .background {
-        /* Workaround for mobile safari stretching gradients */
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: linear-gradient(135deg, #18171c 0%, #3c3946 100%) center
-          fixed;
-      }
-
       .section {
         display: flex;
         position: relative;
@@ -131,6 +120,13 @@
         max-width: 800px;
         position: relative;
         padding: 2rem 1.5rem;
+      }
+
+      .home,
+      .project {
+        background: linear-gradient(135deg, #18171c 0%, #3c3946 100%) center
+          fixed;
+        background-size: cover;
       }
 
       .home__heading {
@@ -152,7 +148,8 @@
 
       .promo,
       .contact {
-        background: rgba(24, 23, 28, 0.5);
+        background: linear-gradient(135deg, #0e0e11 0%, #32303b 100%) center
+          fixed;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25) inset;
       }
 
@@ -320,8 +317,6 @@
     </style>
   </head>
   <body>
-    <div class="background"></div>
-
     <header class="section home">
       <div class="container">
         <h1 class="home__heading">Steven Hall</h1>
