@@ -33,6 +33,8 @@
 
     <link rel="canonical" href="https://stevenhall.uk" />
 
+    <link rel="stylesheet" href="./styles.css" />
+
     <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
       WebFont.load({
@@ -41,305 +43,19 @@
         },
       });
     </script>
-
-    <style>
-      @font-face {
-        font-family: "Gilroy";
-        font-weight: bold;
-        src: url("fonts/gilroy-extra-bold.woff") format("woff");
-      }
-
-      @font-face {
-        font-family: "Gilroy";
-        font-weight: normal;
-        src: url("fonts/gilroy-light.woff") format("woff");
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        min-width: 20em;
-        min-height: 20em;
-        background: #18171c;
-        color: #ffffff;
-        font-family: "Gilroy", sans-serif;
-        text-align: center;
-        line-height: 2;
-        scroll-behavior: smooth;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-
-      html.wf-loading {
-        opacity: 0;
-      }
-
-      html.wf-active {
-        transition: opacity 0.3s ease-out;
-      }
-
-      body {
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p {
-        margin: 0 0 1rem;
-        font-size: 1em;
-      }
-
-      a {
-        color: inherit;
-        transition: color 0.2s ease-in-out;
-      }
-
-      a:hover {
-        color: #3399ff;
-      }
-
-      .background {
-        /* Workaround for mobile safari stretching gradients */
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: linear-gradient(135deg, #18171c 0%, #3c3946 100%);
-        background-size: cover;
-      }
-
-      .section {
-        display: flex;
-        position: relative;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        padding: 10vw 0;
-      }
-
-      .container {
-        width: 100%;
-        max-width: 800px;
-        position: relative;
-        padding: 2rem 1.5rem;
-      }
-
-      .home__heading {
-        display: inline-block;
-        margin: 0 0 0 -0.4rem;
-        padding: 8px 2px 0;
-        font-size: 50px;
-        line-height: 34px;
-        letter-spacing: -0.05em;
-      }
-
-      .home__subheading {
-        margin-left: -0.4rem;
-        color: #b0afb6;
-        font-size: 24px;
-        line-height: 24px;
-        letter-spacing: -0.05em;
-      }
-
-      .promo,
-      .contact {
-        background: rgba(24, 23, 28, 0.5);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25) inset;
-      }
-
-      .promo__heading {
-        margin-bottom: 0.5rem;
-        font-size: 1.25em;
-        line-height: 1.5;
-        letter-spacing: -0.025em;
-      }
-
-      .promo__description {
-        max-width: 666px;
-        margin: 0 auto;
-      }
-
-      .project {
-        position: relative;
-        text-align: justify;
-      }
-
-      .project:before,
-      .project:after {
-        content: "";
-        position: absolute;
-        right: 0;
-        left: 0;
-      }
-
-      .project__screenshot {
-        display: block;
-        width: 100%;
-        min-height: 56.25%;
-        margin: 0 0 1.5rem;
-      }
-
-      .project__screenshot img {
-        display: block;
-        width: 100%;
-      }
-
-      .project__heading {
-        display: inline-block;
-        margin-bottom: 1.5rem;
-        font-size: 1.5em;
-        line-height: 1;
-        letter-spacing: -0.03em;
-      }
-
-      .project__link {
-        display: inline-block;
-        font-weight: bold;
-      }
-
-      .project__link:before {
-        content: "";
-        display: inline-block;
-        width: 14px;
-        height: 14px;
-        margin-right: 4px;
-        background: url(images/icons/link.svg) no-repeat center;
-        background-size: contain;
-        vertical-align: -1.5px;
-      }
-
-      .project__link--disabled {
-        cursor: not-allowed;
-      }
-
-      .project__link--disabled:before {
-        background-image: url(images/icons/broken_link.svg);
-      }
-
-      .clients {
-        min-height: 100vh;
-      }
-
-      .clients__logos {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 1.5rem -5% 3rem;
-        padding: 0;
-      }
-
-      .clients__logos li img {
-        width: 100%;
-      }
-
-      .clients__logos li {
-        display: flex;
-        width: 25%;
-        flex-grow: 1;
-        margin: 0 5%;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-      }
-
-      .clients__logos li:before {
-        content: "";
-        display: block;
-        padding-top: 80%;
-      }
-
-      .clients__logos li svg {
-        width: 100%;
-      }
-
-      .contact {
-        min-height: 100vh;
-        font-size: 1.5em;
-        line-height: 1.25;
-      }
-
-      .contact__options {
-        margin: 1rem 0;
-        padding: 0;
-      }
-
-      .contact__options li {
-        display: inline-block;
-        width: 45px;
-        margin: 0 4px;
-        list-style: none;
-      }
-
-      .contact__options a {
-        display: block;
-        filter: brightness(1);
-        transition: filter 0.2s ease-in-out;
-      }
-
-      .contact__options a:hover {
-        filter: brightness(1.25);
-      }
-
-      @media screen and (min-width: 30em) {
-        .container {
-          padding: 2rem;
-        }
-
-        .clients__logos li {
-          width: 20%;
-        }
-      }
-
-      @media screen and (min-width: 45em) {
-        .home {
-          padding: 20vw 0;
-        }
-
-        .home > .container {
-          margin-top: -1rem;
-          padding-top: 0;
-        }
-
-        .promo {
-          font-size: 1.25em;
-          line-height: 2.5;
-        }
-
-        .project__heading {
-          font-size: 1.75em;
-        }
-      }
-    </style>
   </head>
   <body>
-    <div class="background"></div>
-
-    <header class="section home">
+    <section class="section promo">
       <div class="container">
-        <h1 class="home__heading">Steven Hall</h1>
-        <h2 class="home__subheading">Frontend Development</h2>
-      </div>
-    </header>
-
-    <section class="section promo intro">
-      <div class="container">
-        <h3 class="promo__heading">
+        <h1 class="promo__heading">
           Over 20 years experience building websites and apps.
-        </h3>
+        </h1>
         <p class="promo__description">
           Since 2000, I’ve worked on a huge variety of projects for a diverse
           range of clients, from the smallest startups to the largest
-          multinationals. Taking a pragmatic approach, I work quickly to bring
-          new products to life – or&nbsp;rebuild old ones – with exceptional
-          pace and quality.
+          multinationals. With all I’ve learned, I work quickly to bring new
+          products to life – or rebuild existing ones – with exceptional speed
+          and quality.
         </p>
       </div>
     </section>
@@ -378,15 +94,15 @@
 
     <section class="section promo">
       <div class="container">
-        <h3 class="promo__heading">
-          A master craftsman of clean, maintainable&nbsp;code.
-        </h3>
-        <p>
-          Experience has taught me how to get the best results while using less
-          code – leading to quicker development and reducing the surface area
-          for bugs. The result is an easy to follow, adaptable, maintainable and
-          well-documented codebase – creating an intuitive launchpad for
-          fellow&nbsp;developers.
+        <h2 class="promo__heading">
+          A master craftsman of <br />
+          clean, maintainable code.
+        </h2>
+        <p class="promo__description">
+          I take great pride in my work, using the right tools and techniques to
+          skilfully and efficiently create the best quality products. The result
+          is an easy to follow, adaptable, maintainable and well-documented
+          codebase – an intuitive launchpad for fellow developers.
         </p>
       </div>
     </section>
@@ -425,15 +141,15 @@
 
     <section class="section promo">
       <div class="container">
-        <h3 class="promo__heading">
-          A former designer who strives for the best&nbsp;UX.
-        </h3>
+        <h2 class="promo__heading">
+          A keen eye for design <br />
+          and creating the best UX.
+        </h2>
         <p class="promo__description">
-          I started my career in design, so I bring products to life with the
-          care and attention they deserve – seamlessly filling gaps and adding
-          details which really improve the overall quality and finesse of the
-          product and its user experience. I can even create new designs from
-          scratch.
+          I started my career as a designer, so I bring products to life with
+          the care and attention they deserve. Always striving for the best user
+          experience, I seamlessly fill in gaps and add details which really
+          improve on the overall quality and finesse of the finished product.
         </p>
       </div>
     </section>
@@ -484,15 +200,15 @@
 
     <section class="section promo">
       <div class="container">
-        <h3 class="promo__heading">
-          An expert problem solver and avid&nbsp;brainstormer.
-        </h3>
+        <h2 class="promo__heading">
+          A truly creative thinker <br />
+          and expert problem solver.
+        </h2>
         <p class="promo__description">
-          The most productive projects I've worked on have taken a team-wide
-          collaborative approach to fleshing out new product features. A willing
-          and valued contributor to any brainstorm, design workshop or client
-          meeting, I often hit on elegant solutions which others
-          might&nbsp;miss.
+          The most successful products I've worked on have taken a team-wide
+          collaborative, iterative approach to fleshing out new product
+          features. A willing and valued contributor to any workshop or client
+          meeting, I often hit on elegant solutions which others might miss.
         </p>
       </div>
     </section>
@@ -536,15 +252,15 @@
 
     <section class="section promo">
       <div class="container">
-        <h3 class="promo__heading">
-          Self-motivated with superb time&nbsp;management.
-        </h3>
+        <h2 class="promo__heading">
+          Self-motivated with <br />
+          superb time management.
+        </h2>
         <p class="promo__description">
-          I like to keep myself busy, always pushing a project forward with one
-          eye&nbsp;firmly on delivery requirements. I won't obsess or get bogged
-          down, instead taking a common sense, iterative approach to ensure
-          features remain shippable to the highest level, within an
-          agreed&nbsp;timeframe.
+          I like to keep moving, always pushing a product forward with one eye
+          firmly on deliverables. I won't obsess or get bogged down, instead
+          taking a common sense, iterative approach to ensure features remain
+          shippable to the highest standard, within an agreed timeframe.
         </p>
       </div>
     </section>
@@ -588,15 +304,16 @@
 
     <section class="section promo">
       <div class="container">
-        <h3 class="promo__heading">
-          A real team-player and all-round nice&nbsp;guy&nbsp;;-)
-        </h3>
+        <h2 class="promo__heading">
+          A real team-player <br />
+          and all-round nice&nbsp;guy&nbsp;;-)
+        </h2>
         <p class="promo__description">
           Whatever your way of working, I'm flexible enough to fit right in.
           I'll offer helpful suggestions where appropriate, but I'm not
           overbearing with my opinions. Happy to help in any situation, I'm also
           just a great guy to have around. Why not
-          <a href="#contact">get in touch</a> and see for&nbsp;yourself?
+          <a href="#contact">get in touch?</a>
         </p>
       </div>
     </section>
@@ -635,7 +352,7 @@
     </section>
     <footer id="contact" class="section contact">
       <div class="container">
-        <h3 class="contact__heading">Get in touch...</h3>
+        <h3 class="contact__heading">Let's Talk.</h3>
         <ul class="contact__options">
           <li>
             <a title="Email" href="mailto:steve@stevenhall.uk">
