@@ -18,7 +18,7 @@ html {
   min-width: 20em;
   min-height: 20em;
   background: #1a1a1a;
-  color: #ffffff;
+  color: #a1a1a1;
   font-family: "Gilroy", sans-serif;
   text-align: center;
   line-height: 2;
@@ -60,10 +60,6 @@ a:hover {
   color: #3399ff;
 }
 
-br.desktop {
-  display: none;
-}
-
 .section {
   display: flex;
   position: relative;
@@ -81,19 +77,22 @@ br.desktop {
 }
 
 .promo__heading {
+  color: #ffffff;
   margin-bottom: 0.5rem;
-  font-size: 1.5em;
+  font-size: 2.25em;
   line-height: 1.25;
   letter-spacing: -0.025em;
 }
 
+.promo__heading > br {
+  display: none;
+}
+
 .promo__description {
   margin: 0 auto;
-  color: #a3a3a3;
 }
 
 .project {
-  color: #a3a3a3;
   position: relative;
   text-align: justify;
 }
@@ -128,6 +127,7 @@ br.desktop {
 }
 
 .project__link {
+  color: #ffffff;
   display: inline-block;
   font-weight: bold;
 }
@@ -192,6 +192,10 @@ br.desktop {
   line-height: 1.25;
 }
 
+.contact__heading {
+  color: #ffffff;
+}
+
 .contact__options {
   margin: 1rem 0;
   padding: 0;
@@ -226,13 +230,13 @@ br.desktop {
   .promo__heading {
     font-size: 2em;
   }
+
+  .promo__heading > br {
+    display: inline;
+  }
 }
 
 @media screen and (min-width: 45em) {
-  br.desktop {
-    display: inline;
-  }
-
   .promo {
     font-size: 21px;
     line-height: 2.5;
