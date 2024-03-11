@@ -42,8 +42,8 @@ body {
 }
 
 ::selection {
-  color: #1a1a1a;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #3399ff;
 }
 
 h1,
@@ -82,20 +82,38 @@ a:hover {
   padding: 2rem 1.5rem;
 }
 
+.intro__heading,
 .promo__heading {
   color: #ffffff;
   margin-bottom: 0.5rem;
-  font-size: 2.25em;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+.intro__heading {
+  font-size: 3em;
+  line-height: 1;
+}
+
+.intro__subheading {
+  font-size: 1.6em;
   line-height: 1.25;
   letter-spacing: -0.025em;
+  margin: 0 auto 1rem;
+  max-width: 20em;
 }
 
-.promo__heading > br {
-  display: none;
+.promo__heading {
+  font-size: 1.6em;
 }
 
+.intro__description,
 .promo__description {
   margin: 0 auto;
+}
+
+.intro__description > br {
+  display: none;
 }
 
 .project {
@@ -243,18 +261,23 @@ a:hover {
     width: 20%;
   }
 
-  .promo__heading {
-    font-size: 2em;
+  .intro__heading {
+    font-size: 4em;
   }
 
-  .promo__heading > br {
-    display: inline;
+  .intro__subheading {
+    font-size: 1.75em;
+  }
+
+  .promo__heading {
+    font-size: 2em;
   }
 }
 
 @media screen and (min-width: 45em) {
+  .intro,
   .promo {
-    font-size: 21px;
+    font-size: 1.2em;
     line-height: 2.5;
   }
 
@@ -272,6 +295,24 @@ a:hover {
 }
 
 @media screen and (min-width: 60em) {
+  .intro,
+  .promo {
+    font-size: 1.3125em;
+    line-height: 2.5;
+  }
+
+  .intro__heading {
+    font-size: 6em;
+  }
+
+  .intro__subheading {
+    font-size: 2.2em;
+  }
+
+  .intro__description > br {
+    display: inline;
+  }
+
   .promo__heading {
     font-size: 3.25em;
   }
