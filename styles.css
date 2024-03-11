@@ -85,7 +85,7 @@ a:hover {
 .intro__heading,
 .promo__heading {
   color: #ffffff;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   letter-spacing: -0.025em;
   line-height: 1.25;
 }
@@ -110,6 +110,10 @@ a:hover {
 .intro__description,
 .promo__description {
   margin: 0 auto;
+}
+
+.promo__description {
+  max-width: 42em;
 }
 
 .intro__description > br {
@@ -295,14 +299,8 @@ a:hover {
 }
 
 @media screen and (min-width: 60em) {
-  .intro,
-  .promo {
-    font-size: 1.3125em;
-    line-height: 2.5;
-  }
-
   .intro__heading {
-    font-size: 6em;
+    font-size: 5.2em;
   }
 
   .intro__subheading {
