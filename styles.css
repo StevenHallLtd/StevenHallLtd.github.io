@@ -86,12 +86,11 @@ a:hover {
   color: #ffffff;
   margin-bottom: 1rem;
   letter-spacing: -0.025em;
-  line-height: 1.25;
 }
 
 .intro__heading {
   font-size: 3em;
-  line-height: 1;
+  line-height: 0.85;
 }
 
 .intro__subheading {
@@ -103,6 +102,7 @@ a:hover {
 
 .promo__heading {
   font-size: 1.6em;
+  line-height: 1.1;
 }
 
 .intro__description > br {
@@ -271,7 +271,11 @@ a:hover {
   .intro,
   .promo {
     font-size: 1.2em;
-    line-height: 2.5;
+    text-align: center;
+  }
+
+  .intro__subheading {
+    margin: 0 auto 1rem;
   }
 
   .promo__heading {
@@ -289,7 +293,7 @@ a:hover {
 
 @media screen and (min-width: 60em) {
   .intro__heading {
-    font-size: 5.2em;
+    font-size: 6em;
   }
 
   .intro__subheading {
@@ -306,6 +310,6 @@ a:hover {
   }
 
   .promo__heading {
-    font-size: 3.25em;
+    font-size: 3.6em;
   }
 }
