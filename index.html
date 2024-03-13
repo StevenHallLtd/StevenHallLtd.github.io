@@ -31,7 +31,6 @@
     <meta name="theme-color" content="#18171c" />
 
     <link rel="canonical" href="https://stevenhall.uk" />
-    <link rel="stylesheet" href="./styles.css" />
 
     <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
@@ -41,360 +40,672 @@
         },
       });
     </script>
+
+    <style>
+      @font-face {
+        font-family: "Gilroy";
+        font-weight: bold;
+        src: url("fonts/gilroy-extra-bold.woff") format("woff");
+      }
+
+      @font-face {
+        font-family: "Gilroy";
+        font-weight: normal;
+        src: url("fonts/gilroy-light.woff") format("woff");
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-width: 20em;
+        min-height: 20em;
+        background: #1a1a1a;
+        color: #a1a1a1;
+        font-family: "Gilroy", sans-serif;
+        line-height: 2;
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      html.wf-loading {
+        opacity: 0;
+      }
+
+      html.wf-active {
+        transition: opacity 0.3s ease-out;
+      }
+
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      ::selection {
+        color: #ffffff;
+        background-color: #3399ff;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin: 0 0 1rem;
+      }
+
+      a {
+        color: inherit;
+        transition: color 0.2s ease-in-out;
+        text-decoration-thickness: 1px;
+      }
+
+      a:hover {
+        color: #3399ff;
+      }
+
+      .section {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 10vw 0;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 950px;
+        position: relative;
+        padding: 2rem 1.5rem;
+      }
+
+      .intro__heading,
+      .promo__heading {
+        color: #ffffff;
+        margin-bottom: 1rem;
+        letter-spacing: -0.025em;
+      }
+
+      .intro__heading {
+        font-size: 3em;
+        line-height: 0.85;
+      }
+
+      .intro__subheading {
+        font-size: 1.6em;
+        line-height: 1.25;
+        letter-spacing: -0.025em;
+        max-width: 20em;
+      }
+
+      .promo__heading {
+        font-size: 1.6em;
+        line-height: 1.1;
+      }
+
+      .intro__description > br {
+        display: none;
+      }
+
+      .project {
+        position: relative;
+      }
+
+      .project:before,
+      .project:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 0;
+      }
+
+      .project__screenshot {
+        display: block;
+        width: 100%;
+        min-height: 56.25%;
+        margin: 0 0 1.5rem;
+      }
+
+      .project__screenshot img {
+        display: block;
+        width: 100%;
+      }
+
+      .project__heading {
+        color: #ffffff;
+        display: inline-block;
+        margin-bottom: 1.5rem;
+        font-size: 1.5em;
+        line-height: 1;
+        letter-spacing: -0.03em;
+      }
+
+      .project__link {
+        color: #ffffff;
+        display: inline-block;
+        font-weight: bold;
+      }
+
+      .project__link:before {
+        content: "";
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-right: 4px;
+        background: url(images/icons/link.svg) no-repeat center;
+        background-size: contain;
+        vertical-align: -1.5px;
+      }
+
+      .project__link--disabled {
+        cursor: not-allowed;
+      }
+
+      .project__link--disabled:before {
+        background-image: url(images/icons/broken_link.svg);
+      }
+
+      .clients {
+        min-height: 100vh;
+      }
+
+      .clients__logos {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1.5rem -5% 3rem;
+        padding: 0;
+      }
+
+      .clients__logos li img {
+        width: 100%;
+      }
+
+      .clients__logos li {
+        display: flex;
+        width: 25%;
+        flex-grow: 1;
+        margin: 0 5%;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+      }
+
+      .clients__logos li:before {
+        content: "";
+        display: block;
+        padding-top: 80%;
+      }
+
+      .clients__logos li svg {
+        width: 100%;
+      }
+
+      .contact {
+        min-height: 100vh;
+        font-size: 1.5em;
+        line-height: 1.25;
+        text-align: center;
+      }
+
+      .contact__heading {
+        color: #ffffff;
+      }
+
+      .contact__options {
+        margin: 1rem 0;
+        padding: 0;
+      }
+
+      .contact__options li {
+        display: inline-block;
+        width: 45px;
+        margin: 0 4px;
+        list-style: none;
+      }
+
+      .contact__options a {
+        display: block;
+        filter: brightness(1);
+        transition: filter 0.2s ease-in-out;
+      }
+
+      .contact__options a:hover {
+        filter: brightness(1.25);
+      }
+
+      @media screen and (min-width: 30em) {
+        .container {
+          padding: 2rem;
+        }
+
+        .clients__logos li {
+          width: 20%;
+        }
+
+        .intro__heading {
+          font-size: 4em;
+        }
+
+        .intro__subheading {
+          font-size: 1.75em;
+        }
+
+        .promo__heading {
+          font-size: 2em;
+        }
+      }
+
+      @media screen and (min-width: 45em) {
+        .intro,
+        .promo {
+          font-size: 1.2em;
+          text-align: center;
+        }
+
+        .intro__subheading {
+          margin: 0 auto 1rem;
+        }
+
+        .promo__heading {
+          font-size: 2.5em;
+        }
+
+        .project {
+          font-size: 1.2em;
+        }
+
+        .project__heading {
+          font-size: 1.5em;
+        }
+      }
+
+      @media screen and (min-width: 60em) {
+        .intro__heading {
+          font-size: 6em;
+        }
+
+        .intro__subheading {
+          font-size: 2.2em;
+        }
+
+        .intro__description,
+        .promo__description {
+          font-size: 1.1em;
+        }
+
+        .intro__description > br {
+          display: inline;
+        }
+
+        .promo__heading {
+          font-size: 3.6em;
+        }
+      }
+    </style>
   </head>
   <body>
-    <section class="section intro">
-      <div class="container">
-        <h1 class="intro__heading">Steven Hall</h1>
-        <h2 class="intro__subheading">
-          Leading Frontend Development with an emphasis on quality and speed
-          to&nbsp;market.
-        </h2>
-        <p class="intro__description">
-          I help businesses large and small push new products to market in
-          record time, creating experiences which users love while laying solid
-          foundations for future development. <br />I also help to unblock
-          development teams by
-          <a href="#reworking">reworking existing&nbsp;products</a>.
-        </p>
-      </div>
-    </section>
+    <main>
+      <section class="section intro">
+        <div class="container">
+          <h1 class="intro__heading">Steven Hall</h1>
+          <h2 class="intro__subheading">
+            Leading Frontend Development with an emphasis on quality and speed
+            to&nbsp;market.
+          </h2>
+          <p class="intro__description">
+            I help businesses large and small push new products to market in
+            record time, creating experiences which users love while laying
+            solid foundations for future development. <br />I also help to
+            unblock development teams by
+            <a href="#reworking">reworking existing&nbsp;products</a>.
+          </p>
+        </div>
+      </section>
 
-    <section class="section project">
-      <div class="container">
-        <h3 class="project__heading">TV Livestream App</h3>
-        <img
-          class="project__screenshot"
-          src="images/screenshots/chat_app@1x.jpg"
-          srcset="
-            images/screenshots/chat_app@0.5x.jpg  320w,
-            images/screenshots/chat_app@1x.jpg    640w,
-            images/screenshots/chat_app@2x.jpg   1280w
-          "
-          sizes="(max-width: 50rem) calc(100vw - 4rem), 46rem"
-          alt="A person making a video call"
-        />
-        <p>
-          A video chat app for iOS featuring a variety of single and multi-user
-          modes, with videos able to be broadcast live on TV or recorded for
-          later use. An accompanying web app allows the configuration and
-          moderation of live chat rooms, review and handling of recorded
-          sessions and basic user&nbsp;admin.
-        </p>
-        <p>
-          Both the iOS app and the accompanying web app were built
-          simultaneously by myself using React, React Native, Twilio Video and
-          Firebase analytics, authorisation, cloud functions, realtime data and
-          storage in around twelve weeks, including some significant changes to
-          functionality along the&nbsp;way.
-        </p>
-        <p class="project__link project__link--disabled">Coming soon</p>
-      </div>
-    </section>
-
-    <section class="section promo">
-      <div class="container">
-        <h2 class="promo__heading">
-          A master craftsman&nbsp;of <br />
-          clean, maintainable code.
-        </h2>
-        <p class="promo__description">
-          I take great pride in my work, using the right tools and techniques to
-          skilfully and efficiently create the best quality products. The result
-          is an easy to follow, adaptable, maintainable and well-documented
-          codebase – an intuitive launchpad for fellow developers.
-        </p>
-      </div>
-    </section>
-
-    <section class="section project">
-      <div class="container">
-        <h3 class="project__heading">3D Collectibles App</h3>
-        <img
-          class="project__screenshot"
-          src="images/screenshots/collectibles_app@1x.jpg"
-          srcset="
-            images/screenshots/collectibles_app@0.5x.jpg  320w,
-            images/screenshots/collectibles_app@1x.jpg    640w,
-            images/screenshots/collectibles_app@2x.jpg   1280w
-          "
-          sizes="(max-width: 50rem) calc(100vw - 4rem), 46rem"
-          alt="An example 3D scene"
-        />
-        <p>
-          A rich-immersive prototype for iOS combining a navigable 3D scene
-          supported by a collectibles storefront, with storytelling through
-          conventional UI, interactive video and augmented reality. Built using
-          React Native, React Navigation, ThreeJS and Reality Composer in around
-          six&nbsp;weeks.
-        </p>
-        <p>
-          Another prototype explored how these collectibles could be created
-          through machine learning, using a model inspired by DNA. This included
-          a web app where collectibles could be generated, manipulated in 3D,
-          adjusted and scored. Built with React, Material UI and ThreeJS in
-          four&nbsp;weeks.
-        </p>
-        <p class="project__link project__link--disabled">Coming soon</p>
-      </div>
-    </section>
-
-    <section class="section promo">
-      <div class="container">
-        <h2 class="promo__heading">
-          A keen eye for design <br />
-          and creating the best&nbsp;UX.
-        </h2>
-        <p class="promo__description">
-          I started my career as a designer, so I bring products to life with
-          the care and attention they deserve. Always striving for the best user
-          experience, I seamlessly fill in gaps and add details which really
-          improve on the overall quality and finesse of the finished product.
-        </p>
-      </div>
-    </section>
-
-    <section id="reworking" class="section project">
-      <div class="container">
-        <h3 class="project__heading">Reworking Products</h3>
-        <a
-          href="https://apps.apple.com/us/app/go-hws-mobile/id1597671431"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      <section class="section project">
+        <div class="container">
+          <h3 class="project__heading">TV Livestream App</h3>
           <img
             class="project__screenshot"
-            src="images/screenshots/recruitment_app@1x.png"
+            src="images/screenshots/chat_app@1x.jpg"
             srcset="
-              images/screenshots/recruitment_app@0.5x.png  320w,
-              images/screenshots/recruitment_app@1x.png    640w,
-              images/screenshots/recruitment_app@2x.png   1280w
+              images/screenshots/chat_app@0.5x.jpg  320w,
+              images/screenshots/chat_app@1x.jpg    640w,
+              images/screenshots/chat_app@2x.jpg   1280w
             "
             sizes="(max-width: 50rem) calc(100vw - 4rem), 46rem"
-            alt="Healthcare Recruitment App Screenshot"
+            alt="A person making a video call"
           />
-        </a>
-        <p>
-          Technical debt, left unchallenged, can slowly grind a project to a
-          halt. By taking a pragmatic approach, I’ve been able to rework a
-          number of products now, successfully rearchitecting years worth of
-          work in just a few months by creating elegantly simple toolkits of
-          components and&nbsp;logic.
-        </p>
-        <p>
-          In this instance, I also created a new design system in Figma –
-          starting with the basics like colour and typography and working up a
-          few layouts, before rapidly building the new app in React Native. Once
-          handed over, the result was a real breath of fresh air for users and
-          the development&nbsp;team.
-        </p>
-        <a
-          class="project__link"
-          href="https://apps.apple.com/us/app/go-hws-mobile/id1597671431"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Healthcare Recruitment App</a
-        >
-      </div>
-    </section>
+          <p>
+            A video chat app for iOS featuring a variety of single and
+            multi-user modes, with videos able to be broadcast live on TV or
+            recorded for later use. An accompanying web app allows the
+            configuration and moderation of live chat rooms, review and handling
+            of recorded sessions and basic user&nbsp;admin.
+          </p>
+          <p>
+            Both the iOS app and the accompanying web app were built
+            simultaneously by myself using React, React Native, Twilio Video and
+            Firebase analytics, authorisation, cloud functions, realtime data
+            and storage in around twelve weeks, including some significant
+            changes to functionality along the&nbsp;way.
+          </p>
+          <p class="project__link project__link--disabled">Coming soon</p>
+        </div>
+      </section>
 
-    <section class="section promo">
-      <div class="container">
-        <h2 class="promo__heading">
-          A truly creative thinker <br />
-          and expert problem solver.
-        </h2>
-        <p class="promo__description">
-          The most successful products I’ve worked on have taken a team-wide,
-          collaborative and iterative approach to fleshing out new product
-          features. A willing and valued contributor to any workshop or client
-          meeting, I often hit on elegant solutions which others might miss.
-        </p>
-      </div>
-    </section>
+      <section class="section promo">
+        <div class="container">
+          <h2 class="promo__heading">
+            A master craftsman&nbsp;of <br />
+            clean, maintainable code.
+          </h2>
+          <p class="promo__description">
+            I take great pride in my work, using the right tools and techniques
+            to skilfully and efficiently create the best quality products. The
+            result is an easy to follow, adaptable, maintainable and
+            well-documented codebase – an intuitive launchpad for fellow
+            developers.
+          </p>
+        </div>
+      </section>
 
-    <section class="section project">
-      <div class="container">
-        <h3 class="project__heading">Local Opportunity Finder</h3>
-        <a
-          href="https://smallbusiness.withgoogle.com/tools/local-opportunity-finder/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      <section class="section project">
+        <div class="container">
+          <h3 class="project__heading">3D Collectibles App</h3>
           <img
             class="project__screenshot"
-            src="images/screenshots/google_lof@1x.png"
+            src="images/screenshots/collectibles_app@1x.jpg"
             srcset="
-              images/screenshots/google_lof@0.5x.png  320w,
-              images/screenshots/google_lof@1x.png    640w,
-              images/screenshots/google_lof@2x.png   1280w
+              images/screenshots/collectibles_app@0.5x.jpg  320w,
+              images/screenshots/collectibles_app@1x.jpg    640w,
+              images/screenshots/collectibles_app@2x.jpg   1280w
             "
             sizes="(max-width: 50rem) calc(100vw - 4rem), 46rem"
-            alt="Local Opportunity Finder Screenshot"
+            alt="An example 3D scene"
           />
-        </a>
-        <p>
-          Google’s Local Opportunity Finder is a campaign encouraging businesses
-          to list or enhance their business profile listing on Google and Google
-          Maps by giving personalised suggestions based on their existing
-          profile and business sector, all localised for several markets. Built
-          with React and&nbsp;GSAP.
-        </p>
-        <p>
-          A previous version of the site was a far more rich, immersive
-          experience for the US market only – allowing business owners to see,
-          to the nearest zipcode, where and when local users were searching for
-          businesses like theirs – hooking into some really big data. Built with
-          Polymer and&nbsp;GSAP.
-        </p>
-        <a
-          class="project__link"
-          href="https://smallbusiness.withgoogle.com/tools/local-opportunity-finder/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Local Opportunity Finder</a
-        >
-      </div>
-    </section>
+          <p>
+            A rich-immersive prototype for iOS combining a navigable 3D scene
+            supported by a collectibles storefront, with storytelling through
+            conventional UI, interactive video and augmented reality. Built
+            using React Native, React Navigation, ThreeJS and Reality Composer
+            in around six&nbsp;weeks.
+          </p>
+          <p>
+            Another prototype explored how these collectibles could be created
+            through machine learning, using a model inspired by DNA. This
+            included a web app where collectibles could be generated,
+            manipulated in 3D, adjusted and scored. Built with React, Material
+            UI and ThreeJS in four&nbsp;weeks.
+          </p>
+          <p class="project__link project__link--disabled">Coming soon</p>
+        </div>
+      </section>
 
-    <section class="section promo">
-      <div class="container">
-        <h2 class="promo__heading">
-          Self-motivated with <br />
-          superb time management.
-        </h2>
-        <p class="promo__description">
-          I like to keep busy, always pushing a product forward with one eye
-          firmly on deliverables. I won’t obsess or get bogged down, instead
-          taking a common sense, iterative approach to ensure features remain
-          shippable to the highest standard, within an agreed timeframe.
-        </p>
-      </div>
-    </section>
+      <section class="section promo">
+        <div class="container">
+          <h2 class="promo__heading">
+            A keen eye for design <br />
+            and creating the best&nbsp;UX.
+          </h2>
+          <p class="promo__description">
+            I started my career as a designer, so I bring products to life with
+            the care and attention they deserve. Always striving for the best
+            user experience, I seamlessly fill in gaps and add details which
+            really improve on the overall quality and finesse of the finished
+            product.
+          </p>
+        </div>
+      </section>
 
-    <section class="section project">
-      <div class="container">
-        <h3 class="project__heading">Black Owned Friday</h3>
-        <a
-          href="https://smallbusiness.withgoogle.com/black-owned-friday/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            class="project__screenshot"
-            src="images/screenshots/google_bof@1x.png"
-            srcset="
-              images/screenshots/google_bof@0.5x.png  320w,
-              images/screenshots/google_bof@1x.png    640w,
-              images/screenshots/google_bof@2x.png   1280w
-            "
-            sizes="(max-width: 50rem) calc(100vw - 4rem), 46rem"
-            alt="Black Owned Friday Screenshot"
-          />
-        </a>
-        <p>
-          Coinciding with Black Friday, Google’s Black Owned Friday campaign
-          aims to shift the narrative towards black-owned businesses with this
-          shoppable video experience, featuring over 100 products in this
-          original music video by T-Pain and Normani. Built with React, YouTube
-          and&nbsp;GSAP.
-        </p>
-        <a
-          class="project__link"
-          href="https://smallbusiness.withgoogle.com/black-owned-friday/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Black Owned Friday</a
-        >
-      </div>
-    </section>
+      <section id="reworking" class="section project">
+        <div class="container">
+          <h3 class="project__heading">Reworking Products</h3>
+          <a
+            href="https://apps.apple.com/us/app/go-hws-mobile/id1597671431"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="project__screenshot"
+              src="images/screenshots/recruitment_app@1x.png"
+              srcset="
+                images/screenshots/recruitment_app@0.5x.png  320w,
+                images/screenshots/recruitment_app@1x.png    640w,
+                images/screenshots/recruitment_app@2x.png   1280w
+              "
+              sizes="(max-width: 50rem) calc(100vw - 4rem), 46rem"
+              alt="Healthcare Recruitment App Screenshot"
+            />
+          </a>
+          <p>
+            Technical debt, left unchallenged, can slowly grind a project to a
+            halt. By taking a pragmatic approach, I’ve been able to rework a
+            number of products now, successfully rearchitecting years worth of
+            work in just a few months by creating elegantly simple toolkits of
+            components and&nbsp;logic.
+          </p>
+          <p>
+            In this instance, I also created a new design system in Figma –
+            starting with the basics like colour and typography and working up a
+            few layouts, before rapidly building the new app in React Native.
+            Once handed over, the result was a real breath of fresh air for
+            users and the development&nbsp;team.
+          </p>
+          <a
+            class="project__link"
+            href="https://apps.apple.com/us/app/go-hws-mobile/id1597671431"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Healthcare Recruitment App</a
+          >
+        </div>
+      </section>
 
-    <section class="section promo">
-      <div class="container">
-        <h2 class="promo__heading">
-          A real team-player <br />
-          and all-round nice&nbsp;guy&nbsp;;-)
-        </h2>
-        <p class="promo__description">
-          Whatever your way of working, I’m flexible enough to fit right in.
-          I’ll offer helpful suggestions where appropriate, but I’m not
-          overbearing with my opinions. Happy to help in any situation, I’m also
-          just a great guy to have on board. Why not
-          <a href="#contact">get in touch?</a>
-        </p>
-      </div>
-    </section>
+      <section class="section promo">
+        <div class="container">
+          <h2 class="promo__heading">
+            A truly creative thinker <br />
+            and expert problem solver.
+          </h2>
+          <p class="promo__description">
+            The most successful products I’ve worked on have taken a team-wide,
+            collaborative and iterative approach to fleshing out new product
+            features. A willing and valued contributor to any workshop or client
+            meeting, I often hit on elegant solutions which others might miss.
+          </p>
+        </div>
+      </section>
 
-    <section class="section project clients">
-      <div class="container">
-        <h3 class="project__heading">And more...</h3>
-        <ul class="clients__logos">
-          <li>
-            <img alt="Google" src="images/logos/google.svg" />
-          </li>
-          <li>
-            <img alt="Nike" src="images/logos/nike.svg" />
-          </li>
-          <li>
-            <img alt="Spotify" src="images/logos/spotify.svg" />
-          </li>
-          <li>
-            <img alt="Meta" src="images/logos/meta.svg" />
-          </li>
-          <li>
-            <img alt="NBA" src="images/logos/nba.svg" />
-          </li>
-          <li>
-            <img alt="Microsoft" src="images/logos/microsoft.svg" />
-          </li>
-        </ul>
-        <p>
-          I’ve been on such an incredible journey throughout my career, using
-          all kinds of tools, technologies and techniques, spanning all sorts of
-          use-cases and sectors – I simply can’t share it all here. If you have
-          a specific requirement and would like some more relevant examples,
-          please <a href="#contact">get in&nbsp;touch</a>.
-        </p>
-      </div>
-    </section>
+      <section class="section project">
+        <div class="container">
+          <h3 class="project__heading">Local Opportunity Finder</h3>
+          <a
+            href="https://smallbusiness.withgoogle.com/tools/local-opportunity-finder/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="project__screenshot"
+              src="images/screenshots/google_lof@1x.png"
+              srcset="
+                images/screenshots/google_lof@0.5x.png  320w,
+                images/screenshots/google_lof@1x.png    640w,
+                images/screenshots/google_lof@2x.png   1280w
+              "
+              sizes="(max-width: 50rem) calc(100vw - 4rem), 46rem"
+              alt="Local Opportunity Finder Screenshot"
+            />
+          </a>
+          <p>
+            Google’s Local Opportunity Finder is a campaign encouraging
+            businesses to list or enhance their business profile listing on
+            Google and Google Maps by giving personalised suggestions based on
+            their existing profile and business sector, all localised for
+            several markets. Built with React and&nbsp;GSAP.
+          </p>
+          <p>
+            A previous version of the site was a far more rich, immersive
+            experience for the US market only – allowing business owners to see,
+            to the nearest zipcode, where and when local users were searching
+            for businesses like theirs – hooking into some really big data.
+            Built with Polymer and&nbsp;GSAP.
+          </p>
+          <a
+            class="project__link"
+            href="https://smallbusiness.withgoogle.com/tools/local-opportunity-finder/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Local Opportunity Finder</a
+          >
+        </div>
+      </section>
 
-    <footer id="contact" class="section contact">
-      <div class="container">
-        <h3 class="contact__heading">Let’s Talk.</h3>
-        <ul class="contact__options">
-          <li>
-            <a title="Email" href="mailto:steve@stevenhall.uk">
-              <svg viewBox="0 0 34 34">
-                <circle fill="#D0021B" cx="17" cy="17" r="17"></circle>
-                <path
-                  fill="#FFF"
-                  d="M8.2 10.5c-1.2 0-.6.4 0 .9l8.2 6.8 9.4-6.8c.6-.5 1.2-.9 0-.9H8.2z"
-                ></path>
-                <path
-                  fill="#FFF"
-                  d="M7 12.3v10c0 .6.6 1.2 1.1 1.2H26c.5 0 1.1-.6 1.1-1.2v-10l-10.6 7.6L7 12.3z"
-                ></path>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a
-              title="LinkedIn"
-              href="https://www.linkedin.com/in/stevenjohnhall"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg viewBox="0 0 34 34">
-                <circle fill="#0077B5" cx="17" cy="17" r="17"></circle>
-                <path
-                  fill="#FFF"
-                  d="M12.2 24.1H8.9V13.5h3.3v10.6zm-1.7-11.9c-1.2 0-2-.8-2-1.8s.8-1.8 2-1.8 2 .8 2 1.8-.7 1.8-2 1.8zm15 11.9h-3.8v-5.5c0-1.4-.6-2.4-1.9-2.4-1 0-1.5.7-1.8 1.3V24.1h-3.7V13.5H18v1.7c.2-.7 1.4-1.8 3.3-1.8 2.4 0 4.2 1.5 4.2 4.8v5.9z"
-                ></path>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+      <section class="section promo">
+        <div class="container">
+          <h2 class="promo__heading">
+            Self-motivated with <br />
+            superb time management.
+          </h2>
+          <p class="promo__description">
+            I like to keep busy, always pushing a product forward with one eye
+            firmly on deliverables. I won’t obsess or get bogged down, instead
+            taking a common sense, iterative approach to ensure features remain
+            shippable to the highest standard, within an agreed timeframe.
+          </p>
+        </div>
+      </section>
+
+      <section class="section project">
+        <div class="container">
+          <h3 class="project__heading">Black Owned Friday</h3>
+          <a
+            href="https://smallbusiness.withgoogle.com/black-owned-friday/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="project__screenshot"
+              src="images/screenshots/google_bof@1x.png"
+              srcset="
+                images/screenshots/google_bof@0.5x.png  320w,
+                images/screenshots/google_bof@1x.png    640w,
+                images/screenshots/google_bof@2x.png   1280w
+              "
+              sizes="(max-width: 50rem) calc(100vw - 4rem), 46rem"
+              alt="Black Owned Friday Screenshot"
+            />
+          </a>
+          <p>
+            Coinciding with Black Friday, Google’s Black Owned Friday campaign
+            aims to shift the narrative towards black-owned businesses with this
+            shoppable video experience, featuring over 100 products in this
+            original music video by T-Pain and Normani. Built with React,
+            YouTube and&nbsp;GSAP.
+          </p>
+          <a
+            class="project__link"
+            href="https://smallbusiness.withgoogle.com/black-owned-friday/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Black Owned Friday</a
+          >
+        </div>
+      </section>
+
+      <section class="section promo">
+        <div class="container">
+          <h2 class="promo__heading">
+            A real team-player <br />
+            and all-round nice&nbsp;guy&nbsp;;-)
+          </h2>
+          <p class="promo__description">
+            Whatever your way of working, I’m flexible enough to fit right in.
+            I’ll offer helpful suggestions where appropriate, but I’m not
+            overbearing with my opinions. Happy to help in any situation, I’m
+            also just a great guy to have on board. Why not
+            <a href="#contact">get in touch?</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="section project clients">
+        <div class="container">
+          <h3 class="project__heading">And more...</h3>
+          <ul class="clients__logos">
+            <li>
+              <img alt="Google" src="images/logos/google.svg" />
+            </li>
+            <li>
+              <img alt="Nike" src="images/logos/nike.svg" />
+            </li>
+            <li>
+              <img alt="Spotify" src="images/logos/spotify.svg" />
+            </li>
+            <li>
+              <img alt="Meta" src="images/logos/meta.svg" />
+            </li>
+            <li>
+              <img alt="NBA" src="images/logos/nba.svg" />
+            </li>
+            <li>
+              <img alt="Microsoft" src="images/logos/microsoft.svg" />
+            </li>
+          </ul>
+          <p>
+            I’ve been on such an incredible journey throughout my career, using
+            all kinds of tools, technologies and techniques, spanning all sorts
+            of use-cases and sectors – I simply can’t share it all here. If you
+            have a specific requirement and would like some more relevant
+            examples, please <a href="#contact">get in&nbsp;touch</a>.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="container">
+          <h3 class="contact__heading">Let’s Talk.</h3>
+          <ul class="contact__options">
+            <li>
+              <a title="Email" href="mailto:steve@stevenhall.uk">
+                <svg viewBox="0 0 34 34">
+                  <circle fill="#D0021B" cx="17" cy="17" r="17"></circle>
+                  <path
+                    fill="#FFF"
+                    d="M8.2 10.5c-1.2 0-.6.4 0 .9l8.2 6.8 9.4-6.8c.6-.5 1.2-.9 0-.9H8.2z"
+                  ></path>
+                  <path
+                    fill="#FFF"
+                    d="M7 12.3v10c0 .6.6 1.2 1.1 1.2H26c.5 0 1.1-.6 1.1-1.2v-10l-10.6 7.6L7 12.3z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                title="LinkedIn"
+                href="https://www.linkedin.com/in/stevenjohnhall"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 34 34">
+                  <circle fill="#0077B5" cx="17" cy="17" r="17"></circle>
+                  <path
+                    fill="#FFF"
+                    d="M12.2 24.1H8.9V13.5h3.3v10.6zm-1.7-11.9c-1.2 0-2-.8-2-1.8s.8-1.8 2-1.8 2 .8 2 1.8-.7 1.8-2 1.8zm15 11.9h-3.8v-5.5c0-1.4-.6-2.4-1.9-2.4-1 0-1.5.7-1.8 1.3V24.1h-3.7V13.5H18v1.7c.2-.7 1.4-1.8 3.3-1.8 2.4 0 4.2 1.5 4.2 4.8v5.9z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

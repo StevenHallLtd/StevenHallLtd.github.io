@@ -31,7 +31,6 @@
     <meta name="theme-color" content="#18171c" />
 
     <link rel="canonical" href="https://stevenhall.uk" />
-    <link rel="stylesheet" href="./styles.css" />
 
     <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
@@ -41,14 +40,112 @@
         },
       });
     </script>
+
+    <style>
+      @font-face {
+        font-family: "Gilroy";
+        font-weight: bold;
+        src: url("fonts/gilroy-extra-bold.woff") format("woff");
+      }
+
+      @font-face {
+        font-family: "Gilroy";
+        font-weight: normal;
+        src: url("fonts/gilroy-light.woff") format("woff");
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-width: 20em;
+        min-height: 20em;
+        background: #1a1a1a;
+        color: #ffffff;
+        font-family: "Gilroy", sans-serif;
+        line-height: 2;
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      html.wf-loading {
+        opacity: 0;
+      }
+
+      html.wf-active {
+        transition: opacity 0.3s ease-out;
+      }
+
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      ::selection {
+        color: #ffffff;
+        background-color: #3399ff;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin: 0 0 1rem;
+      }
+
+      a {
+        color: inherit;
+        transition: color 0.2s ease-in-out;
+        text-decoration-thickness: 1px;
+      }
+
+      a:hover {
+        color: #3399ff;
+      }
+
+      .section {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 10vw 0;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 950px;
+        position: relative;
+        padding: 2rem 1.5rem;
+      }
+
+      .error h1 {
+        font-size: 8.75em;
+        margin-bottom: 0;
+        line-height: 1;
+      }
+
+      @media screen and (min-width: 30em) {
+        .container {
+          padding: 2rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <header class="section error">
+    <section class="section error">
       <div class="container">
         <h1>404</h1>
         <h2>Page not found. Sorry!</h2>
         <a href="/">Go Home</a>
       </div>
-    </header>
+    </section>
   </body>
 </html>
