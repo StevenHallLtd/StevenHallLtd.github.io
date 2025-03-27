@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Steven Hall • Leading Frontend Development</title>
+    <title>Steven Hall • React and React Native Development</title>
     <meta
       name="description"
       content="I help organisations large and small push new products to market in record time, creating experiences which users love while laying solid foundations for future development. I also help to unblock development teams by reworking existing products."
@@ -12,7 +12,7 @@
     <meta property="og:url" content="https://stevenhall.uk" />
     <meta
       property="og:title"
-      content="Steven Hall • Leading Frontend Development"
+      content="Steven Hall • React and React Native Development"
     />
     <meta
       property="og:description"
@@ -23,12 +23,12 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#18171c" />
-    <meta name="theme-color" content="#18171c" />
 
     <link rel="canonical" href="https://stevenhall.uk" />
 
@@ -62,7 +62,7 @@
         min-width: 20em;
         min-height: 20em;
         background: #1a1a1a;
-        color: #a1a1a1;
+        color: #e6e6e6;
         font-family: "Gilroy", sans-serif;
         line-height: 2;
         scroll-behavior: smooth;
@@ -125,9 +125,18 @@
         padding: 2rem 1.5rem;
       }
 
+      .intro,
+      .promo {
+        text-align: center;
+      }
+
+      .intro__image {
+        margin-bottom: 1rem;
+        width: 10em;
+      }
+
       .intro__heading,
       .promo__heading {
-        color: #ffffff;
         margin-bottom: 1rem;
         letter-spacing: -0.025em;
       }
@@ -141,7 +150,6 @@
         font-size: 1.6em;
         line-height: 1.25;
         letter-spacing: -0.025em;
-        max-width: 20em;
       }
 
       .promo__heading {
@@ -178,7 +186,6 @@
       }
 
       .project__heading {
-        color: #ffffff;
         display: inline-block;
         margin-bottom: 1.5rem;
         font-size: 1.5em;
@@ -187,7 +194,6 @@
       }
 
       .project__link {
-        color: #ffffff;
         display: inline-block;
         font-weight: bold;
       }
@@ -289,7 +295,7 @@
         }
 
         .intro__heading {
-          font-size: 4em;
+          font-size: 4.5em;
         }
 
         .intro__subheading {
@@ -305,7 +311,6 @@
         .intro,
         .promo {
           font-size: 1.2em;
-          text-align: center;
         }
 
         .intro__subheading {
@@ -327,7 +332,7 @@
 
       @media screen and (min-width: 60em) {
         .intro__heading {
-          font-size: 6em;
+          font-size: 5em;
         }
 
         .intro__subheading {
@@ -353,11 +358,13 @@
     <main>
       <section class="section intro">
         <div class="container">
+          <img
+            alt="Rocket... Yeah!"
+            src="/images/rocket.svg"
+            class="intro__image"
+          />
           <h1 class="intro__heading">Steven Hall</h1>
-          <h2 class="intro__subheading">
-            Leading Frontend Development with an emphasis on quality and speed
-            to&nbsp;market.
-          </h2>
+          <h2 class="intro__subheading">React and React Native Development</h2>
           <p class="intro__description">
             I help organisations large and small push new products to market in
             record time, creating experiences which users love while laying
